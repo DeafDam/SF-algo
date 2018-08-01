@@ -1,0 +1,161 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>IPI - Introduction à l'algorithmique</title>
+    
+    <meta name="description" content="" />
+    <meta name="author" content="Pierre-Julien VILLOUD" />
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/idea.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="my-navbar">
+  <a class="navbar-brand" href="index.html">
+    <img src="img/ipi.jpg" width="30" height="30" alt=""> Cours Algo 001
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav nav-pills mr-auto">
+      
+    </ul>
+    <span class="navbar-text">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <!--a class="btn btn-primary" href="https://github.com/pjvilloud/ipi-java-350-delivery-ex" target="_blank"><i class="fa fa-icon fa-gamepad"></i></a-->
+            &nbsp;
+            <a class="btn btn-primary" href="mailto:pjvilloud@protonmail.com"><i class="fa fa-icon fa-envelope"></i></a>
+            &nbsp;
+            <a class="btn btn-primary" href="https://github.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-github"></i></a>
+            &nbsp;
+            <a class="btn btn-primary" href="https://linkedin.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-linkedin"></i></a>&nbsp;
+            <a class="btn btn-primary" href="#" id="numSlide">1</a>
+        </div>
+    </span>
+  </div>
+</nav>
+<div class="progress">
+  <div id="progress" class="progress-bar" style="width: 0%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="container-fluid" id="impress">
+
+    <div id="accueil" class="step slide" data-rel-x="0" data-y=0>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container text-center">
+            <h1 class="display-3">Bienvenue !</h1>
+            <p class="lead">
+                <h2>Pierre-Julien VILLOUD</h2>
+                <div class="big-top-margin">
+                    <img src="img/pjvilloud.jpg" class="img-bienvenue rounded mx-auto d-block" alt="Pierre-Julien VILLOUD">
+                </div>
+                <div class="big-top-margin">
+                    <h3><i class="fa fa-icon fa-envelope-square"></i>&nbsp;<a href="mailto:pjvilloud@protonmail.com">pjvilloud@protonmail.com</a></h3>
+                    <h3><i class="fa fa-icon fa-github-square"></i>&nbsp;<a href="https://github.com/pjvilloud" target="_blank">https://github.com/pjvilloud</a></h3>
+                    <h3><i class="fa fa-icon fa-linkedin-square"></i>&nbsp;<a href="https://linkedin.com/pjvilloud" target="_blank">https://linkedin.com/pjvilloud</a></h3>
+                    <h3><i class="fa fa-icon fa-globe"></i>&nbsp;<a href="http://pjvilloud.github.io" target="_blank">http://pjvilloud.github.io</a></h3>
+                </div>
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div id="introduction" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Introduction</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;<strong>Algorithme</strong> : C'est une suite d'actions (ou <em>instructions</em>) qu'un ordinateur doit effectuer pour obtenir en un temps fini un résultat déterminé (ou <em>sortie</em>), à partir d'une situation donnée (ou <em>entrée</em>).
+            </div>
+          </div>
+          <div class="container small-font  big-top-margin">
+            <img src="img/wordcloud.png" alt="" width="1200">
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font big-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous allons utiliser dans ce cours un <em>pseudo-langage</em> permettant de comprendre les concepts de l'algorithmique.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="chainescaracteres" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les chaînes de caractères</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fréquent que l'utilisateur d'un programme et l'ordinateur intéragissent en échangeant des messages textuels. Nous allons donc introduire deux <strong>instructions</strong> permettant l'affichage par l'ordinateur et la saisie par l'utilisateur de messages sous formes de <strong>chaînes de caractères</strong>.
+            </div>
+          </div>
+        <div class="container-fluid">
+            <div class="row small-text">
+                <div class="col-6">
+                    <h2 class="display-4">Affichage</h2>
+                    <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
+                        data-title="Procédure <code>affiche</code>" data-content="Le mot <em>affiche</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">affiche</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
+                data-title="Chaîne de caractère entre quotes" data-content="Pour représenter une suite de caractères, on écrit cette dernière entre simples (parfois doubles) quotes : ''">'Hello World !'</span>)<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+                data-title="Séparateur d'instruction ;" data-content="Chaque instruction est terminée par un point-virgule (comme dans beaucoup de langages)">;</span></code></pre></div>
+                <div class="col-6">
+                    <h2 class="display-4">Saisie</h2>
+                    <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+                        data-title="Procédure <code>lit</code>" data-content="Le mot <em>lit</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">lit</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+                data-title="Variable de type chaîne de caractère" data-content="Pour rendre le programme interactif, on introduit une variable qui va contenir la chaîne de caractère saisie par l'utilisateur. Cette notion sera approfondie plus tard.">nom);</span></code></pre></div>
+            </div>
+            <hr>
+            <div class="row smaller-text">
+                <div class="col-6 text-left">
+                    <pre><code class="ada">affiche('Quel est votre nom ?');
+lit(<span id="term1-nom">nom</span>);<span id="term1-nom2"></span>
+affiche('Bonjour ' <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
+    data-title="Concaténation de chaînes" data-content="Le signe + est un opérateur qui dans ce contexte permet de concaténer deux chaînes de caractères en une seule">+</span> nom + ' !');
+                    </code></pre>
+                </div>
+                <div class="col-6 text-left little-top-margin" >
+                    <div id="term-1"></div>
+                </div>
+            </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les chaînes de caractères peuvent être composées de n'importe quels caractères (lettre, majuscules, minuscules, chiffres, caractères accentués, caractères spéciaux...).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+<script src="js/impress.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/highlight.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/terminal.js"></script>
+<script src="js/script.js"></script>
+
