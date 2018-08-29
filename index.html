@@ -102,45 +102,740 @@
       </div>
     </div>
 
-    <div id="chainescaracteres" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Les chaînes de caractères</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fréquent que l'utilisateur d'un programme et l'ordinateur intéragissent en échangeant des messages textuels. Nous allons donc introduire deux <strong>instructions</strong> permettant l'affichage par l'ordinateur et la saisie par l'utilisateur de messages sous formes de <strong>chaînes de caractères</strong>.
+    <div id="chainescaracteres" class="step slide term-1">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">Les chaînes de caractères</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fréquent que l'utilisateur d'un programme et l'ordinateur intéragissent en échangeant des messages textuels. Nous allons donc introduire deux <strong>instructions</strong> permettant l'affichage par l'ordinateur et la saisie par l'utilisateur de messages sous formes de <strong>chaînes de caractères</strong>.
+                    </div>
+                </div>
             </div>
-          </div>
-        <div class="container-fluid">
-            <div class="row small-text">
-                <div class="col-6">
-                    <h2 class="display-4">Affichage</h2>
-                    <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
-                        data-title="Procédure <code>affiche</code>" data-content="Le mot <em>affiche</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">affiche</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
-                data-title="Chaîne de caractère entre quotes" data-content="Pour représenter une suite de caractères, on écrit cette dernière entre simples (parfois doubles) quotes : ''">'Hello World !'</span>)<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
-                data-title="Séparateur d'instruction ;" data-content="Chaque instruction est terminée par un point-virgule (comme dans beaucoup de langages)">;</span></code></pre></div>
-                <div class="col-6">
-                    <h2 class="display-4">Saisie</h2>
-                    <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
-                        data-title="Procédure <code>lit</code>" data-content="Le mot <em>lit</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">lit</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
-                data-title="Variable de type chaîne de caractère" data-content="Pour rendre le programme interactif, on introduit une variable qui va contenir la chaîne de caractère saisie par l'utilisateur. Cette notion sera approfondie plus tard.">nom);</span></code></pre></div>
-            </div>
-            <hr>
-            <div class="row smaller-text">
-                <div class="col-6 text-left">
-                    <pre><code class="ada">affiche('Quel est votre nom ?');
+            <div class="container-fluid">
+                <div class="row small-text">
+                    <div class="col-6">
+                        <h2 class="display-4">Affichage</h2>
+                        <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
+                        data-title="Procédure <code>affiche</code>" data-content="Le mot <em>affiche</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">affiche</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true" data-title="Chaîne de caractère entre quotes" data-content="Pour représenter une suite de caractères, on écrit cette dernière entre simples (parfois doubles) quotes : ''">'Hello World !'</span>)<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Séparateur d'instruction ;" data-content="Chaque instruction est terminée par un point-virgule (comme dans beaucoup de langages)">;</span></code></pre>
+                    </div>
+                    <div class="col-6">
+                        <h2 class="display-4">Saisie</h2>
+                        <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-title="Procédure <code>lit</code>" data-content="Le mot <em>lit</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">lit</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Variable de type chaîne de caractère" data-content="Pour rendre le programme interactif, on introduit une variable qui va contenir la chaîne de caractère saisie par l'utilisateur. Cette notion sera approfondie plus tard.">nom);</span></code></pre>
+                    </div>
+                </div>
+                <hr>
+                <div class="row smaller-text">
+                    <div class="col-6 text-left">
+                        <pre><code class="ada">affiche('Quel est votre nom ?');
 lit(<span id="term1-nom">nom</span>);<span id="term1-nom2"></span>
 affiche('Bonjour ' <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
     data-title="Concaténation de chaînes" data-content="Le signe + est un opérateur qui dans ce contexte permet de concaténer deux chaînes de caractères en une seule">+</span> nom + ' !');
-                    </code></pre>
-                </div>
-                <div class="col-6 text-left little-top-margin" >
-                    <div id="term-1"></div>
+                        </code></pre>
+                    </div>
+                    <div class="col-6 text-left little-top-margin" >
+                        <div id="term-1"></div>
+                    </div>
                 </div>
             </div>
+            <div class="container-fluid">
+                <div class="alert alert-primary small-font " role="alert">
+                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les chaînes de caractères peuvent être composées de n'importe quels caractères (lettre, majuscules, minuscules, chiffres, caractères accentués, caractères spéciaux...).
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="variablesettypes" class="step slide term-2">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">Variables et types</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Comme nous l'avons vu, nous pouvons utiliser des <strong>variables</strong> pour stocker des valeurs (dans le cas précédent, une chaîne de caractères). On peut considérer que l'ordinateur contient un certain nombre de <em>cases </em>, ou <em>emplacements mémoires</em> permettant d'accueillir et de stocker ces fameuses variables. Pour pouvoir utiliser cette variable dans une autre instruction, on l'identifie par une <em>étiquette</em> ou <em>identificateur</em> permettant d'y faire référence. Un identificateur est donc une suite de caractères alphanumériques (mais commençant forcément par une lettre).
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row smaller-text">
+                        <div class="col-6 text-left">
+                            <pre><code class="ada">affiche('Quel est votre nom ?');
+lit(<span id="term2-nom">nom</span>);<span id="term2-nom2"></span>
+affiche('Bonjour ' + nom + ' !');
+affiche('Rappelez-moi votre nom ?');
+lit(<span id="term2-nom3">nom</span>);<span id="term2-nom4"></span>
+affiche('OK ! Bonjour ' + nom + ' !');
+affiche('Bonjour ' + <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
+    data-title="Ceci n'est pas un identificateur" data-content="Attention, <em>nom</em> est ici entre quotes, ce n'est donc pas l'identificateur (et donc pas la variable) qui est utilisé mais bien la chaîne de caractère 'nom' !">'nom'</span> + ' !');
+                            </code></pre>
+                        </div>
+                        <div class="col-6 text-left little-top-margin" >
+                            <div id="term-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;On peut ensuite utiliser ou manipuler ces variables en faisant référence à leurs identificateurs respectifs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="variablesettypes-declaration" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Déclarations de variables</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour pouvoir être utilisée, une variable doit être <strong>déclarée</strong> une seule fois avant d'y faire référence pour la première fois. Dans une déclaration, on précise le <strong>type</strong> de la variable ainsi que <strong>l'identificateur</strong> qui sera utilisé pour y faire référence. La plupart des langages sont sensibles à la casse. Ainsi une variable d'identificateur <code>nom</code> est distincte de <code>Nom</code> ou de <code>NOM</code>.
+            </div>
+          </div>
+          <div class="container text-left">
+            <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+                data-title="Identificateur" data-content="L'identificateur <code>nom</code> est déclaré. A chaque fois que cet identificateur est utilisé, cela fera référence à cette variable.">nom</span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
+                    data-title="<em>est de type</em>" data-content="Le caractère <code>:</code> est équivalent à <em>est de type</em>">:</span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+                        data-title="Type" data-content="Le type de la variable est ici une chaîne de caractère, mais il y en a d'autres que l'on verra plus tard.">chaîne</span>;
+
+
+affiche('Quel est votre nom ?');
+lit(nom);
+affiche('Bonjour ' + nom + ' !');</code></pre>
+          </div>
           <div class="container-fluid">
             <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les chaînes de caractères peuvent être composées de n'importe quels caractères (lettre, majuscules, minuscules, chiffres, caractères accentués, caractères spéciaux...).
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On parle ici de langage <strong>fortement typé</strong> (Java, C++...), c'est-à-dire qu'on ne peut stocker qu'un seul type de valeur dans une variable. Il existe aussi des langages <strong>faiblement typés</strong> où l'on peut stocker n'importe quel type dans une variable (Javascript, PHP...). Dans ce cas, on ne spécifie pas le type.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="variablesettypes-affectation" class="step slide term-2-2">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Initialisation et affectation de variables</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une fois déclarée, la variable est <strong>indéfinie</strong> puisqu'elle n'a pas encore de valeur. Elle doit donc être <strong>initialisée</strong>, c'est-à-dire qu'on doit lui donner une valeur avant de pouvoir la référencer quelque part. Par la suite, on peut lui <strong>affecter</strong> d'autres valeurs au fur et à mesure de l'algorithme.
+            </div>
+          </div>
+          <div class="container-fluid text-left">
+            <div class="row">
+                <div class="col-6 text-left" >
+                           
+                    <pre><code class="ada">msg : chaîne;
+ch : chaîne;
+<span class="text-primary" id="term2-2-msglbl1">msg</span> := 'Bonjour ';<span id="term2-2-msg0"></span>
+affiche('Quel est votre prénom ?');
+lit(<span class="term2-2-nomprenomlbl1">ch</span>);<span id="term2-2-nomprenom"></span>
+<span class="term2-2-msglbl2">msg</span> := <span class="term2-2-msglbl2">msg</span> + <span class="term2-2-nomprenomlbl1">ch</span>;<span id="term2-2-msg"></span>
+affiche('Quel est votre nom ?');
+lit(<span class="term2-2-nomprenomlbl2">ch</span>);<span id="term2-2-nomprenom2"></span>
+<span class="term2-2-msglbl3">msg</span> := <span class="term2-2-msglbl3">msg</span> + <span class="term2-2-nomprenomlbl2">ch</span> + ' !';<span id="term2-2-msg2"></span>
+affiche(<span class="term2-2-msglbl3">msg</span>);</code></pre>
+                </div>
+            <div class="col-6 text-left" >
+                <div id="term-2-2"></div>
+            </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On parle ici de langage <strong>fortement typé</strong> (Java, C++...), c'est-à-dire qu'on ne peut stocker qu'un seul type de valeur dans une variable. Il existe aussi des langages <strong>faiblement typés</strong> où l'on peut stocker n'importe quel type dans une variable (Javascript, PHP...). Dans ce cas, on ne spécifie pas le type.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="variablesettypes-typeentier" class="step slide term-3">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Type entier</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu que nous pouvions stocker des chaînes de caractères dans des variables. Que se passe-t-il si l'on souhaite effectuer des opérations arithmétiques (additions ou multiplications par exemple) avec des nombres entiers ? Une chaîne de caractères ne peut être utilisée pour effectuer ces opérations puisqu'elle peut contenir n'importe quel caractère. On utilise le type <strong>entier</strong>.
+            </div>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="row smaller-text">
+                <div class="col-6 text-left">
+                    <pre><code class="ada">nombre : entier;
+affiche('Nombre entre 1 et 10');
+lit(<span id="term3-nom">nombre</span>);<span id="term3-nom2"></span>
+affiche('Carré : ' + <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
+    data-title="Expression arithmétique" data-content="Comme la variable <code>nombre</code> contient un nombre entier, on peut effectuer une multiplication et afficher le résultat (on part du principe que l'instruction <code>affiche</code> sait afficher des variables de type entier). ">nombre*nombre</span>);</code></pre>
+                </div>
+                <div class="col-6 text-left little-top-margin" >
+                    <div id="term-3"></div>
+                </div>
+            </div>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les autres opérateurs arithmétiques peuvent être utilisés : <code>+ / * </code> et combinés. Les règles de priorité sur les opérateurs sont celles des mathématiques.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="variablesettypes-typereel" class="step slide term-3">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Type réel</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ajouter, soustraire et multiplier des entiers fonctionne bien. Qu'en est-il de la division de deux entiers ? Cela ne produit pas systématiquement un entier. On doit alors utiliser le type <strong>réel</strong>.
+            </div>
+          </div>
+          <div class="container-fluid text-left">
+                    <pre><code class="ada">nbEntier, deux, cinq, dix : entier;
+nbReelFini, nbReelNonFini : réel;
+
+<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+    data-title="Affectation d'un entier" data-content="Pour affecter un entier, il suffit de l'écrire directement. Attention, <code>10</code> est ici bien un entier mais <code>'10'</code> serait une chaîne de caractère, et il ne serait pas possible d'effectuer des opérations dessus.">dix := 10;</span>
+cinq := 5;
+deux := 10 / 5;<span class="badge-primary badge">=&gt; <script>document.write(10/5)</script></span>
+nbEntier := cinq / deux;<span class="badge-warning badge">=&gt; 2</span>
+nbReelFini := cinq / deux;<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+    data-title="Entier/Réel" data-content="<code>2</code> est un entier mais <code>2.0</code> est un réel même si mathématiquement, les valeurs sont identiques. Ainsi lorsqu'on utilise <code>2.0</code>, les calculs seront effectués en valeur approchée."><span class="badge-primary badge">=&gt; 2.0</span></span>
+nbReelFini := cinq / nbReelFini;<span class="badge-primary badge">=&gt; 2.5</span>
+nbReelNonFini := 2 / 3;<span class="badge-warning badge">=&gt; <script>document.write(2/3);</script></span></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Généralement dans les langages de programmation typés, la division de deux entiers produit un entier. Il faut que l'un de deux opérandes soit un réel pour produire un réel. A noter que lorsque le résultat n'est pas fini, ce dernier est arrondi.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="variablesettypes-exo" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Exercice</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ecrire un algorithme permettant à un utilisateur de calculer son âge en lui demandant son année de naissance et l'année en cours (on ne tient pas compte des jours et des mois).
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Comment faire maintenant si l'on souhaite calculer également l'âge de tous ses enfants ? Comment gérer le cas où l'utilisateur renseigne une année de naissance supérieure à l'année en cours ?
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="conditioniteration" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Conditions et itérations</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsqu'on écrit un algorithme, nous avons rapidement besoin de pouvoir effectuer des portions d'algorithmes plusieurs fois, ou d'exécuter une portion d'algorithme uniquement dans tel ou tel cas. Pour cela, on doit d'abord définir comment <em>isoler</em> un ensemble d'instructions pour former un <strong>bloc</strong>.
+            </div>
+          </div>
+          <div class="container-fluid small-font text-left">
+            <div class="row">
+                
+                <div class="col-6">
+                    <h3 class="display-4">Condition</h3>
+                    <pre><code class="ada">nombre : entier;
+affiche('Pair ou impair ? Entre un nombre : ');
+lit(nombre);
+</code></pre>
+<em>Si nombre est pair on exécute l'instruction suivante</em>
+<pre><code class="ada">     affiche(nombre + ' est pair !');</code></pre>
+<em>Sinon, on exécute l'instruction suivante</em>
+<pre><code class="ada">     affiche(nombre + ' est impair !');</code></pre>
+                </div>
+                <div class="col-6">
+                    <h3 class="display-4">Itération</h3>
+                    <pre><code class="ada">x, y, resultat : entier;
+affiche('On souhaite calculer x ^ y. Entrer x : ');
+lit(x);
+affiche('Entrer y');
+lit(y);
+resultat := 1;
+</code></pre>
+<em>Exécuter l'instruction suivante y fois</em>
+<pre><code class="ada">     resultat := resultat * x;
+
+affiche(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
+                </div>
+            </div>
+            
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On prendra l'habitude <strong>d'indenter</strong>, c'est-à-dire de décaler par plusieurs espaces ou une tabulation (il faut cependant garder toujours le même espacement pour des raisons de lisibilité) les instructions contenues dans le bloc. Voyons maintenant comment écrire ces itérations et conditions.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="conditioniteration-condition" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Conditions</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour pouvoir exécuter un bloc de code en fonction d'une condition, nous devons déjà définir la notion <strong>d'expression booléenne</strong> ou <strong>d'instruction conditionnelle</strong>. Cela représente une instruction qui renvoie <code>vrai</code> ou <code>faux</code>. On introduit donc par la même occasion un nouveau type, le <strong>type booléen</strong> qui ne peut prendre que ses deux valeurs.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <div class="row">
+                <div class="col-6">
+                    <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+                        data-title="Début de condition" data-content="Le mot réservé <code>si</code> signale le début d'une instruction conditionnelle. L'instruction qui suit doit être une expression booléenne."><span class="text-primary">si</span></span> condition <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+                            data-title="Début de bloc" data-content="Le mot réservé <code>alors</code> signale le début du bloc d'instructions à exécuter dans le cas ou la condition est vraie."><span class="text-primary">alors</span></span>
+    instructions...
+<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+    data-title="Fin de bloc" data-content="Le mot réservé <code>finsi</code> signale la fin du bloc d'instructions ainsi que la fin de l'instruction conditionnelle. Les instructions suivantes seront exécutées normalement."><span class="text-primary">finsi</span></span>
+
+<span class="text-primary">si</span> condition <span class="text-primary">alors</span>
+    instructions...
+<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+    data-title="Cas par défaut" data-content="Le mot réservé <code>sinon</code> permet d'exécuter les instructions contenues dans le bloc suivant dans le cas ou la condition est fausse."><span class="text-primary">sinon</span></span>
+    instructions...
+<span class="text-primary">finsi</span>
+
+<span class="text-primary">si</span> condition <span class="text-primary">alors</span>
+    instructions...
+<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+     data-title="Conditions multiples" data-content="On peut tester autant de conditions que l'on veut. Dans ce cas, il suffit d'enchaîner les bloc <code>sinon si</code>. A noter que c'est la première condition satisfaite qui prévaut. Lorsqu'on rentre dans un bloc, on sort ensuite de l'instruction conditionnelle, et ce même si d'autres conditions suivantes auraient pu être satisfaites. Il est recommandé d'écrire des conditions qui <em>s'excluent</em>."><span class="text-primary">sinon si</span></span> condition <span class="text-primary">alors</span>
+    instructions...
+<span class="text-primary">sinon</span>
+    instructions...
+<span class="text-primary">finsi</span></code></pre></div>
+                <div class="col-6">
+                    <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-title="Test d'égalité" data-content="Attention, ceci n'est pas une affectation, on n'utilise pas <code>:=</code> mais <code>=</code>. Ainsi <code>x = 0</code> est une expression booléenne renvoyant <code>vrai</code> si x vaut 0, <code>faux</code> sinon."><span class="text-primary">si</span></span> x = 0 <span class="text-primary">alors</span>
+    affiche('x est nul !');
+<span class="text-primary">finsi</span>
+
+<span class="text-primary">si</span> x &lt; 0 <span class="text-primary">alors</span>
+    affiche('x est négatif !');
+<span class="text-primary">sinon</span>
+    affiche('x est positif ou nul !');
+<span class="text-primary">finsi</span>
+
+<span class="text-primary">si</span> x &lt; 0 <span class="text-primary">alors</span>
+    affiche('x est négatif !');
+<span class="text-primary">sinon si</span> x &gt; 0 <span class="text-primary">alors</span>
+    affiche('x est positif !');
+<span class="text-primary">sinon</span>
+    affiche('x est nul !');
+<span class="text-primary">finsi</span></code></pre></div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que <code>si</code>, <code>alors</code>, <code>sinon</code> et <code>finsi</code> sont désormais des <strong>mots réservés</strong>. Ils ne peuvent être utilisés en tant qu'identificateur pour des variables.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="conditioniteration-expressionsbooleennes1" class="step slide">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">Expressions booléennes (1/2)</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu des expressions booléennes simples. Dans la réalité, les conditions sont souvent plus complexes et combinées. Voyons quelques exemples. Soit <code>A</code> et <code>B</code> des expressions booléennes simples (comme <code>x = 0</code> par exemple).
+                    </div>
+                </div>
+                <div class="container-fluid small-font text-left">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3 class="display-5">Négation</h3>
+                            <p>La négation permet d'inverser la condition. </p>
+                            <pre><code class="ada">non A
+        non x = 0 
+        <em>équivalent à </em>x &ne; 0</code></pre>
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">A</th>
+                                  <th scope="col">non A</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>vrai</td>
+                                  <td>faux</td>
+                                </tr>
+                                <tr>
+                                  <td>faux</td>
+                                  <td>vrai</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="display-5">Intersection</h3>
+                            <p>Le résultat d'une intersection est vrai lorsque les deux opérandes sont vrais. </p>
+                            <pre><code class="ada">A et B
+        x &gt; 0 et x &lt; 5 
+        <em>est vrai si x est compris entre 1 et 4,
+        faux sinon</em></code></pre>
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">A</th>
+                                  <th scope="col">B</th>
+                                  <th scope="col">A et B</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>vrai</td>
+                                  <td>vrai</td>
+                                  <td>vrai</td>
+                                </tr>
+                                <tr>
+                                  <td>vrai</td>
+                                  <td>faux</td>
+                                  <td>faux</td>
+                                </tr>
+                                <tr>
+                                  <td>faux</td>
+                                  <td>vrai</td>
+                                  <td>faux</td>
+                                </tr>
+                                <tr>
+                                  <td>faux</td>
+                                  <td>faux</td>
+                                  <td>faux</td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+              <div class="container-fluid">
+                <div class="alert alert-primary small-font" role="alert">
+                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que dans le cas d'une intersection, si le premier opérande est faux, le deuxième n'est même pas évalué.
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="conditioniteration-expressionsbooleennes2" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Expressions booléennes (2/2)</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu des expressions booléennes simples. Dans la réalité, les conditions sont souvent plus complexes et combinées. Voyons quelques exemples. Soit <code>A</code> et <code>B</code> des expressions booléennes simples (comme <code>x = 0</code> par exemple).
+            </div>
+          </div>
+          <div class="container-fluid small-font text-left">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="display-5">Union</h3>
+                    <p>L'union permet de s'assurer qu'au moins un des deux opérandes est vrai.</p>
+                    <pre><code class="ada">A ou B
+autorisationParentale : booléen;
+age &gt;= 18 ou autorisationParentale
+&nbsp;</code></pre>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">A</th>
+                          <th scope="col">B</th>
+                          <th scope="col">A ou B</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>vrai</td>
+                          <td>vrai</td>
+                          <td>vrai</td>
+                        </tr>
+                        <tr>
+                          <td>vrai</td>
+                          <td>faux</td>
+                          <td>vrai</td>
+                        </tr>
+                        <tr>
+                          <td>faux</td>
+                          <td>vrai</td>
+                          <td>vrai</td>
+                        </tr>
+                        <tr>
+                          <td>faux</td>
+                          <td>faux</td>
+                          <td>faux</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <h3 class="display-5">Union exclusive</h3>
+                    <p>L'union exclusive permet de s'assurer qu'un et un seul des deux opérandes est vrai.</p>
+                    <pre><code class="ada">A xou B
+fromage, dessert : booléen;
+fromage xou dessert</code></pre>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">A</th>
+                          <th scope="col">B</th>
+                          <th scope="col">A xou B</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>vrai</td>
+                          <td>vrai</td>
+                          <td>faux</td>
+                        </tr>
+                        <tr>
+                          <td>vrai</td>
+                          <td>faux</td>
+                          <td>vrai</td>
+                        </tr>
+                        <tr>
+                          <td>faux</td>
+                          <td>vrai</td>
+                          <td>vrai</td>
+                        </tr>
+                        <tr>
+                          <td>faux</td>
+                          <td>faux</td>
+                          <td>faux</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que dans le cas d'une union classique, si le premier opérande est vrai, le deuxième n'est même pas évalué.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="conditioniteration-iteration" class="step slide term-4">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Itérations</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Afin d'éviter de dupliquer un bloc de code, ou lorsqu'on ne sait pas à l'avance combien de fois on veut l'exécuter, on utilise les <strong>itérations</strong> (ou boucles). Une itération exécute un bloc de code <strong>tant qu'une condition est vérifiée</strong>. Dès que la condition est fausse, l'itération se termine et la suite du programme s'exécute.
+            </div>
+          </div>
+          <div class="container-fluid small-font text-left">
+            <div class="row">
+                <div class="col-6">
+                    <pre><code class="javascript"><span class="text-primary">tantque</span> condition <span class="text-primary">faire</span>
+    instructions
+<span class="text-primary">finfaire</span>;</code></pre>
+<hr>
+                    <pre><code class="javascript">resultat, x, y, i : entier;
+affiche('On souhaite calculer x ^ y. Entrer x : ');
+lit(<span id="term4-x">x</span>);<span id="term4-xlbl"></span>
+affiche('Entrer y');
+lit(<span id="term4-y">y</span>);<span id="term4-ylbl"></span>
+resultat := 1;
+i := 1;
+<span class="text-primary">tantque</span> i &lt;= y <span class="text-primary">faire</span>
+    <span class="term4-res">resultat</span> := <span class="term4-res">resultat</span> * <span class="term4-x">x</span>;<span id="term4-reslbl"></span>
+    affiche('Calcul... ' + <span class="term4-x">x</span> + ' ^ ' <span class="term4-i">i</span> + ' = ' + <span class="term4-res">resultat</span>);
+    <span class="term4-i">i</span> := <span class="term4-i">i</span> + 1;<span id="term4-ilbl"></span>
+<span class="text-primary">finfaire</span>;
+affiche(x + ' ^ ' y + ' = ' + resultat);</code></pre>
+                </div>
+                <div class="col-6 big-top-margin">
+                    <div id="term-4" class="little-top-margin"></div>
+                </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-warning small-font " role="alert">
+                <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Pour éviter les boucles infinies, il faut bien faire attention à la condition. Généralement les variables sur lesquelles porte la condition doivent être mises à jour dans le bloc de l'itération pour qu'il y ait sortie de boucle à un moment donné.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="conditioniteration-exercice" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Exercice</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ecrire maintenant l'algorithme permettant de demander le nom et l'année de naissance de l'utilisateur. Calculer son age, puis lui demander combien d'enfant il a. Pour chaque enfant, demander son nom et calculer son âge.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il y a encore une duplication au niveau du calcul de l'âge de l'utilisateur et de ses enfants. Comment l'éviter ?
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="proceduresfonctions" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Procédures et fonctions</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour éviter de recopier des portions entières d'algorithmes lorsqu'on en a besoin plusieurs fois à des endroits différents, on peut regrouper ces instructions en une <strong>procédure</strong> ou une <strong>fonction</strong> qui sera nommée. Il suffira ensuite d'utiliser le nom de la procédure ou fonction pour exécuter les instructions.
+            </div>
+          </div>
+          <div class="container-fluid small-font text-left">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="display-4">Procédure</h3>
+                    <p>Une procédure est simplement un regroupement d'instructions.</p>
+                    <pre class="big-top-margin"><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
+                        data-title="Déclaration de procédure" data-content="Une procédure doit être déclarée pour pouvoir être appelée. On utilise donc le mot réservé <code>procédure</code>"><span class="text-primary">procédure</span></span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+                            data-title="Nom de la procédure" data-content="De la même manière qu'une variable, il faut nommer une procédure. C'est ce dernier qui sera utilisé pour appeler la procédure">bonjour</span>
+<span class="text-primary">debproc</span>
+    <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+        data-title="Corps de la procédure" data-content="On appelle <em>corps de la procédure</em> l'ensemble des instructions qui constituent la procédure. Ces instructions ne sont exécutées que lorsque la procédure est appelée. Ils sont délimités par les mots réservés <code>debproc</code> et <code>finproc</code>">affiche('Quel est votre nom ?');
+    lit(nom);
+    affiche('Bonjour ' + nom + ' !');</span>
+<span class="text-primary">finproc</span>;
+
+...
+
+<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+    data-title="Appel de procédure" data-content="Pour appeler une procédure, il suffit de faire référence à son nom. Comme toute instruction, on finit par un <code>;</code>">bonjour;</span></code></pre>
+                </div>  
+                <div class="col-6">
+                    <h3 class="display-4">Fonction</h3>
+                    <p>Une fonction est un regroupement d'instructions mais qui <strong>renvoie</strong> un résultat qui peut être stocké dans une variable ou utilisé directement dans une instruction.</p>
+                    <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+                        data-title="Déclaration de fonction" data-content="Une fonction doit également être déclarée. On utilise le mot réservé <code>fonction</code>"><span class="text-primary">fonction</span></span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
+                            data-title="Nom de la fonction" data-content="De la même manière qu'une procédure, il faut nommer une fonction. C'est ce dernier qui sera utilisé pour appeler la fonction">majeur</span>(âge : entier) <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+                                data-title="Type de retour" data-content="On spécifie le type de la donnée qui sera retournée par la fonction. Ici c'est un booléen, mais cela pourrait être un entier ou une chaîne de caractère par exemple">: booléen</span>
+<span class="text-primary">debfonc</span>
+    <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+        data-title="Corps de la fonction" data-content="On appelle <em>corps de la fonction</em> l'ensemble des instructions qui constituent la fonction. Ces instructions ne sont exécutées que lorsque la fonction est appelée. Ils sont délimités par les mots réservés <code>debfonc</code> et <code>finfonc</code>. Le mot clé <code>retour</code> permet de sortir de la fonction et de renvoyer la valeur. Toute instruction suivant un <code>retour</code> ne sera donc pas exécutée !"><span class="text-primary">si</span> âge &lt; 18 <span class="text-primary">alors</span>
+        retour faux;
+    <span class="text-primary">sinon</span>
+        retour vrai;
+    <span class="text-primary">finsi</span>;</span>
+<span class="text-primary">finfonc</span>;
+...
+estmajeur := majeur(25);<span class="badge badge-success">vrai</span>
+<span class="text-primary">si</span> majeur(12) <span class="text-primary">alors</span>...<span class="badge badge-danger">faux</span></code></pre>
+                </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>affiche()</code> est une procédure
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>lit(var)</code> est une fonction puisqu'elle renvoie une chaîne de caractère.
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Dans le cas d'une fonction, il est obligatoire de renvoyer systématiquement une valeur du bon type. Il ne doit pas y avoir de <em>branche</em> qui ne fait pas de retour.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="proceduresfonctions-parametres" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Paramètres</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est intéressant de développer des procédures et des fonctions <strong>dynamiques</strong>, c'est-à-dire qui peuvent être utilisées avec des données différentes. Pour cela, on peut utiliser des <strong>paramètres</strong> dans nos fonctions et procédures.
+            </div>
+          </div>
+          <div class="container-fluid small-font text-left">
+            <div class="row">
+                <div class="col-6"><pre><code class="ada">fonction saisieNombre() : entier
+nombre : entier;
+debfonc
+    affiche('Entrer un nombre !');
+    lit(entier);
+    retour(entier);
+finfonc;
+
+procédure calculPuissance(message : chaîne)
+x, y : entier;
+debproc
+    affiche(message);
+    x = saisieNombre();
+    y = saisieNombre();
+    affiche(x + ' ^ ' + y + ' = ' + puissance(x,y));
+finproc;</code></pre></div>
+                <div class="col-6"><pre><code class="ada">fonction puissance(a : entier, b : entier) : entier
+resultat, i : entier;
+debfonc
+    resultat := 1;
+    i := 1;
+    tantque i &lt;= b faire
+        resultat := resultat * a;
+        i := i + 1;
+    finfaire;
+    retour resultat;
+finfonc;
+
+calculPuissance('Calcul de x ^ y : ');</code></pre></div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les paramètres sont des variables particulières puisqu'elles n'ont de valeur que lors de l'appel de la procédure ou la fonction. Il n'y a pas d'affectation explicite.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="proceduresfonctions-exercice" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Exercice</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ecrire le même algorithme que dans l'exercice précédent mais en introduisant des procédures et des fonctions pour rendre le code aussi propre et concis que possible, sans duplication. 
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
             </div>
           </div>
         </div>
