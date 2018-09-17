@@ -93,9 +93,51 @@
           <div class="container small-font  big-top-margin">
             <img src="img/wordcloud.png" alt="" width="1200">
           </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="introduction-langages" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Langages de programmation</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Au tout début de l'informatique, les programmes étaient développés en <strong>langage machine</strong>, c'est-à-dire des 0 et des 1 qui étaient directement interpretables et exécutables par le processeur de l'ordinateur. Cela a évidemment été très vite compliqué. Un premier langage de bas niveau est apparu, le <strong>langage assembleur</strong>, un langage très proche du langage machine mais lisible par un être humain.
+            </div>
+          </div>
+          <div class="container small-font  big-top-margin">
+            <img src="img/compilation.png" alt="">
+          </div>
           <div class="container-fluid">
             <div class="alert alert-primary small-font big-top-margin" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous allons utiliser dans ce cours un <em>pseudo-langage</em> permettant de comprendre les concepts de l'algorithmique.
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les langages utilisés maintenant sont dits de <strong>haut niveau</strong>. Ces langages sont transformés ou <strong>compilés</strong> en langage assembleur puis <strong>assemblés</strong> en langage machine pour pouvoir être exécutés par le processeur.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="introduction-compilation" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Compilation</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour passer d'un code source en langage de haut niveau à un code en langage assembleur, on passe par ce que l'on appelle un <strong>compilateur</strong>. Il effectue les actions suivantes sur le code source : 
+            </div>
+          </div>
+          <div class="container small-font  big-top-margin">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Analyse lexicale</strong> : Cela permet d'isoler chaque <em>mot</em> et de le qualifier (est-ce un mot réservé du langage, est-ce une valeur, un identificateur ?).</li>
+                <li class="list-group-item"><strong>Analyse syntaxique</strong> : Cela permet de vérifier que l'enchainement des mots est valide par rapport à la grammaire du langage.</li>
+                <li class="list-group-item"><strong>Analyse sémantique</strong> : Cela permet de vérifier que le types des variables sont respectés ou qu'elles ont été bien déclarées par exemple.</li>
+            </ul>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font big-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;En cas de problème à l'une des étapes ci-dessus, la compilation génère des erreurs et le programme ne peut être exécuté. Nous allons utiliser dans ce cours un <em>pseudo-langage</em> permettant de comprendre les concepts de l'algorithmique.
             </div>
           </div>
         </div>
@@ -140,7 +182,7 @@ affiche('Bonjour ' <span data-toggle="popover" data-offset="0" data-trigger="hov
             </div>
             <div class="container-fluid">
                 <div class="alert alert-primary small-font " role="alert">
-                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les chaînes de caractères peuvent être composées de n'importe quels caractères (lettre, majuscules, minuscules, chiffres, caractères accentués, caractères spéciaux...).
+                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les chaînes de caractères peuvent être composées de n'importe quels caractères (lettres, majuscules, minuscules, chiffres, caractères accentués, caractères spéciaux...).
                 </div>
             </div>
         </div>
@@ -229,7 +271,7 @@ ch : chaîne;
 <span class="text-primary" id="term2-2-msglbl1">msg</span> := 'Bonjour ';<span id="term2-2-msg0"></span>
 affiche('Quel est votre prénom ?');
 lit(<span class="term2-2-nomprenomlbl1">ch</span>);<span id="term2-2-nomprenom"></span>
-<span class="term2-2-msglbl2">msg</span> := <span class="term2-2-msglbl2">msg</span> + <span class="term2-2-nomprenomlbl1">ch</span>;<span id="term2-2-msg"></span>
+<span class="term2-2-msglbl2">msg</span> := <span class="term2-2-msglbl2">msg</span> + <span class="term2-2-nomprenomlbl1">ch</span> + ' ';<span id="term2-2-msg"></span>
 affiche('Quel est votre nom ?');
 lit(<span class="term2-2-nomprenomlbl2">ch</span>);<span id="term2-2-nomprenom2"></span>
 <span class="term2-2-msglbl3">msg</span> := <span class="term2-2-msglbl3">msg</span> + <span class="term2-2-nomprenomlbl2">ch</span> + ' !';<span id="term2-2-msg2"></span>
@@ -786,7 +828,7 @@ nombre : entier;
 debfonc
     affiche('Entrer un nombre !');
     lit(entier);
-    retour(entier);
+    retour entier;
 finfonc;
 
 procédure calculPuissance(message : chaîne)
@@ -832,11 +874,6 @@ calculPuissance('Calcul de x ^ y : ');</code></pre></div>
           </div>
           <div class="container small-font text-left">
             <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
-            </div>
           </div>
         </div>
       </div>

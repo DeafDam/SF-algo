@@ -75,7 +75,7 @@ rootElement.addEventListener( "impress:stepenter", function(event) {
         $("#term2-2-nomprenom").html('<span class="badge badge-warning">=&gt; \''+prenom+'\'</span>');
         $(".term2-2-msglbl2").addClass('text-primary');
         $("#term2-2-msg").addClass('text-primary');
-        $("#term2-2-msg").html('<span class="badge badge-primary">=&gt; \'Bonjour '+prenom+'\'</span>');
+        $("#term2-2-msg").html('<span class="badge badge-primary">=&gt; \'Bonjour '+prenom+' \'</span>');
 
         myTerminal4.input("Quel est votre nom ?", function (nom) {
           $("#term2-2-msg").html('');
