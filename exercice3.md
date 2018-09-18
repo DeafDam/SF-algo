@@ -1,16 +1,18 @@
 ```
-fonction calculAge(anneeEnCours : entier, anneeNaissance : entier) : entier;
-debfonc
-  retour anneeEnCours - anneeNaissance;
-finfonc;
-
-procedure litEntier(message : chaîne) : entier;
-monEntier : entier;
-debfonc 
-  affiche(message);
-  lit(monEntier);
-  retour monEntier;
-finfonc;
+nom : chaîne;
+anneeNaissance, anneeEnCours, nbEnfants, numEnf : entier;
+affiche('Quel est votre nom ?');
+lit(nom);
+affiche('Quelle est votre année de naissance ?');
+lit(anneeNaissance);
+anneeEnCours :=litEntier('Quelle est l'année en cours ?');
+demandeEtAfficheAge(nom, anneeEnCours);
+nbEnfants := litEntier(nom + ', combien avez vous d'enfants ?');
+numEnf := 1;
+tantque numeroEnfant <= nbEnfants faire
+  demandeEtAfficheAge('Votre enfant numéro ' + numeroEnfant, anneeEnCours);
+  numEnf := numEnf + 1;
+finfaire
 
 procedure demandeEtAfficheAge(nom : chaîne, anneeEnCours : entier)
 nom : chaîne;
@@ -20,18 +22,29 @@ debproc
   affiche(nom + ' a ' + calculAge(anneeEnCours, anneeNaissance) + ' ans');
 finproc
 
-procedure monProgramme
-nom : chaîne;
-anneeNaissance, anneeEnCours, nbEnfants, numEnf : entier;
-debproc
-  affiche('Quel est votre nom ?');
-  lit(nom);
-  anneeEnCours := litEntier('Quelle est l'année en cours ?');
-  demandeEtAfficheAge(nom, anneeEnCours);
-  numEnf := 1;
-  tantque numeroEnfant <= nbEnfants faire
-    demandeEtAfficheAge('Votre enfant numéro ' + numeroEnfant, anneeEnCours);
-    numEnf := numEnf + 1;
-  finfaire
-finproc
+fonction litEntier(message : chaîne) : entier;
+monEntier : entier;
+debfonc 
+  affiche(message);
+  lit(monEntier);
+  retour monEntier;
+finfonc;
+
+fonction calculAge(anneeEnCours : entier, anneeNaissance : entier) : entier
+debfonc
+  si anneeCorrecte(anneeEnCours) et anneeCorrecte(anneeNaissance) alors
+      si anneeEnCours >= anneeNaissance alors
+        retour anneeEnCours - anneeNaissance;
+      finsi;
+      affiche('Il est impossible qu'une personne soit née après ' + anneeEnCours);
+
+  finsi;
+  affiche('Une des deux années renseignées est incorrecte !');
+  retour -1;
+finfonc
+
+fonction anneeCorrecte(annee : entier) : booléen
+debfonc
+	retour annee > 1900 ;
+finfonc
 ```
