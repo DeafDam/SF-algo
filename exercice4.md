@@ -1,4 +1,3 @@
-Exercice 4 :
 Une boulangerie est ouverte de 7h à 13h et de 16h à 19h, sauf le dimanche après-midi et le lundi toute la journée. Ecrire la fonction permettant de savoir si la boulangerie est ouverte : 
 ```
 jourActuel : chaîne;
@@ -11,6 +10,7 @@ si boulangerieOverte(heureActuelle, jourActuel) alors
    affiche('La boulangerie est fermée !');
  finsi;
 ```
+Variante 
 ```
 fonction boulangerieOuverte(heure : entier, jour : chaîne) : booléen
 debfonc
@@ -29,6 +29,7 @@ debfonc
   finsi;
 finfonc
 ```
+Variante
 ```
 fonction boulangerieOuverte(heure : entier, jour : chaîne) : booléen
 debfonc
@@ -42,6 +43,8 @@ debfonc
 	retour ouvert;
 finfonc
 ```
+Variante en une ligne
+
 ```
 fonction boulangerieOuverte(heure : entier, jour : chaîne) : booléen
 debfonc

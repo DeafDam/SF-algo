@@ -42,9 +42,9 @@ Variante sans utiliser min2
 ```
 fonction min3(a : entier, b : entier c : entier) : entier
 debfonc
-	si a < b et a < c
+	si a <= b et a <= c
 		retour a;
-	sinon si b < c et b < a 
+	sinon si b <= c et b <= a 
 		retour b;
 	sinon
 		retour c;
