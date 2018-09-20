@@ -59,19 +59,3 @@ debfonc
 	 ou (d1.année = d2.année et d1.mois = d2.mois et d1.jour < d2.jour);
 finfonc;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-finfonc;
-
-	
