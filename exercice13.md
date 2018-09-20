@@ -27,11 +27,11 @@ debproc
 	nbrB5 := 0;
 	nbrP1 := 0;
 	reste := montantVersé - montantDu;
-	tantque reste > 10 faire
+	tantque reste >= 10 faire
 		reste := reste - 10;
 		nbrB10 := nbrB10 + 1;
 	finfaire;
-	tantque reste > 5 faire
+	tantque reste >= 5 faire
 		reste := reste - 5;
 		nbrB5 := nbrB5 + 1;
 	finfaire;
