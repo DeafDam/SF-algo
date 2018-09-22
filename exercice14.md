@@ -8,15 +8,3 @@ Et de la syntaxe :
 chaîne[4] => 5e caractère de la chaîne
 chaîne[4] := '\*',
 
-```
-procedure remplaceEtoile(caractere : chaîne, phrase : chaîne)
-i : entier;
-debfonc
-	i := 0;
-	tantque i < longueur(phrase) faire
-		si phrase[i] = caractere alors
-			phrase[i] := '*'
-		finsi;
-	finfaire;
-finfonc
-```

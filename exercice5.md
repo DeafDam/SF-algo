@@ -13,22 +13,4 @@ Le modulo est le reste de la division entière.
 Wikipédia : une année est bissextile si l'année est divisible par 4 et non divisible par 100, ou
 si l'année est divisible par 400.
 
-```
-fonction bissextile(annee : entier) : booléen
-debfonc
-  si annee mod 4 != 0 alors
-    retour faux;
-  sinonsi annee mod 100 = 0 et annee mod 400 != 0
-    retour faux;
-  sinon
-    retour vrai;
-  finsi;
-finfonc;
-```
-```
-fonction bissextile(annee : entier) : booléen
-debfonc
-  retour annee mod 4 = 0 et (annee mod 100 != 0 ou annee mod 400 = 0);
-finfonc;
-```
 
