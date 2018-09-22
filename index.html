@@ -355,6 +355,36 @@ nbReelNonFini := 2 / 3;<span class="badge-warning badge">=&gt; <script>document.
       </div>
     </div>
 
+    <div id="variablesettypes-structure" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Type structuré</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Avant de parler de programmation objet dans un prochain cours, une première étape consiste à utiliser un type structuré permettant de représenter des données composées.
+            </div>
+          </div>
+          <div class="container text-left">
+            <pre><code class="ada">type personne = structure 
+    nom : chaîne;
+    prenom : chaîne;
+    âge : entier;
+fin;
+
+p : personne;
+p.nom := 'Pierre-Julien';
+p.prenom := 'Villoud';
+p.âge := 31;</code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Cela permet de représenter des données plus complexes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="variablesettypes-exo" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
@@ -481,7 +511,7 @@ affiche(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
           </div>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que <code>si</code>, <code>alors</code>, <code>sinon</code> et <code>finsi</code> sont désormais des <strong>mots réservés</strong>. Ils ne peuvent être utilisés en tant qu'identificateur pour des variables.
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que <code>si</code>, <code>alors</code>, <code>sinon</code> et <code>finsi</code> sont désormais des <strong>mots réservés</strong>. Ils ne peuvent être utilisés en tant qu'identificateur pour des variables. On peut également <em>imbriquer</em> d'autres <code>si ... finsi</code> à l'intérieur des instructions permettant de modéliser des cas plus complexes.
             </div>
           </div>
         </div>
@@ -504,7 +534,7 @@ affiche(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
                             <p>La négation permet d'inverser la condition. </p>
                             <pre><code class="ada">non A
         non x = 0 
-        <em>équivalent à </em>x &ne; 0</code></pre>
+        <em>équivalent à </em>x &ne; 0  <em>ou </em> x != 0</code></pre>
                             <table class="table">
                               <thead>
                                 <tr>
@@ -528,7 +558,7 @@ affiche(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
                             <h3 class="display-5">Intersection</h3>
                             <p>Le résultat d'une intersection est vrai lorsque les deux opérandes sont vrais. </p>
                             <pre><code class="ada">A et B
-        x &gt; 0 et x &lt; 5 
+        x &gt; 0 et x &le; 4 (ou x &lt;= 4)
         <em>est vrai si x est compris entre 1 et 4,
         faux sinon</em></code></pre>
                             <table class="table">
@@ -568,7 +598,7 @@ affiche(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
                 </div>
               <div class="container-fluid">
                 <div class="alert alert-primary small-font" role="alert">
-                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que dans le cas d'une intersection, si le premier opérande est faux, le deuxième n'est même pas évalué.
+                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que dans le cas d'une intersection et dans la plupart des langages de programmation, si le premier opérande est faux, le deuxième n'est même pas évalué.
                 </div>
               </div>
             </div>
@@ -903,7 +933,7 @@ calculPuissance('Calcul de x ^ y : ');</code></pre></div>
           </div>
           <div class="container-fluid">
             <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une <strong>chaîne de caractère</strong> peut être considérée comme un tableau de caractères, c'est d'ailleurs de cette manière qu'elle est souvent représentée en programmation (comme en C avec <code>char[]</code>).
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une <strong>chaîne de caractère</strong> peut être considérée comme un tableau de caractères, c'est d'ailleurs de cette manière qu'elle est souvent représentée en programmation (comme en C avec <code>char[]</code>). Le type <code>chaîne</code> introduit jusqu'ici peut donc être utilisé de la même manière qu'un vecteur.
             </div>
           </div>
         </div>
@@ -1039,11 +1069,12 @@ v := entier[3];</code></pre>
             <pre><code class="ada">v : entier[];
 nb, taille : entier;
 v := entier[5];
-...
-nb := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Premier élément du vecteur">v[0]</span>;
-<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-title="" data-content="Dernier élément du vecteur">v[4]</span> := nb;
+
+nb := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Premier élément du vecteur, mais <code>nb</code> vaut <em>indéfini</em> car aucune valeur n'a été affectée à cet indice.">v[0]</span>;
+<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-title="" data-content="Dernier élément du vecteur">v[4]</span> := 12;
+nb := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Cette fois-ci, <code>nb</code> vaut bien 12">v[4]</span>;
 taille := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Nombre d'éléments du vecteur">longueur(v)</span>;
-<span class="text-danger">taille := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Cette instruction provoque une erreur car il n'y a que 5 éléments maximum dans mon vecteur">v[5]</span></span>;
+<span class="text-danger">nb := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Cette instruction provoque une erreur car il n'y a que 5 éléments maximum dans mon vecteur">v[5]</span></span>;
 </code></pre>
           </div>
           <div class="container-fluid">
@@ -1227,6 +1258,56 @@ finfaire;</code></pre>
           <div class="container-fluid">
             <div class="alert alert-primary small-font " role="alert">
                 <i class="fa fa-icon fa-info-circle"></i>&nbsp;Si on souhaite parcourir un vecteur à trois dimensions, on imbriquera de nouveau un <code>tantque</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-insertion" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Insertions</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Insérer une valeur dans un vecteur est possible si le vecteur n'est pas plein. Voici plusieurs méthodes pour effectuer une insertion.
+            </div>
+          </div>
+          <div class="container small-font text-left big-top-margin">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur non trié</strong> : On utilisera un algorithme de recherche séquentielle afin de trouver un indice dans le vecteur où il y a une valeur <em>indéfini</em>. Le cas échéant, on place alors l'élément à l'indice.</li>
+                <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur trié</strong> : On utilisera un algorithme de recherche séquentielle dans un vecteur trié afin de trouver l'indice auquel l'élément devrait être placé. Il faut ensuite décalé les éléments supérieurs.</li>
+                <li class="list-group-item"><strong>Méthode dichotomique dans un vecteur trié</strong> : Idem que la méthode précédente sauf qu'on utilise une recherche dichotomique pour trouver l'indice.</li>
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voyons maintenant comment supprimer un élément d'un vecteur
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-suppression" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Suppressions</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Supprimer une valeur dans un vecteur est possible si la valeur existe dans le vecteur. Voici plusieurs méthodes pour effectuer une suppression.
+            </div>
+          </div>
+          <div class="container small-font text-left big-top-margin">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur non trié</strong> : On utilisera un algorithme de recherche séquentielle afin de trouver l'indice de l'élément recherché. S'il existe, on affecte l'élément à la valeur <em>indéfini</em>.</li>
+                <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur trié</strong> : On utilisera un algorithme de recherche séquentielle dans un vecteur trié afin de trouver l'indice de l'élément dans le vecteur. S'il existe on décale les éléments supérieurs vers la gauche</li>
+                <li class="list-group-item"><strong>Méthode dichotomique dans un vecteur trié</strong> : Idem que la méthode précédente sauf qu'on utilise une recherche dichotomique pour trouver l'indice.</li>
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter qu'un vecteur peut contenir plusieurs valeurs égales. Il faut donc savoir si c'est le cas avant d'écrire notre algorithme car l'implémentation peut alors être différente.
             </div>
           </div>
         </div>

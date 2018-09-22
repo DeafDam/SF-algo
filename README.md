@@ -61,3 +61,7 @@ Cours d'algo pour l'IPI
 
 [Exercice vecteurs 14](vecteurs/exercice14.md)
 
+[Exercice vecteurs 15](vecteurs/exercice15.md)
+
+[Exercice vecteurs 16](vecteurs/exercice16.md)
+
