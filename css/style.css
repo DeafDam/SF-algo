@@ -18,6 +18,37 @@
     overflow-x:hidden;
 }
 
+.table.table-bordered td {
+    border: 2px solid;
+}
+
+.table.table-bordered-tr tr {
+    border: 2px solid;
+}
+
+.table.table-bordered-tr td {
+    border: 1px #ABABAB solid;
+}
+
+.list-group-horizontal .list-group-item {
+    display: inline-block;
+}
+.list-group-horizontal .list-group-item {
+    margin-bottom: 0;
+    margin-left:-4px;
+    margin-right: 0;
+    border-right-width: 0;
+}
+.list-group-horizontal .list-group-item:first-child {
+    border-top-right-radius:0;
+    border-bottom-left-radius:4px;
+}
+.list-group-horizontal .list-group-item:last-child {
+    border-top-right-radius:4px;
+    border-bottom-left-radius:0;
+    border-right-width: 1px;
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1281px) {
    nav.navbar {
     padding: 0 5px 0 5px;

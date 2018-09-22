@@ -879,6 +879,360 @@ calculPuissance('Calcul de x ^ y : ');</code></pre></div>
       </div>
     </div>
 
+    <div id="vecteurs" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les vecteurs</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fréquent de vouloir représenter un ensemble de variables d'un même type dans un algorithme. On veut pouvoir généralement parcourir une à une ces variables pour effectuer un traitement dessus, ou accéder à une variable en particulier (la n<sup>ème</sup> par exemple). Un <strong>vecteur</strong> (ou tableau) permet de stocker un nombre illimité de variables d'un même type.
+            </div>
+          </div>
+        </div>
+
+          <div class="container">
+              <div class="small-font text-center">
+                <ul class="list-group">
+                    <li class="list-group-item">Liste de présence =&gt; Vecteur de chaînes de caractère</li>
+                    <li class="list-group-item">Les employés d'une entreprise =&gt; Vecteur d'un type structuré <code>employe</code></li>
+                    <li class="list-group-item">Les livres d'une bibliothèque =&gt; Vecteur d'un type structuré <code>livre</code></li>
+                    <li class="list-group-item">...</li>
+                </ul>
+                <pre><code class="java"></code></pre>
+              </div>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une <strong>chaîne de caractère</strong> peut être considérée comme un tableau de caractères, c'est d'ailleurs de cette manière qu'elle est souvent représentée en programmation (comme en C avec <code>char[]</code>).
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="vecteurs-representation" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Représentation graphique</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un vecteur peut être représenté des manières suivantes : 
+            </div>
+          </div>
+          <div class="container-fluid small-font row big-top-margin">
+              <div class="col-4">
+                  <ul class="list-group small-font">
+                      <li class="list-group-item">Appolinaire Guillaume</li>
+                      <li class="list-group-item">Aragon Louis</li>
+                      <li class="list-group-item">...</li>
+                      <li class="list-group-item">Eluard Paul</li>
+                  </ul>
+              </div>
+              <div class="col-8">
+                  <table class="table table-bordered ">
+                      <tr>
+                          <td>
+                              <ul class="list-group">
+                                  <li class="list-group-item"><strong>Auteur</strong> : Appolinaire Guillaume</li>
+                                  <li class="list-group-item"><strong>Titre</strong> : Calligrammes</li>
+                                  <li class="list-group-item"><strong>Publié en</strong> : avril 1918</li>
+                                  <li class="list-group-item"><strong>Editeur</strong> : Mercure de France</li>
+                              </ul>
+                          </td>
+                          <td>
+                            <ul class="list-group">
+                                  <li class="list-group-item"><strong>Auteur</strong> : Aragon Louis</li>
+                                  <li class="list-group-item"><strong>Titre</strong> : Les Beaux Quartiers</li>
+                                  <li class="list-group-item"><strong>Publié en</strong> : octobre 1936</li>
+                                  <li class="list-group-item"><strong>Editeur</strong> : Denoël</li>
+                              </ul>
+                          </td>
+                          <td>...</td>
+                          <td>
+                            <ul class="list-group">
+                                  <li class="list-group-item"><strong>Auteur</strong> : Eluard Paul</li>
+                                  <li class="list-group-item"><strong>Titre</strong> : Capitale de la douleur</li>
+                                  <li class="list-group-item"><strong>Publié en</strong> : septembre 1936</li>
+                                  <li class="list-group-item"><strong>Editeur</strong> : Denoël</li>
+                              </ul>
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+          <div class="little-top-margin container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Bien que les types structurés soient le plus souvent utilisés, nous prendrons des exemples avec des types simples pour commencer.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-vocabulaire" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Vocabulaire</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voici les différents éléments de vocabulaire lorsqu'on parle de vecteurs
+            </div>
+          </div>
+          <div class="container small-font text-left little-top-margin">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Ensemble des éléments</strong> : Cela correspond à l'ensemble des <em>cases</em> du vecteur.</li>
+                <li class="list-group-item"><strong>Taille</strong> : Cela correspond au nombre d'éléments du vecteur.</li>
+                <li class="list-group-item"><strong>Ensemble des indices</strong> : Cela correspond à l'ensemble des <em>numéros des cases</em> du vecteur (parfois de 1 à <em>taille</em>, mais généralement de 0 à <em>taille - 1</em>). L'indice le plus petit est appelé <em>borne inférieure</em>, le plus grand <em>borne supérieure</em>.</li>
+                <li class="list-group-item"><strong>Parcours</strong> : Lorsqu'on effectue un traitement sur chaque élément d'un vecteur, du premier au dernier.</li>
+                <li class="list-group-item"><strong>Accès direct</strong> : Lorsqu'on veut obtenir la valeur située à un indice donné.</li>
+                <li class="list-group-item"><strong>Tri</strong> : Permet de trier les éléments du tableau selon un critère particulier.</li>
+                <li class="list-group-item"><strong>Recherche</strong> : Lorsqu'on veut rechercher une valeur dans un tableau.</li>
+                <li class="list-group-item"><strong>Sous-vecteur</strong> : Cela représente un sous-ensemble d'un vecteur.</li>
+            </ul>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voyons maintenant comment déclarer et utiliser ces vecteurs.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-declaration" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Déclaration et initialisation d'un vecteur</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Cela dépend des langages de programmation, mais généralement pour déclarer un vecteur, il faut connaître le type de données que l'on souhaite stocker à l'intérieur. Pour l'initialiser, il faut connaître que le nombre d'éléments qui'il contiendra au maximum. Concernant ce dernier paramètre, cela dépend des implémentations.
+            </div>
+          </div>
+          <div class="container little-top-margin">
+            <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+                data-title="" data-content="Nom de la variable">v</span> : <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
+                    data-title="" data-content="Type que contiendra le vecteur">entier</span>[];
+a : chaine[];
+t : booleen[];
+
+v := entier<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Nombre d'éléments maximum du vecteur">[5];</span>
+v := entier[3];</code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font little-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Parce qu'on ne sais pas forcément combien d'éléments un vecteur contiendra, il existe des implémentations où il n'est pas nécessaire de fournir le nombre d'éléments. Le vecteur s'agrandira au fur et à mesure de son remplissage.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-accesdirect" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Accès direct</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour accéder directement à un élément d'un certain indice, on utilise la notation suivante : 
+            </div>
+          </div>
+          <div class="container ">
+            <pre><code class="ada">v : entier[];
+nb, taille : entier;
+v := entier[5];
+...
+nb := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Premier élément du vecteur">v[0]</span>;
+<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-title="" data-content="Dernier élément du vecteur">v[4]</span> := nb;
+taille := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Nombre d'éléments du vecteur">longueur(v)</span>;
+<span class="text-danger">taille := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Cette instruction provoque une erreur car il n'y a que 5 éléments maximum dans mon vecteur">v[5]</span></span>;
+</code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;En fonction des langages de programmation, le fait de vouloir accéder à un indice en dehors des bornes du vecteur résulte au mieux à une <em>valeur indéfinie</em> ou au pire à une <em>erreur d'exécution</em>. Il est donc primordial de s'assurer de la validité d'un indice au sein d'un vecteur. On pourra utiliser la fonction <code>longueur(v)</code> qui donne le nombre d'éléments d'un vecteur.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-parcours" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Parcours séquentiel d'un vecteur</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour effectuer un traitement sur chaque élement d'un vecteur, on utilise une des deux notations suivantes : 
+            </div>
+          </div>
+          <div class="container-fluid row">
+              <div class="col-6">
+                  <div class="container text-left">
+                    <pre><code class="ada">v : entier[];
+...
+i : entier;
+i := 0;
+<span data-toggle="popover" data-offset="120px" data-trigger="hover click" data-placement="top" data-html="true"
+   data-content="Attention ici, il faut bien utiliser un inférieur strict car les indices commencent à 0. Ainsi le dernier élement d'un tableau contenant 5 éléments est bien à l'indice 4 !">tantque i &lt; longueur(v) faire</span>
+    faireQuelqueChoseSur(v[i]);
+    i := i + 1;
+finfaire;</code></pre>
+                </div>
+              </div>
+              <div class="col-6">
+                  <div class="container text-left">
+<pre><code class="ada">v : entier[];
+...
+i : entier;
+pour i := 0 à longueur(v) - 1 faire
+    faireQuelqueChoseSur(v[i]);
+finfaire;</code></pre>
+              </div>
+          </div>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On a parcouru le vecteur <em>de gauche à droite</em> ou <em>du début à la fin</em> mais on peut également le parcourir dans le sens inverse. Dans ce cas, on initialise <code>i := longueur(v) - 1</code> et on décrémente <code>i</code> à chaque itération jusqu'à ce qu'<code>i</code> prenne la valeur <code>0</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-recherche" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Recherches dans un vecteur</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous n'avons jusqu'ici mis aucune condition sur l'ordre des éléments d'un vecteur. Ainsi, si l'on souhaite rechercher une valeur dans un vecteur, on est obligé de parcourir l'ensemble du vecteur, ce qui peut être gourmand en ressources. Voyons ce qu'il est possible de faire avec un vecteur trié. On dit qu'un vecteur est trié si quel que soit <code>i</code> on a <code>V[i+1] &ge; V[i]</code>
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Recherche séquentielle dans un vecteur non trié</strong> : Puisque le vecteur n'est pas trié, nous sommes obligés de parcourir tous les éléments du vecteur jusqu'à la fin si l'élément n'est pas trouvé dans le vecteur, ou jusqu'à ce qu'on rencontre cet élément.</li>
+                <li class="list-group-item"><strong>Recherche séquentielle dans un tableau trié</strong> : Grâce au tri, on peut s'arrêter de chercher si l'élément recherché est supérieur à l'élément lu puisque tous les éléments suivants du vecteur seront supérieurs.</li>
+                <li class="list-group-item"><strong>Recherche dichotomique dans un tableau trié</strong> : Cet algorithme partitionne le vecteur sur lequel on travaille en 3. Un sous-vecteur contenant les indices 1 à m - 1, un sous-vecteur d'un seul élément d'indice m et un autre sous-vecteur contenant les indices m + 1 à n. On regarde si l'élément recherché est situé à l'indice m, si ce n'est pas le cas, on réitère la recherche sur le premier sous-vecteur si l'élément recherché est inférieur à l'élément d'indice m, ou sur le dernier sous-vecteur si l'élément recherché est supérieur à l'indice m.</li>
+            </ul>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;La recherche séquentielle est donc à proscrire dans le cas d'un vecteur trié. Si le vecteur ne l'est pas, il faut évaluer si beaucoup de recherches seront effectuées et si le vecteur contiendra potentiellement beaucoup d'éléments, dans ce cas, cela peut valoir le coup de trier soi-même le vecteur avant de rechercher dans ce dernier.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-tri" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Tri d'un vecteur</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour trier un vecteur non trié, nous avons plusieurs méthodes possibles : 
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Tri par remplacement</strong> : Cet algorithme sélectionne le minimum du vecteur d'origine à chaque itération, le ranger dans un nouveau vecteur que l'on construit et le remplace par une valeur maximum dans le vecteur d'origine pour qu'il ne soit plus récupéré.</li>
+                <li class="list-group-item"><strong>Tri par permutation</strong> : Cet algorithme permet d'éviter la construction d'un nouveau vecteur en considérant que le vecteur est <em>séparé</em> en deux sous-vecteurs, le sous-vecteur contenant <code>i</code> éléments dont les éléments ont été triés, et les <code>n - 1</code> éléments qui restent à trier. A chaque itération, on permute le i<sup>ème</sup> élément avec le minimum du deuxième sous-vecteur.</li>
+                <li class="list-group-item"><strong>Tri par bulle</strong> : Cet algorithme parcourt le sous-vecteur des éléments non triés de droite à gauche, et à chaque fois que deux éléments consécutifs ne sont pas dans l'ordre, on les permute, ce qui permet d'avoir en fin de parcours le plus petit élément du sous-vecteur placé en bonne position. De plus, l'ordre général du sous-vecteur a été amélioré du fait des permutations successives.</li>
+            </ul>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ces algorithmes ont été présentés dans l'ordre de leur coût décroissant.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-multi" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Vecteurs à plusieurs dimensions</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un vecteur pouvant contenir n'importe quel type, on peut donc représenter un vecteur de vecteur, ou vecteurs à deux dimensions. Mais on peut également représenter des vecteurs à trois ou quatre dimensions... Pour déclarer et initialiser un vecteur à deux dimensions, on utilise la notation <code>v : entier[][]; v := entier[3][3];</code>
+            </div>
+          </div>
+          <div class="container small-font text-center big-top-margin">
+            <table class="table table-bordered-tr">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+            </table>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour accéder à un élément d'un vecteur à deux dimensions, on utilise la notation <code>v[i][j]; v[2][1] =&gt; 8</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="vecteurs-multiparcours" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Parcours séquentiel d'un vecteur à deux dimensions</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour effectuer un traitement sur chaque élement d'un vecteur à deux dimensions, on utilise une des deux notations suivantes : 
+            </div>
+          </div>
+          <div class="container-fluid small-font row">
+              <div class="col-6">
+                  <div class="container text-left">
+                    <pre><code class="ada">v : entier[][];
+...
+i,j : entier;
+i := 0; j := 0;
+tantque i &lt; longueur(v) faire
+    tantque j &lt; <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+        data-title="Titre" data-content="<code>v[i]</code> est donc à son tour un vecteur, on peut donc appeler <code>longueur(v[i])</code>">longueur(v[i])</span> faire
+        faireQuelqueChoseSur(v[i][j]);
+        j := j + 1;
+    finfaire;
+    i := i + 1;
+finfaire;</code></pre>
+                </div>
+              </div>
+              <div class="col-6">
+                  <div class="container text-left">
+<pre><code class="ada">v : entier[][];
+...
+i; j : entier;
+pour i := 0 à longueur(v) - 1 faire
+    pour j := 0 à longueur(v[i]) - 1 faire
+        faireQuelqueChoseSur(v[i][j]);
+    finfaire
+finfaire;</code></pre>
+              </div>
+          </div>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Si on souhaite parcourir un vecteur à trois dimensions, on imbriquera de nouveau un <code>tantque</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </div>
 
 
