@@ -33,23 +33,23 @@ Cours d'algo pour l'IPI
 
 [Correction exercice 16](exercice16.md)
 
-[Correction exercice vecteurs 1](evecteurs/xercice1.md)
+[Correction exercice vecteurs 1](vecteurs/exercice1.md)
 
-[Correction exercice vecteurs 2](evecteurs/xercice2.md)
+[Correction exercice vecteurs 2](vecteurs/exercice2.md)
 
-[Correction exercice vecteurs 3](evecteurs/xercice3.md)
+[Correction exercice vecteurs 3](vecteurs/exercice3.md)
 
-[Correction exercice vecteurs 4](evecteurs/xercice4.md)
+[Correction exercice vecteurs 4](vecteurs/exercice4.md)
 
-[Correction exercice vecteurs 5](evecteurs/xercice5.md)
+[Correction exercice vecteurs 5](vecteurs/exercice5.md)
 
-[Correction exercice vecteurs 6](evecteurs/xercice6.md)
+[Correction exercice vecteurs 6](vecteurs/exercice6.md)
 
-[Correction exercice vecteurs 7](evecteurs/xercice7.md)
+[Correction exercice vecteurs 7](vecteurs/exercice7.md)
 
-[Correction exercice vecteurs 8](evecteurs/xercice8.md)
+[Correction exercice vecteurs 8](vecteurs/exercice8.md)
 
-[Correction exercice vecteurs 9](evecteurs/xercice9.md)
+[Correction exercice vecteurs 9](vecteurs/exercice9.md)
 
 [Correction exercice vecteurs 10](vecteurs/exercice10.md)
 
