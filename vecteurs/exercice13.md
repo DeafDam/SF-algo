@@ -16,6 +16,27 @@ donnera
   2 6       1 3  
   9   7   1   4  
 
+```
+procedure ecrireSudoku(s : entier[][])
+i, j : entier;
+debproc
+i := 0;
+	tantque i < longueur(s) faire
+	j := 0;
+		tantque j < longueur(s[i]) faire
+			si s[i][j] = 0 alors
+				affiche(' ');
+			sinon
+				affiche(s[i][j]);
+			finsi;
+			j := j + 1;
+		finfaire
+		affiche('\n');
+		i := i + 1;
+	finfaire
+finproc
+```
+
 Bonus : on pourra essayer d'afficher le sudoku de cette manière : 
 
 [[0, 8, 0, 4, 0, 2, 0, 6, 0],[0, 3, 4, 0, 0, 0, 9, 1, 0], ...]
