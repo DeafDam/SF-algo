@@ -1,4 +1,5 @@
 Soit le type structuré date, formé de trois nombres entiers qui indiquent respectivement le jour, le mois et l'année.
+
 type date = structure
 	jour, mois, année : entier;
 fin;

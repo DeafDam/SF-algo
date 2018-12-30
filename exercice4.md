@@ -4,7 +4,7 @@ jourActuel : chaîne;
 heureActuelle : entier;
 affiche("Quel jour sommes-nous ?"); lit(jourActuel);
 affiche("Quelle heure est-il ?"); lit(heureActuelle);
-si boulangerieOverte(heureActuelle, jourActuel) alors
+si boulangerieOuverte(heureActuelle, jourActuel) alors
   affiche('La boulangerie est ouverte !');
  sinon
    affiche('La boulangerie est fermée !');

@@ -7,7 +7,7 @@ affiche('Quel est votre nom ?');
 lit(nom);
 affiche('Quelle est votre année de naissance ?');
 lit(anneeNaissance);
-anneeEnCours :=litEntier('Quelle est l'année en cours ?');
+anneeEnCours := litEntier('Quelle est l'année en cours ?');
 demandeEtAfficheAge(nom, anneeEnCours);
 nbEnfants := litEntier(nom + ', combien avez vous d'enfants ?');
 numEnf := 1;

@@ -12,8 +12,7 @@ pour chaque article, la quantité et le prix HT
 
 on affiche le total TTC
 
-ind := indiceMin(v)
-
+```
 procedure affichePrixTTC()
 debproc
 	nbArticles, qte : entier;
@@ -33,19 +32,4 @@ debproc
 	finfaire
 	affiche('Total TTC : ' + resultat);
 finproc
-
-fonction carre(n : entier) : entier
-debfonc
-	retour n*n;
-finfonc;
-
-nbElem := carre(4);
-nbEleme
-
-procedure afficheCarre(n : entier)
-depbroc
-	affiche('Carré de ' + n + ' : ' + carre(carre(2)))
-finproc
-
-carre(2)
-
+```
