@@ -132,7 +132,7 @@
             <ul class="list-group">
                 <li class="list-group-item"><strong>Analyse lexicale</strong> : Cela permet d'isoler chaque <em>mot</em> et de le qualifier (est-ce un mot réservé du langage, est-ce une valeur, un identificateur ?).</li>
                 <li class="list-group-item"><strong>Analyse syntaxique</strong> : Cela permet de vérifier que l'enchainement des mots est valide par rapport à la grammaire du langage.</li>
-                <li class="list-group-item"><strong>Analyse sémantique</strong> : Cela permet de vérifier que le types des variables sont respectés ou qu'elles ont été bien déclarées par exemple.</li>
+                <li class="list-group-item"><strong>Analyse sémantique</strong> : Cela permet de vérifier que les types des variables sont respectés ou qu'elles ont été bien déclarées par exemple.</li>
             </ul>
           </div>
           <div class="container-fluid">
@@ -180,7 +180,7 @@ affiche('Bonjour ' <span data-toggle="popover" data-offset="0" data-trigger="hov
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid text-center">
                 <div class="alert alert-primary small-font " role="alert">
                     <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les chaînes de caractères peuvent être composées de n'importe quels caractères (lettres, majuscules, minuscules, chiffres, caractères accentués, caractères spéciaux...).
                 </div>
@@ -194,7 +194,7 @@ affiche('Bonjour ' <span data-toggle="popover" data-offset="0" data-trigger="hov
                 <h1 class="display-3">Variables et types</h1>
                 <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Comme nous l'avons vu, nous pouvons utiliser des <strong>variables</strong> pour stocker des valeurs (dans le cas précédent, une chaîne de caractères). On peut considérer que l'ordinateur contient un certain nombre de <em>cases </em>, ou <em>emplacements mémoires</em> permettant d'accueillir et de stocker ces fameuses variables. Pour pouvoir utiliser cette variable dans une autre instruction, on l'identifie par une <em>étiquette</em> ou <em>identificateur</em> permettant d'y faire référence. Un identificateur est donc une suite de caractères alphanumériques (mais commençant forcément par une lettre).
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Comme nous l'avons vu, nous pouvons utiliser des <strong>variables</strong> pour stocker des valeurs (dans le cas précédent, une chaîne de caractères). On peut considérer que l'ordinateur contient un certain nombre de <em>cases</em>, ou <em>emplacements mémoires</em> permettant d'accueillir et de stocker ces fameuses variables. Pour pouvoir utiliser cette variable dans une autre instruction, on l'identifie par une <em>étiquette</em> ou <em>identificateur</em> permettant d'y faire référence. Un identificateur est donc une suite de caractères alphanumériques (mais commençant forcément par une lettre).
                     </div>
                 </div>
                 <div class="container-fluid">
@@ -280,11 +280,6 @@ affiche(<span class="term2-2-msglbl3">msg</span>);</code></pre>
             <div class="col-6 text-left" >
                 <div id="term-2-2"></div>
             </div>
-            </div>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On parle ici de langage <strong>fortement typé</strong> (Java, C++...), c'est-à-dire qu'on ne peut stocker qu'un seul type de valeur dans une variable. Il existe aussi des langages <strong>faiblement typés</strong> où l'on peut stocker n'importe quel type dans une variable (Javascript, PHP...). Dans ce cas, on ne spécifie pas le type.
             </div>
           </div>
         </div>
@@ -374,7 +369,7 @@ fin;
 p : personne;
 p.nom := 'Pierre-Julien';
 p.prenom := 'Villoud';
-p.âge := 31;</code></pre>
+p.âge := 32;</code></pre>
           </div>
           <div class="container-fluid">
             <div class="alert alert-primary small-font " role="alert">
