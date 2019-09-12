@@ -33,6 +33,7 @@ debproc
 	i := longueur(v) - 1;
 	tantque i >= 0 faire
 		affiche(v[i]);
+		i := i - 1;
 	finfaire;
 finproc;
 ```
