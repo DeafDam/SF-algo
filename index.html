@@ -44,6 +44,17 @@
     </ul>
     <span class="navbar-text">
         <div class="btn-group" role="group" aria-label="Basic example">
+            <form class="form-inline my-2 my-lg-0" onsubmit="search()">
+              <div class="input-group">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Rechercher">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="searchNb"></span>
+                  <button class="btn btn-primary" type="submit"><i class="fa fa-icon fa-search"></i></button>
+                </div>
+              </div>
+              
+              
+            </form>
             <a class="btn btn-primary" href="https://github.com/pjvilloud/ipi-algo-001-cours" target="_blank"><i class="fa fa-icon fa-gamepad"></i></a>
             &nbsp;
             <a class="btn btn-primary" href="mailto:pjvilloud@protonmail.com"><i class="fa fa-icon fa-envelope"></i></a>
@@ -1320,5 +1331,7 @@ finfaire;</code></pre>
 <script src="js/highlight.min.js"></script>
 <script src="js/moment.min.js"></script>
 <script src="js/terminal.js"></script>
+<script src="js/mark.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/search.js"></script>
 
