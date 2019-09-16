@@ -15,8 +15,9 @@ debfonc
 	i := 0;
 	tantque i < longueur(phrase) faire
 		si phrase[i] = caractere alors
-			phrase[i] := '*'
+			phrase[i] := '*';
 		finsi;
+		i := i + 1;
 	finfaire;
-finfonc
+finfonc;
 ```
