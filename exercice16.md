@@ -12,7 +12,7 @@ debfonc
         finsi;
         i := i + 1;
     finfaire;
-    si j == longueur(aiguille) alors
+    si j = longueur(aiguille) alors
         retour vrai;
     finsi;
     retour faux;
