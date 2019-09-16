@@ -5,21 +5,16 @@ fonction cherche(aiguille : chaine, botteDeFoin : chaine) : booléen
 i,j : entier;
 debfonc
     i := 0;
-    tantque i < longueur(botteDeFoin) faire
-        si botteDeFoin[i] != aiguille[0] alors
-            i := i + 1;
-        sinon
-            j := 0;
-            tantque i < longueur(botteDeFoin) et j < longueur(aiguille) et botteDeFoin[i] = aiguille[j] faire
-                i := i + 1;
-                j := j + 1;
-            finfaire;
-            si j = longueur(aiguille) alors
-                retour vrai;
-            finsi;
-            retour faux;
-        finsi;
+    j := 0;
+    tantque i < longueur(botteDeFoin) && j < longueur(aiguille) faire
+        si botteDeFoin[i] = aiguille[j] alors
+            j := j + 1;
+        }
+        i := i + 1;
     finfaire;
+    si j == longueur(aiguille) alors
+        retour vrai;
+    finsi;
     retour faux;
-finfonc
+finfonc;
 ```
