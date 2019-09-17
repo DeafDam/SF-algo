@@ -10,6 +10,7 @@ debfonc
         si botteDeFoin[i] = aiguille[j] alors
             j := j + 1;
         sinon
+            i := i - j;
             j := 0;
         finsi;
         i := i + 1;
