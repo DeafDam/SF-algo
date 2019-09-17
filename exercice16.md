@@ -6,7 +6,7 @@ i,j : entier;
 debfonc
     i := 0;
     j := 0;
-    tantque i < longueur(botteDeFoin) && j < longueur(aiguille) faire
+    tantque i < longueur(botteDeFoin) et j < longueur(aiguille) faire
         si botteDeFoin[i] = aiguille[j] alors
             j := j + 1;
         sinon
