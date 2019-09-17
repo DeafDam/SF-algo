@@ -9,6 +9,8 @@ debfonc
     tantque i < longueur(botteDeFoin) && j < longueur(aiguille) faire
         si botteDeFoin[i] = aiguille[j] alors
             j := j + 1;
+        sinon
+            j := 0;
         finsi;
         i := i + 1;
     finfaire;
