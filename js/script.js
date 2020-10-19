@@ -1,9 +1,10 @@
-
+var $ = jQuery.noConflict();
 $(document).ready(function() {
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
     $(block).find('[data-toggle="popover"]').popover({
-      container: 'body'
+      container: 'body',
+      boundary: 'window'
     });
   });
 
@@ -133,12 +134,14 @@ rootElement.addEventListener( "impress:stepenter", function(event) {
   if(showPopover === "true") {
     setTimeout(function(){
       $('#' + currentStep.id + ' [data-toggle="popover"]').popover('show', {
-        container: 'body'
+        container: 'body',
+        boundary: 'window'
       });
   }, 1000);
   } else {
     $('#' + currentStep.id + ' [data-toggle="popover"]').popover({
-      container: 'body'
+      container: 'body',
+      boundary: 'window'
     });
   }
 
