@@ -58,7 +58,7 @@ rootElement.addEventListener( "impress:stepenter", function(event) {
         $("#term3-nombre").addClass('text-primary');
         $("#term3-nombre2").html('<span class="badge badge-primary">=&gt; \''+userInput+'\'</span>');
 
-        myTerminal3.print("Carré : " + userInput*userInput + " !");
+        myTerminal3.print("Carré : " + userInput*userInput);
         
       });
   } else if($(currentStep).hasClass("term-2-2")){
