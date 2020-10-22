@@ -1,0 +1,225 @@
+Demander un nombre à l'utilisateur supérieur à 1
+Calculer et afficher la somme des entiers depuis 1 jusqu'à ce nombre
+Ex : 4 : 0+1+2+3+4 => 10
+nb : entier;
+resultat : entier;
+i : entier;
+nb := 0;
+tant que nb <= 0 faire
+	affiche('Merci d'entrer un nombre supérieur à 1');
+	lit(nb);
+finfaire;
+resultat := 0;
+i := 1;
+tant que i <= nb faire
+	resultat := resultat + i;
+	i := i + 1;
+finfaire
+affiche('La somme des entiers de 1 à ' + nb + ' = ' + resultat);
+
+
+Demander un nombre à l'utilisateur supérieur à 0
+Calculer et afficher la factorielle de ce nombre
+Ex : 5 : 5*4*3*2*1 => 120
+nb : entier;
+resultat : entier;
+i : entier;
+nb := 0;
+tant que nb <= 0 faire
+	affiche('Merci d'entrer un nombre supérieur à 0');
+	lit(nb);
+finfaire;
+resultat := 1;
+i := nb;
+tant que i > 1 faire
+	resultat := resultat * i;
+	i := i - 1;
+finfaire
+affiche('La factorielle de ' + nb + ' = ' + resultat);
+
+Demander un nombre à l'utilisateur supérieur à 1. Calculer et afficher la somme des entiers impairs depuis 1 jusqu'à ce nombre
+Ex : 8 : 1+3+5+7 => 16
+nb : entier;
+resultat : entier;
+i : entier;
+nb := 0;
+tant que nb <= 0 faire
+	affiche('Merci d'entrer un nombre supérieur à 1');
+	lit(nb);
+finfaire;
+resultat := 0;
+i := 1;
+tant que i <= nb faire
+	resultat := resultat + i;
+	i := i + 2;
+finfaire
+affiche('La somme des entiers de 1 à ' + nb + ' = ' + resultat);
+
+Demander à l'utilisateur de saisir des nombres, et calculer la somme de ces nombres tant que l'utilisateur saisit des nombres strictement positifs. Bonus : Calculer aussi la moyenne de ces nombres.
+
+nb : entier;
+resultat : entier;
+resultat := 0;
+nb := 1;
+tant que nb > 0 faire
+	affiche('Saisir un nombre positif');
+	lit(nb);
+	si(nb > 0) 
+		resultat := resultat + nb;
+	finsi;
+finfaire;
+affiche('La somme des nombres saisis est : ' + resultat);
+
+
+Demander à l'utilisateur de deviner un nombre entier entre 1 et 100. Choisir un nombre fixe défini "en dur" dans le programme Demander à l'utilisateur le chiffre et afficher "C'est plus" si le chiffre saisi est inférieur à celui défini, "C'est moins" si le chiffre est supérieur à celui défini ou "Bien joué" si le chiffre est égal.
+
+affiche('Essaye de deviner mon nombre !');
+nombreATrouver : entier;
+nombreATrouver := 42;
+nombreSaisi : entier;
+nombreSaisi := 1;
+tantque nombreSaisi != nombreATrouver faire
+	affiche('Saisis un nombre entre 1 et 100 : ');
+	lit(nombreSaisi);
+	si nombreSaisi > nombreATrouver alors
+		affiche('C\'est moins !');	
+	sinon si nombreSaisi < nombreATrouver alors
+		affiche('C\'est plus !');	
+	sinon
+		affiche('Bien joué');	
+	finsi;
+finfaire
+
+affiche('Essaye de deviner mon nombre !');
+nombreATrouver : entier;
+nombreATrouver := 42;
+nombreSaisi : entier;
+faire
+	affiche('Saisis un nombre entre 1 et 100 : ');
+	lit(nombreSaisi);
+	si nombreSaisi > nombreATrouver alors
+		affiche('C\'est moins !');	
+	sinon si nombreSaisi < nombreATrouver alors
+		affiche('C\'est plus !');	
+	sinon
+		affiche('Bien joué');	
+	finsi;
+tantque nombreSaisi != nombreATrouver
+
+
+Développer un algorithme essayant de trouver un nombre choisi par l'utilisateur (entre 1 et 100). A chaque proposition, l'utilisateur saisira '+' si le nombre à deviner est supérieur à celui proposé par le programme, '-' si le nombre à deviner est inférieur à celui proposé par le programme, ou '=' si c'est le bon.
+Vous pouvez aussi afficher combien de tentatives il a fallu pour trouver le bon nombre.
+
+Le jeu des allumettes se joue à deux, au départ on place 17 allumettes sur la table, chaque joueur à son tour peut retirer une, deux ou trois allumettes. Le joueur qui ramasse la dernière allumette a perdu.
+Ecrire un programme qui permet de jouer à deux joueurs.
+On pourra agrémenter le programme pour demander le nom des joueurs.
+
+nbAllumettes, nbAllumettesARetirer : entier;
+nbAllumettes := 17;
+
+joueur1, joueur2 : chaîne;
+joueurActif, joueurGagnant : chaîne;
+
+affiche('Nom du joueur 1 : ');
+lit(joueur1);
+affiche('Nom du joueur 2 : ');
+lit(joueur2);
+joueurActif := joueur1;
+
+tantque nbAllumettes > 0 faire
+	//afficher le nombre d'allumettes restant et je demande au joueur actif d'enlever 1, 2 ou 3 allumettes.
+	affiche('Il reste ' + nbAllumettes + ' allumettes');
+	affiche(joueurActif + ' joue et doit enlever entre 1 et 3 allumettes');
+	lit(nbAllumettesARetirer);
+
+	//Vérifier que les règles respectées
+	//1, 2 ou 3 allumettes OK
+	//je ne peux pas enlever plus d'allumettes qu'il reste d'allumettes OK
+	//il faut forcément en laisser une OK
+	si nbAllumettesARetirer > 3 ou nbAllumettesARetirer <= 0
+		ou nbAllumettes < nbAllumettesARetirer alors
+		affiche('Il n'est pas possible d\'enlever + nbAllumettesARetirer + ' allumettes');
+	sinon //(les regles sont respectées)
+		//Retirer le nombre d'allumettes qu'a pris le joueur actif du nombre total d'allumettes
+		nbAllumettes := nbAllumettes - nbAllumettesARetirer;
+
+		//On change de joueur
+		//Si le joueur actif est le joueur 1, alors le joueur actif devient le joueur 2
+		si joueurActif = joueur1 alors
+			joueurActif = joueur2;
+		sinon (si joueurActif = joueur2) 
+			joueurActif = joueur1;
+		finsi;
+	finsi;	
+finfaire;
+
+//Je détermine le gagnant
+si joueurActif = joueur1 alors
+	affiche(joueur2 + ' a gagné !');
+sinon
+	affiche(joueur1 + ' a gagné !');
+finsi;
+
+Calculer la remise de monnaie qu'un commerçant doit à un client avec la fonction suivante (les montants sont entiers, et on calcule la remise avec des billets de 10€, des billets de 5€ et des pièces de 1 €):
+
+//Je commence par demander le montant payé et le montant à payé.
+
+
+Je calcule le montant à rembourser.
+
+Si ce montant est supérieur à 0, 
+
+- je calcule combien de billets de 10€ je peux lui rendre
+- je calcule combien de billets de 5€ je peux lui rendre
+- je calcule combien de pièces de 1€ je peux lui rendre
+
+J'affiche la remise de la monnaie
+
+montantAPayer, montantPayé, montantRestant : entier;
+nbrB10, nbrB5, nbrP1 : entier;
+nbrB10 := 0;
+nbrB5 := 0;
+nbrP1 := 0;
+affiche('Saisir le montant à payer : ');
+lit(montantAPayer);
+affiche('Saisir le montant payé : ');
+lit(montantPayé);
+
+montantRestant := montantPayé - montantAPayer;
+tantque montantRestant >= 10 alors
+	montantRestant := montantRestant - 10;
+	nbrB10 := nbrB10 + 1;
+finfaire
+tantque montantRestant >= 5 alors
+	montantRestant := montantRestant - 5;
+	nbrB5 := nbrB5 + 1;
+finfaire
+tantque montantRestant >= 1 alors
+	montantRestant := montantRestant - 1;
+	nbrP1 := nbrP1 + 1;
+finfaire
+affiche('Vous devez rendre ' + nbrB10 + ' billets de 10');
+affiche('Vous devez rendre ' + nbrB5 + ' billets de 5');
+affiche('Vous devez rendre ' + nbrP1 + ' pièces de 1');
+
+
+Ecrire un algorithme demandant à l'utilisateur de saisir 2 nombres et lui afficher le nombre le plus petit.
+n1, n2 : réel;
+affiche('Entrer un nombre : ');
+lit(n1);
+affiche('Entrer un deuxième nombre : ');
+lit(n2);
+si n1 < n2 alors
+	affiche(n1 + ' est le chiffre le plus petit');
+sinon
+	affiche(n2 + ' est le chiffre le plus petit');
+finsi;
+
+Ecrire un algorithme demandant à l'utilisateur de saisir 3 nombres et lui afficher le nombre le plus petit.
+si a <= b et a <= c
+	affiche(a + ' est le chiffre le plus petit');
+sinon si b <= c et b <= a 
+	affiche(b + ' est le chiffre le plus petit');
+sinon
+	affiche(c + ' est le chiffre le plus petit');
+finsi
