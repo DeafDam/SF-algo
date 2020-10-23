@@ -1,0 +1,333 @@
+Ecrire un algorithme permettant à un utilisateur de calculer son âge en lui demandant son année de naissance et l'année en cours (on ne tient pas compte des jours et des mois). 
+On affiche l'âge que si les années sont cohérentes
+On affichera "Erreur dans les années saisies" si ce n'est pas le cas
+
+procédure demandeNomCalculAge(anneeEnCours: entier) //valeur contenue dans la variable 
+debproc
+anneeNaissance : entier;
+nom : chaîne;
+affiche('Indiquer le nom');
+lit(nom);
+affiche('Quelle est l'année de naissance ?');
+lit(anneeNaissance);
+si(anneeEnCours - anneeNaissance = 1) alors
+        affiche(nom + ' a 1 an');
+sinon si anneeNaissance < anneeEnCours 
+        affiche(nom + (anneeEnCours - anneeNaissance) + ' ans');
+sinon si anneeNaissance = anneeEnCours 
+        affiche(nom + ' est né cette année !');
+sinon
+        affiche('Erreur dans les années saisies');
+finsi
+finproc
+
+procédure affiche(texte : chaîne)
+debproc
+//Je prépare l'affichage du texte
+//Je vérifie que le texte est affichable
+//J'affiche le texte
+//Je retourne à la ligne
+finproc
+
+anneeCourante : entier;
+affiche('Quelle est l'année en cours ?');
+lit(anneeCourante);
+affiche(anneeNaissance); //Ca ne fonctionne pas
+demandeNomCalculAge(2050);
+affiche(anneeNaissance);//Ca ne fonctionne pas. Variable anneeNaissance visible que de la procédure
+
+nbEnfants : entier;
+affiche('Combien avez-vous d\'enfants ?')
+lit(nbEnfants);
+i : entier;
+i := 1;
+tantque i <= nbEnfants faire
+ch : chaîne;
+ch := 'Bonjour';
+affiche(ch);//OK
+demandeNomCalculAge(anneeCourante);
+        i := i + 1;
+finfaire
+affiche(ch);//Interdit
+
+
+Remise de monnaie
+
+montantAPayer, montantPayé, montantRestant : entier;
+affiche('Saisir le montant à payer : ');
+lit(montantAPayer);
+affiche('Saisir le montant payé : ');
+lit(montantPayé);
+
+montantRestant := montantPayé - montantAPayer;
+
+afficheRemiseMonnaie(50,'billet');
+afficheRemiseMonnaie(20,'billet');
+afficheRemiseMonnaie(10,'billet');
+afficheRemiseMonnaie(5,'billet');
+afficheRemiseMonnaie(2,'pièce');
+afficheRemiseMonnaie(1,'pièce');
+
+procedure afficheRemiseMonnaie(figure : entier, type : chaîne)
+debproc
+nbElementsARendre : entier;
+nbElementsARendre := 0;
+tantque montantRestant >= figure alors
+        montantRestant := montantRestant - figure;
+        nbElementsARendre := nbElementsARendre + 1;
+finfaire
+si nbElementsARendre != 0 alors
+pluriel : chaîne;
+pluriel := '';
+si nbElementsARendre > 1 alors 
+pluriel := 's';
+finsi;
+affiche('Vous devez rendre ' + nbElementsARendre + ' ' + type + pluriel + ' de ' + figure);
+finsi;
+finproc
+
+
+
+procedure afficheRemiseMonnaie(montant : entier)
+debproc
+nbrElementRenvoye : entier;
+nbrElementRenvoye := 0;
+           tantque montantRestant >= montant alors
+        montantRestant := montantRestant - montant;
+        nbrElementRenvoye:= nbrElementRenvoye+ 1;
+           finfaire
+           affiche('Vous devez rendre ' + nbrElementRenvoye+ ' billets de ' + montant);
+finproc
+
+afficheRemiseMonnaie(20)
+afficheRemiseMonnaie(10)
+afficheRemiseMonnaie(5)
+afficheRemiseMonnaie(
+afficheRemiseMonnaie(1)
+
+
+
+
+
+Ecrire un algorithme demandant à l'utilisateur de saisir 2 nombres et lui afficher le nombre le plus petit.
+
+n1, n2 : réel;
+affiche('Entrer un nombre : ');
+lit(n1);
+affiche('Entrer un deuxième nombre : ');
+lit(n2);
+
+affiche('Le minimum entre ' + n1 + ' et ' + n2 ' est ' + min(n1,n2));
+
+fonction min(n1 : entier, n2 : entier) : entier
+debfonc
+si n1 < n2 alors
+    retour n1;
+sinon
+    retour n2;
+finsi;
+finfonc
+
+
+Ecrire un algorithme demandant à l'utilisateur de saisir 3 nombres et lui afficher le nombre le plus petit.
+a, b, c : entier;
+affiche('Entrer un nombre : ');
+lit(a);//4
+affiche('Entrer un deuxième nombre : ');
+lit(b);//9
+affiche('Entrer un troisième nombre : ');
+lit(c);//3
+
+minEntreAetB : entier;
+minEntreAetB := min(a,b); //4
+
+minEntreABetC := min(minEntreAetB, c);
+
+affiche('Le minimum entre ' + a + ', ' + b + ' et ' + c + ' est ' + minEntreABetC);//3
+1;
+min(a,b);
+min(minEntreAetB, c);
+minimum entre a et b
+minimum entre le résultat et c
+
+si a <= b et a <= c
+        affiche(a + ' est le chiffre le plus petit');
+sinon si b <= c et b <= a 
+        affiche(b + ' est le chiffre le plus petit');
+sinon
+        affiche(c + ' est le chiffre le plus petit');
+finsi
+
+affichePlusPetit(n1 : entier, n2 : entier, n3 : entier)
+debproc
+
+finproc
+
+
+Ecrire une procédure qui affiche les 10 nombres suivant un nombre passé en paramètre.
+procédure affiche10NbSuivants(nb : entier)
+deproc
+i : entier;
+i := 1;
+tantque i <=  10 faire
+affiche(nb + i);
+i := i + 1;
+finfaire;
+finproc
+
+//Demander un nombre à l'utilisateur et appeler la procédure avec ce nombre.
+affiche('Rentrer un nombre, j'afficherai les 10 suivants : ');
+nombreSaisi : entier;
+lit(nombreSaisi);
+affiche10NbSuivants(nombreSaisi);
+affiche(nombreSaisi);//5 
+Ecrire une procédure qui affiche les X (X étant un paramètre passé à la procédure) nombres suivant un nombre passé en paramètre.
+procédure afficheXNbSuivants(nb : entier, nbChiffresAAfficher : entier)
+deproc
+i : entier;
+i := 1;
+tantque i <= nbChiffresAAfficher faire
+affiche(nb + i);
+i := i + 1;
+finfaire;
+finproc
+
+nombreSaisi, nbChiffres : entier;
+affiche('Rentrer un nombre ');
+lit(nombreSaisi);
+affiche('Indiquer le nombre de chiffres suivants à afficher : ');
+lit(nbChiffres);
+afficheXNbSuivants(nombreSaisi, nbChiffres);
+
+//Demander un nombre a à l'utilisateur puis demander un autre nombre b et appeler la procédure avec ce nombre pour afficher les b nombres suivants a.
+
+
+Une boulangerie est ouverte tous les jours de 7h à 13h et de 16h à 19h sauf le lundi. Ecrire un algo demandant le jour à l'utilisateur et lui afficher si la boulangerie est ouverte ou non.
+
+jour : chaîne;
+heure : entier;
+affiche('Quel jour ?');
+lit(jour);
+affiche('Quelle heure ?');
+lit(heure);
+
+si jour != lundi et ( (heure >= 7 et heure < 13) ou (heure >= 16 et heure < 19) ) alors
+        affiche('La boulangerie est ouverte !');
+sinon
+        affiche('La boulangerie est fermée !');
+finsi;
+
+vrai si boulangerie ouverte/faux sinon
+fonction boulangerieOuverte(??) : booléen
+debfonc
+
+finfonc;
+
+si boulangerieOuverte(...) alors
+
+Ecrire une fonction qui retourne un nombre compris entre 5 et 10,jusqu’à ce que la réponse convienne. En cas de réponse supérieure à 10, on fera apparaitre un message : 'Plus petit !', et inversement, 'Plus grand !'' si le nombre est inférieur à 5.
+
+fonction nombreEntre5et10() : entier
+debfonc
+nombre : entier;
+nombreOk : booléen;
+        nombreOK := faux;
+        tantque nombreOK = faux faire
+                 affiche('Entrer un nombre entre 5 et 10');
+                 lit(nombre);
+                 si nombre > 10 alors
+                         affiche('Plus petit !');
+                 sinon si nombre < 5 alors
+                          affiche('Plus grand !');
+                 sinon
+                         nombreOk := vrai;
+                 finsi;
+        finfaire
+        retour nombre;
+finfonc
+affiche('Voici la somme des 2 chiffres saisis : ' + (nombreEntre5et10() + nombreEntre5et10()));
+
+fonction nombreEntreXetY(x : entier, y : entier) : entier
+debfonc
+nombre : entier;
+nombreOk : booléen;
+        nombreOK := faux;
+        tantque nombreOK = faux faire
+                 affiche('Entrer un nombre entre ' + x + ' et ' + y);
+                 lit(nombre);
+                 si nombre > y alors
+                         affiche('Plus petit !');
+                 sinon si nombre < x alors
+                          affiche('Plus grand !');
+                 sinon
+                         nombreOk := vrai;
+                 finsi;
+        finfaire
+        retour nombre;
+finfonc
+
+fonction nombreEntreXetY(x : entier, y : entier) : entier
+debfonc
+nombre : entier;
+        tantque vrai faire
+                 affiche('Entrer un nombre entre ' + x + ' et ' + y);
+                 lit(nombre);
+                 si nombre > y alors
+                         affiche('Plus petit !');
+                 sinon si nombre < x alors
+                          affiche('Plus grand !');
+                 sinon
+                         retour nombre;
+                 finsi;
+        finfaire
+finfonc
+
+nombreEntreXetY(4,8);
+nombreEntreXetY(8,4);
+
+nombreEntreXetY(150,2500);
+
+Ecrire une fonction qui retourne le minimum entre 4 nombres
+
+fonction min4(n1 : entier, n2 : entier, n3 : entier, n4 : entier) : entier
+debfonc
+retour min(min(n1,n2), min(n3, n4));
+finfonc
+
+nb1 :  entier;
+affiche('Saisir le 1er nombre');
+lit(nb1);
+
+affiche('le plus petit est ' + min(nb1, 5, 10, 65));
+
+Ecrire une procédure qui demande 20 nombres à l'utilisateur et qui lui dise quel était le plus petit, et à quelle position ce nombre a été saisi.
+
+fonction testNbrDonner(nbrDonner : entier, nbrTester : entier) : booléen
+debfonc
+si nbrDonner < nbrTester
+retour vrai
+finsi
+retour faux 
+finfonc  
+ 
+nbrPlusPetit : entier 
+nbrLu : entier 
+i : entier 
+p : entier  
+
+i:=1 
+affiche(Donnez 20 nombres) 
+lit(nbrLu) 
+nbrPlusPetit:=nbrLu 
+p:=i  
+
+tantque i!=20
+i:=i+1
+lit(nbrLu)
+si testNbrDonner(nbrLu,nbrPlusPetit)=vrai
+nbrPlusPetit:=nbrLu
+p:=i
+finsi 
+fintantque
+
+ affiche('Le nombre le plus petit est ' + nbrPlusPetit + ' et il se situer en position ' + p)
