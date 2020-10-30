@@ -17,6 +17,8 @@ debfonc
 		si precedent > v[i] alors
 			retour faux;
 		finsi;
+		precedent := v[i];
+		i := i + 1;
 	finfaire;
 	retour vrai;
 finfonc;
