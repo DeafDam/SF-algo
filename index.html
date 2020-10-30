@@ -1238,8 +1238,9 @@ finfaire;</code></pre>
                     <pre><code class="ada">v : entier[][];
 ...
 i,j : entier;
-i := 0; j := 0;
+i := 0;
 tantque i &lt; longueur(v) faire
+    j := 0;
     tantque j &lt; <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
         data-title="Titre" data-content="<code>v[i]</code> est donc à son tour un vecteur, on peut donc appeler <code>longueur(v[i])</code>">longueur(v[i])</span> faire
         faireQuelqueChoseSur(v[i][j]);
