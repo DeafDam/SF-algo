@@ -5,7 +5,7 @@ Ecrire la procédure ecrireSudoku(s : entier[][]) qui affiche correctement le su
 [[0, 8, 0, 4, 0, 2, 0, 6, 0],[0, 3, 4, 0, 0, 0, 9, 1, 0], ...]
 
 donnera
-
+```
   8   4   2   6  
   3 4       9 1  
 9 6           8 4
@@ -15,12 +15,13 @@ donnera
 8 4           7 5
   2 6       1 3  
   9   7   1   4  
-
+```
 Bonus : on pourra essayer d'afficher le sudoku de cette manière : 
 
 [[0, 8, 0, 4, 0, 2, 0, 6, 0],[0, 3, 4, 0, 0, 0, 9, 1, 0], ...]
 
 donnera
+```
  -----------------------
 |   8   | 4   2 |   6   |
 |   3 4 |       | 9 1   |
@@ -34,3 +35,4 @@ donnera
 |   2 6 |       | 1 3   |
 |   9   | 7   1 |   4   |
  -----------------------
+```
