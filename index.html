@@ -116,7 +116,7 @@
           <h1 class="display-3">Langages de programmation</h1>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Au tout début de l'informatique, les programmes étaient développés en <strong>langage machine</strong>, c'est-à-dire des 0 et des 1 qui étaient directement interpretables et exécutables par le processeur de l'ordinateur. Cela a évidemment été très vite compliqué. Un premier langage de bas niveau est apparu, le <strong>langage assembleur</strong>, un langage très proche du langage machine mais lisible par un être humain.
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Au tout début de l'informatique, les programmes étaient développés en <strong>langage machine</strong>, c'est-à-dire des 0 et des 1 qui étaient directement interprétables et exécutables par le processeur de l'ordinateur. Cela a évidemment été très vite compliqué. Un premier langage de bas niveau est apparu, le <strong>langage assembleur</strong>, un langage très proche du langage machine mais lisible par un être humain.
             </div>
           </div>
           <div class="container small-font  big-top-margin">
@@ -171,19 +171,19 @@
                     <div class="col-6">
                         <h2 class="display-4">Affichage</h2>
                         <pre><code class="ada"><span data-toggle="popover" data-trigger="hover click" data-placement="bottom" data-html="true"
-                        data-title="Procédure <code>affiche</code>" data-content="Le mot <em>affiche</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">affiche</span>(<span data-toggle="popover" data-trigger="hover click" data-placement="top" data-html="true" data-title="Chaîne de caractère entre quotes" data-content="Pour représenter une suite de caractères, on écrit cette dernière entre simples (parfois doubles) quotes : ''">'Hello World !'</span>)<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Séparateur d'instruction ;" data-content="Chaque instruction est terminée par un point-virgule (comme dans beaucoup de langages)">;</span></code></pre>
+                        data-title="Procédure <code>afficher</code>" data-content="Le mot <em>afficher</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">afficher</span>(<span data-toggle="popover" data-trigger="hover click" data-placement="top" data-html="true" data-title="Chaîne de caractère entre quotes" data-content="Pour représenter une suite de caractères, on écrit cette dernière entre simples (parfois doubles) quotes : ''">'Hello World !'</span>)<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Séparateur d'instruction ;" data-content="Chaque instruction est terminée par un point-virgule (comme dans beaucoup de langages)">;</span></code></pre>
                     </div>
                     <div class="col-6">
                         <h2 class="display-4">Saisie</h2>
-                        <pre><code class="ada"><span data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true"  data-content="Le mot <em>lit</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">lit</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Variable de type chaîne de caractère" data-content="Pour rendre le programme interactif, on introduit une variable qui va contenir la chaîne de caractère saisie par l'utilisateur. Cette notion sera approfondie plus tard.">nom);</span></code></pre>
+                        <pre><code class="ada"><span data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true"  data-content="Le mot <em>lire</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">lire</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Variable de type chaîne de caractère" data-content="Pour rendre le programme interactif, on introduit une variable qui va contenir la chaîne de caractère saisie par l'utilisateur. Cette notion sera approfondie plus tard.">nom);</span></code></pre>
                     </div>
                 </div>
                 <hr>
                 <div class="row smaller-text">
                     <div class="col-6 text-left">
-                        <pre><code class="ada">affiche('Quel est votre nom ?');
-lit(<span id="term1-nom">nom</span>);<span id="term1-nom2"></span>
-affiche('Bonjour ' <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
+                        <pre><code class="ada">afficher('Quel est votre nom ?');
+lire(<span id="term1-nom">nom</span>);<span id="term1-nom2"></span>
+afficher('Bonjour ' <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
     data-title="Concaténation de chaînes" data-content="Le signe + est un opérateur qui dans ce contexte permet de concaténer deux chaînes de caractères en une seule">+</span> nom + ' !');
                         </code></pre>
                     </div>
@@ -212,13 +212,13 @@ affiche('Bonjour ' <span data-toggle="popover" data-offset="0" data-trigger="hov
                 <div class="container-fluid">
                     <div class="row smaller-text">
                         <div class="col-6 text-left">
-                            <pre><code class="ada">affiche('Quel est votre nom ?');
-lit(<span id="term2-nom">nom</span>);<span id="term2-nom2"></span>
-affiche('Bonjour ' + nom + ' !');
-affiche('Rappelez-moi votre nom ?');
-lit(<span id="term2-nom3">nom</span>);<span id="term2-nom4"></span>
-affiche('OK ! Bonjour ' + nom + ' !');
-affiche('Bonjour ' + <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
+                            <pre><code class="ada">afficher('Quel est votre nom ?');
+lire(<span id="term2-nom">nom</span>);<span id="term2-nom2"></span>
+afficher('Bonjour ' + nom + ' !');
+afficher('Rappelez-moi votre nom ?');
+lire(<span id="term2-nom3">nom</span>);<span id="term2-nom4"></span>
+afficher('OK ! Bonjour ' + nom + ' !');
+afficher('Bonjour ' + <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
     data-title="Ceci n'est pas un identificateur" data-content="Attention, <em>nom</em> est ici entre quotes, ce n'est donc pas l'identificateur (et donc pas la variable) qui est utilisé mais bien la chaîne de caractère 'nom' !">'nom'</span> + ' !');
                             </code></pre>
                         </div>
@@ -248,13 +248,13 @@ affiche('Bonjour ' + <span data-toggle="popover" data-offset="0" data-trigger="h
           <div class="container text-left">
             <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
                 data-title="Identificateur" data-content="L'identificateur <code>nom</code> est déclaré. A chaque fois que cet identificateur est utilisé, cela fera référence à cette variable.">nom</span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
-                    data-title="<em>est de type</em>" data-content="Le caractère <code>:</code> est équivalent à <em>est de type</em>">:</span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
+                    data-title="<em>est du type</em>" data-content="Le caractère <code>:</code> est équivalent à <em>est du type</em>">:</span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
                         data-title="Type" data-content="Le type de la variable est ici une chaîne de caractère, mais il y en a d'autres que l'on verra plus tard.">chaîne</span>;
 
 
-affiche('Quel est votre nom ?');
-lit(nom);
-affiche('Bonjour ' + nom + ' !');</code></pre>
+afficher('Quel est votre nom ?');
+lire(nom);
+afficher('Bonjour ' + nom + ' !');</code></pre>
           </div>
           <div class="container-fluid">
             <div class="alert alert-primary small-font " role="alert">
@@ -281,13 +281,13 @@ affiche('Bonjour ' + nom + ' !');</code></pre>
                     <pre><code class="ada">msg : chaîne;
 ch : chaîne;
 <span class="text-primary" id="term2-2-msglbl1">msg</span> := 'Bonjour ';<span id="term2-2-msg0"></span>
-affiche('Quel est votre prénom ?');
-lit(<span class="term2-2-nomprenomlbl1">ch</span>);<span id="term2-2-nomprenom"></span>
+afficher('Quel est votre prénom ?');
+lire(<span class="term2-2-nomprenomlbl1">ch</span>);<span id="term2-2-nomprenom"></span>
 <span class="term2-2-msglbl2">msg</span> := <span class="term2-2-msglbl2">msg</span> + <span class="term2-2-nomprenomlbl1">ch</span> + ' ';<span id="term2-2-msg"></span>
-affiche('Quel est votre nom ?');
-lit(<span class="term2-2-nomprenomlbl2">ch</span>);<span id="term2-2-nomprenom2"></span>
+afficher('Quel est votre nom ?');
+lire(<span class="term2-2-nomprenomlbl2">ch</span>);<span id="term2-2-nomprenom2"></span>
 <span class="term2-2-msglbl3">msg</span> := <span class="term2-2-msglbl3">msg</span> + <span class="term2-2-nomprenomlbl2">ch</span> + ' !';<span id="term2-2-msg2"></span>
-affiche(<span class="term2-2-msglbl3">msg</span>);</code></pre>
+afficher(<span class="term2-2-msglbl3">msg</span>);</code></pre>
                 </div>
             <div class="col-6 text-left" >
                 <div id="term-2-2"></div>
@@ -311,9 +311,9 @@ affiche(<span class="term2-2-msglbl3">msg</span>);</code></pre>
             <div class="row smaller-text">
                 <div class="col-6 text-left">
                     <pre><code class="ada">nombre : entier;
-affiche('Nombre entre 1 et 10');
-lit(<span id="term3-nom">nombre</span>);<span id="term3-nom2"></span>
-affiche('Carré : ' + <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
+afficher('Nombre entre 1 et 10');
+lire(<span id="term3-nom">nombre</span>);<span id="term3-nom2"></span>
+afficher('Carré : ' + <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
     data-title="Expression arithmétique" data-content="Comme la variable <code>nombre</code> contient un nombre entier, on peut effectuer une multiplication et afficher le résultat (on part du principe que l'instruction <code>affiche</code> sait afficher des variables de type entier). ">nombre*nombre</span>);</code></pre>
                 </div>
                 <div class="col-6 text-left little-top-margin" >
@@ -323,7 +323,7 @@ affiche('Carré : ' + <span data-toggle="popover" data-offset="0" data-trigger="
           </div>
           <div class="container-fluid big-top-margin">
             <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les autres opérateurs arithmétiques peuvent être utilisés : <code>+ / * </code> et combinés. Les règles de priorité sur les opérateurs sont celles des mathématiques.
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les autres opérateurs arithmétiques peuvent être utilisés : <code>+ / *</code> et combinés. Les règles de priorité sur les opérateurs sont celles des mathématiques.
             </div>
           </div>
         </div>
@@ -428,27 +428,27 @@ p.âge := 32;</code></pre>
                 <div class="col-6">
                     <h3 class="display-4">Condition</h3>
                     <pre><code class="ada">nombre : entier;
-affiche('Pair ou impair ? Entre un nombre : ');
-lit(nombre);
+afficher('Pair ou impair ? Entre un nombre : ');
+lire(nombre);
 </code></pre>
 <em>Si nombre est pair on exécute l'instruction suivante</em>
-<pre><code class="ada">     affiche(nombre + ' est pair !');</code></pre>
+<pre><code class="ada">     afficher(nombre + ' est pair !');</code></pre>
 <em>Sinon, on exécute l'instruction suivante</em>
-<pre><code class="ada">     affiche(nombre + ' est impair !');</code></pre>
+<pre><code class="ada">     afficher(nombre + ' est impair !');</code></pre>
                 </div>
                 <div class="col-6">
                     <h3 class="display-4">Itération</h3>
                     <pre><code class="ada">x, y, resultat : entier;
-affiche('On souhaite calculer x ^ y. Entrer x : ');
-lit(x);
-affiche('Entrer y');
-lit(y);
+afficher('On souhaite calculer x ^ y. Entrer x : ');
+lire(x);
+afficher('Entrer y');
+lire(y);
 resultat := 1;
 </code></pre>
 <em>Exécuter l'instruction suivante y fois</em>
 <pre><code class="ada">     resultat := resultat * x;
 
-affiche(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
+afficher(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
                 </div>
             </div>
             
@@ -498,21 +498,21 @@ affiche(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
 <span class="text-primary">finsi</span></code></pre></div>
                 <div class="col-6">
                     <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-title="Test d'égalité" data-content="Attention, ceci n'est pas une affectation, on n'utilise pas <code>:=</code> mais <code>=</code>. Ainsi <code>x = 0</code> est une expression booléenne renvoyant <code>vrai</code> si x vaut 0, <code>faux</code> sinon."><span class="text-primary">si</span></span> x = 0 <span class="text-primary">alors</span>
-    affiche('x est nul !');
+    afficher('x est nul !');
 <span class="text-primary">finsi</span>
 
 <span class="text-primary">si</span> x &lt; 0 <span class="text-primary">alors</span>
-    affiche('x est négatif !');
+    afficher('x est négatif !');
 <span class="text-primary">sinon</span>
-    affiche('x est positif ou nul !');
+    afficher('x est positif ou nul !');
 <span class="text-primary">finsi</span>
 
 <span class="text-primary">si</span> x &lt; 0 <span class="text-primary">alors</span>
-    affiche('x est négatif !');
+    afficher('x est négatif !');
 <span class="text-primary">sinon si</span> x &gt; 0 <span class="text-primary">alors</span>
-    affiche('x est positif !');
+    afficher('x est positif !');
 <span class="text-primary">sinon</span>
-    affiche('x est nul !');
+    afficher('x est nul !');
 <span class="text-primary">finsi</span></code></pre></div>
             </div>
           </div>
@@ -728,18 +728,18 @@ fromage xou dessert</code></pre>
 <span class="text-primary">finfaire</span>;</code></pre>
 <hr>
                     <pre><code class="javascript">resultat, x, y, i : entier;
-affiche('On souhaite calculer x ^ y. Entrer x : ');
-lit(<span id="term4-x">x</span>);<span id="term4-xlbl"></span>
-affiche('Entrer y');
-lit(<span id="term4-y">y</span>);<span id="term4-ylbl"></span>
+afficher('On souhaite calculer x ^ y. Entrer x : ');
+lire(<span id="term4-x">x</span>);<span id="term4-xlbl"></span>
+afficher('Entrer y');
+lire(<span id="term4-y">y</span>);<span id="term4-ylbl"></span>
 resultat := 1;
 i := 1;
 <span class="text-primary">tantque</span> i &lt;= y <span class="text-primary">faire</span>
     <span class="term4-res">resultat</span> := <span class="term4-res">resultat</span> * <span class="term4-x">x</span>;<span id="term4-reslbl"></span>
-    affiche('Calcul... ' + <span class="term4-x">x</span> + ' ^ ' <span class="term4-i">i</span> + ' = ' + <span class="term4-res">resultat</span>);
+    afficher('Calcul... ' + <span class="term4-x">x</span> + ' ^ ' <span class="term4-i">i</span> + ' = ' + <span class="term4-res">resultat</span>);
     <span class="term4-i">i</span> := <span class="term4-i">i</span> + 1;<span id="term4-ilbl"></span>
 <span class="text-primary">finfaire</span>;
-affiche(x + ' ^ ' y + ' = ' + resultat);</code></pre>
+afficher(x + ' ^ ' y + ' = ' + resultat);</code></pre>
                 </div>
                 <div class="col-6 big-top-margin">
                     <div id="term-4" class="little-top-margin"></div>
@@ -796,9 +796,9 @@ affiche(x + ' ^ ' y + ' = ' + resultat);</code></pre>
                             data-title="Nom de la procédure" data-content="De la même manière qu'une variable, il faut nommer une procédure. C'est ce dernier qui sera utilisé pour appeler la procédure">bonjour</span>
 <span class="text-primary">debproc</span>
     <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
-        data-title="Corps de la procédure" data-content="On appelle <em>corps de la procédure</em> l'ensemble des instructions qui constituent la procédure. Ces instructions ne sont exécutées que lorsque la procédure est appelée. Ils sont délimités par les mots réservés <code>debproc</code> et <code>finproc</code>">affiche('Quel est votre nom ?');
-    lit(nom);
-    affiche('Bonjour ' + nom + ' !');</span>
+        data-title="Corps de la procédure" data-content="On appelle <em>corps de la procédure</em> l'ensemble des instructions qui constituent la procédure. Ces instructions ne sont exécutées que lorsque la procédure est appelée. Ils sont délimités par les mots réservés <code>debproc</code> et <code>finproc</code>">afficher('Quel est votre nom ?');
+    lire(nom);
+    afficher('Bonjour ' + nom + ' !');</span>
 <span class="text-primary">finproc</span>;
 
 ...
@@ -832,12 +832,12 @@ estmajeur := majeur(25);<span class="badge badge-success">vrai</span>
             <div class="row">
                 <div class="col-6">
                     <div class="alert alert-primary small-font " role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>affiche()</code> est une procédure
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>afficher()</code> est une procédure
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="alert alert-primary small-font " role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>lit(var)</code> est une fonction puisqu'elle renvoie une chaîne de caractère.
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>lire(var)</code> est une fonction puisqu'elle renvoie une chaîne de caractère.
                     </div>
                 </div>
             </div>
@@ -863,18 +863,18 @@ estmajeur := majeur(25);<span class="badge badge-success">vrai</span>
                 <div class="col-6"><pre><code class="ada">fonction saisieNombre() : entier
 nombre : entier;
 debfonc
-    affiche('Entrer un nombre !');
-    lit(nombre);
+    afficher('Entrer un nombre !');
+    lire(nombre);
     retour nombre;
 finfonc;
 
 procédure calculPuissance(message : chaîne)
 x, y : entier;
 debproc
-    affiche(message);
+    afficher(message);
     x = saisieNombre();
     y = saisieNombre();
-    affiche(x + ' ^ ' + y + ' = ' + puissance(x,y));
+    afficher(x + ' ^ ' + y + ' = ' + puissance(x,y));
 finproc;</code></pre></div>
                 <div class="col-6"><pre><code class="ada">fonction puissance(a : entier, b : entier) : entier
 resultat, i : entier;
