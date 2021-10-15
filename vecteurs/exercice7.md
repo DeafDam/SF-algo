@@ -17,19 +17,19 @@ procedure affichePrixTTC()
 debproc
 	nbArticles, qte : entier;
 	tvTVA, prix, resultat: réel;
-	affiche('Nb articles : ');
-	lit(nbArticles);
-	affiche('Tx TVA: ');
-	lit(txTVA);
+	afficher('Nb articles : ');
+	lire(nbArticles);
+	afficher('Tx TVA: ');
+	lire(txTVA);
 	resultat := 0;
 	tantque nbArticles != 0 faire
-		affiche('Qté de l'article ?)
-		lit(qte);
-		affiche('Prix de l'article ?)
-		lit(prix);
+		afficher('Qté de l'article ?)
+		lire(qte);
+		afficher('Prix de l'article ?)
+		lire(prix);
 		nbArticles := nbArticles - 1;
 		resultat := resultat + qte*prix*txTVA;
 	finfaire
-	affiche('Total TTC : ' + resultat);
+	afficher('Total TTC : ' + resultat);
 finproc
 ```

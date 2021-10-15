@@ -12,7 +12,7 @@ debproc
 		resultat := resultat * monNombre
 		monNombre := monNombre + 1;
 	finfaire
-	affiche('La factorielle de ' + nombreSaisi ' est égale à ' + resultat); 
+	afficher('La factorielle de ' + nombreSaisi ' est égale à ' + resultat); 
 finproc
 ```
 Variante récursive. On définit la fonction factorielle par récurrence de la manière suivante : 

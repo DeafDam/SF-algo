@@ -2,12 +2,12 @@ Une boulangerie est ouverte de 7h à 13h et de 16h à 19h, sauf le dimanche apr�
 ```
 jourActuel : chaîne;
 heureActuelle : entier;
-affiche("Quel jour sommes-nous ?"); lit(jourActuel);
-affiche("Quelle heure est-il ?"); lit(heureActuelle);
+afficher("Quel jour sommes-nous ?"); lire(jourActuel);
+afficher("Quelle heure est-il ?"); lire(heureActuelle);
 si boulangerieOuverte(heureActuelle, jourActuel) alors
-  affiche('La boulangerie est ouverte !');
+  afficher('La boulangerie est ouverte !');
  sinon
-   affiche('La boulangerie est fermée !');
+   afficher('La boulangerie est fermée !');
  finsi;
 ```
 Variante 

@@ -3,10 +3,10 @@ Ecrire le même algorithme que dans l'exercice précédent mais en introduisant 
 ```
 nom : chaîne;
 anneeNaissance, anneeEnCours, nbEnfants, numEnf : entier;
-affiche('Quel est votre nom ?');
-lit(nom);
-affiche('Quelle est votre année de naissance ?');
-lit(anneeNaissance);
+afficher('Quel est votre nom ?');
+lire(nom);
+afficher('Quelle est votre année de naissance ?');
+lire(anneeNaissance);
 anneeEnCours := litEntier('Quelle est l'année en cours ?');
 demandeEtAfficheAge(nom, anneeEnCours);
 nbEnfants := litEntier(nom + ', combien avez vous d'enfants ?');
@@ -21,14 +21,14 @@ nom : chaîne;
 anneeNaissance : entier;
 debproc
   anneeNaissance := litEntier('Quelle est l'année de naissance ?');
-  affiche(nom + ' a ' + calculAge(anneeEnCours, anneeNaissance) + ' ans');
+  afficher(nom + ' a ' + calculAge(anneeEnCours, anneeNaissance) + ' ans');
 finproc
 
 fonction litEntier(message : chaîne) : entier;
 monEntier : entier;
 debfonc 
-  affiche(message);
-  lit(monEntier);
+  afficher(message);
+  lire(monEntier);
   retour monEntier;
 finfonc;
 
@@ -38,10 +38,10 @@ debfonc
       si anneeEnCours >= anneeNaissance alors
         retour anneeEnCours - anneeNaissance;
       finsi;
-      affiche('Il est impossible qu'une personne soit née après ' + anneeEnCours);
+      afficher('Il est impossible qu'une personne soit née après ' + anneeEnCours);
 
   finsi;
-  affiche('Une des deux années renseignées est incorrecte !');
+  afficher('Une des deux années renseignées est incorrecte !');
   retour -1;
 finfonc
 

@@ -6,16 +6,16 @@ procedure remiseMonnaie(montantDu : entier, montantVersé : entier)
 reste, nbrB10, nbrB5, nbrP1 :  entier;
 debproc
 	si montantVersé < montantDu alors
-		affiche('Il manque des sous !');
+		afficher('Il manque des sous !');
 	sinon
 		reste := montantVersé - montantDu;
 		nbrB10 := reste / 10;
 		reste = reste mod 10;
 		nbrB5 := reste / 5;
 		nbrP1 := reste mod 5;
-		affiche('Vous devez rendre ' + nbrB10 + ' billets de 10');
-		affiche('Vous devez rendre ' + nbrB5 + ' billets de 5');
-		affiche('Vous devez rendre ' + nbrP1 + ' pièces de 1');
+		afficher('Vous devez rendre ' + nbrB10 + ' billets de 10');
+		afficher('Vous devez rendre ' + nbrB5 + ' billets de 5');
+		afficher('Vous devez rendre ' + nbrP1 + ' pièces de 1');
 	finsi;
 finproc;
 ```
@@ -37,9 +37,9 @@ debproc
 		nbrB5 := nbrB5 + 1;
 	finfaire;
 	nbrP1 := reste;
-	affiche('Vous devez rendre ' + nbrB10 + ' billets de 10');
-	affiche('Vous devez rendre ' + nbrB5 + ' billets de 5');
-	affiche('Vous devez rendre ' + nbrP1 + ' pièces de 1');
+	afficher('Vous devez rendre ' + nbrB10 + ' billets de 10');
+	afficher('Vous devez rendre ' + nbrB5 + ' billets de 5');
+	afficher('Vous devez rendre ' + nbrP1 + ' pièces de 1');
 	finsi;
 finproc;
 ```

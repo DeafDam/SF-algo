@@ -14,7 +14,7 @@ finfonc
 fonction min2(a : entier, b : entier) : entier
 debfonc
 	si a = b alors
-		affiche('Les nombres sont équivalents');
+		afficher('Les nombres sont équivalents');
 	sinonsi a < b alors
 		retour a;
 	finsi

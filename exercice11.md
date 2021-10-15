@@ -7,12 +7,12 @@ nombreOk : booléen;
 debfonc
 	nombreOK := faux;
 	tantque nombreOK = faux faire
-		 affiche('Entrer un nombre entre 5 et 10');
-		 lit(nombre);
+		 afficher('Entrer un nombre entre 5 et 10');
+		 lire(nombre);
 		 si nombre > 10 alors
-		 	affiche('Plus petit !');
+		 	afficher('Plus petit !');
 		 sinon si nombre < 5 alors
-		  	affiche('Plus grand !');
+		  	afficher('Plus grand !');
 		 sinon
 		 	nombreOk := vrai;
 		 finsi;
@@ -26,12 +26,12 @@ fonction nombreEntre5et10() : entier
 nombre : entier;
 debfonc
 	tantque vrai faire
-		 affiche('Entrer un nombre entre 5 et 10');
-		 lit(nombre);
+		 afficher('Entrer un nombre entre 5 et 10');
+		 lire(nombre);
 		 si nombre > 10 alors
-		 	affiche('Plus petit !');
+		 	afficher('Plus petit !');
 		 sinon si nombre < 5 alors
-		  	affiche('Plus grand !');
+		  	afficher('Plus grand !');
 		 sinon
 		 	retour nombre;
 		 finsi;

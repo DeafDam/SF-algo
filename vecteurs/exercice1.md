@@ -8,7 +8,7 @@ i : entier;
 debproc
 	i := 0;
 	tantque i < longueur(v) faire
-		affiche(v[i]);
+		afficher(v[i]);
 		i := i + 1;
 	finfaire;
 finproc;
@@ -19,7 +19,7 @@ procédure afficheVecteur(v : chaîne[])
 i : entier;
 debproc
 	pour i := 0 à longueur(v) - 1 faire
-		affiche(v[i]);
+		afficher(v[i]);
 	finfaire;
 finproc;
 ```
@@ -32,7 +32,7 @@ i : entier;
 debproc
 	i := longueur(v) - 1;
 	tantque i >= 0 faire
-		affiche(v[i]);
+		afficher(v[i]);
 		i := i - 1;
 	finfaire;
 finproc;
@@ -43,7 +43,7 @@ procédure afficheVecteur(v : chaîne[])
 i : entier;
 debproc
 	pour i := longueur(v) - 1 à 0 faire
-		affiche(v[i]);
+		afficher(v[i]);
 	finfaire;
 finproc;
 ```

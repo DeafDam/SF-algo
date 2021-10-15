@@ -2,9 +2,9 @@ Ecrire un algorithme permettant à un utilisateur de calculer son âge en lui de
 
 ```
 anneeNaissance, anneeEnCours : entier;
-affiche('Quelle est votre année de naissance ?');
-lit(anneeNaissance);
-affiche('Quelle est l'année en cours ?');
-lit(anneeEnCours);
-affiche('Vous avez ' + (anneeEnCours - anneeNaissance) + ' ans');
+afficher('Quelle est votre année de naissance ?');
+lire(anneeNaissance);
+afficher('Quelle est l'année en cours ?');
+lire(anneeEnCours);
+afficher('Vous avez ' + (anneeEnCours - anneeNaissance) + ' ans');
 ```

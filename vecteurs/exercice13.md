@@ -25,13 +25,13 @@ i := 0;
 	j := 0;
 		tantque j < longueur(s[i]) faire
 			si s[i][j] = 0 alors
-				affiche(' ');
+				afficher(' ');
 			sinon
-				affiche(s[i][j]);
+				afficher(s[i][j]);
 			finsi;
 			j := j + 1;
 		finfaire
-		affiche('\n');
+		afficher('\n');
 		i := i + 1;
 	finfaire
 finproc
