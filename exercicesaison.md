@@ -1,5 +1,6 @@
 Ecrire un algorithme permettant d’afficher la saison en introduisant le numéro du mois.
 
+```
 mois : entier;
 afficher("Quel est le numéro du mois ?");
 lire(mois);
@@ -14,3 +15,4 @@ sinon si mois >= 9 ou mois < 12 alors
 sinon 
 	afficher("Hiver");
 finsi;
+```
