@@ -9,7 +9,7 @@ chaîne[4] => 5e caractère de la chaîne
 chaîne[4] := '\*',
 
 ```
-procedure remplaceEtoile(caractere : chaîne, phrase : chaîne)
+fonction remplaceEtoile(caractere : chaîne, phrase : chaîne) : chaîne
 i : entier;
 debfonc
 	i := 0;
@@ -19,5 +19,6 @@ debfonc
 		finsi;
 		i := i + 1;
 	finfaire;
+	retour phrase;
 finfonc;
 ```
