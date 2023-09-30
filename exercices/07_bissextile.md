@@ -12,5 +12,3 @@ Le modulo est le reste de la division entière.
 
 Wikipédia : une année est bissextile si l'année est divisible par 4 et non divisible par 100, ou
 si l'année est divisible par 400.
-
-

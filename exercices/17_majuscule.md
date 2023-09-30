@@ -4,4 +4,3 @@ procédure majusculeMot(phrase : chaîne)
 On s'aidera de :
 fonction majuscule(c : chaîne) : chaîne (renvoie le caractère passé en paramètre en majuscule).
 majuscule('a') => 'A' 
-

@@ -193,12 +193,10 @@ $("#toggleClassIntern").click(function(event) {
 
 $("div.step.slide").each(function(index, el) {
   var id = $(el).attr("id");
-  var title = $(el).find("h1.display-3").text();
+  var title = $(el).find("h2.display-3").text();
   $(el).attr("data-nb", index + 1);
   var yOffset = 1100;
   var xOffset = 2000;
-  var ybase = 1100;
-  var xbase = 0; 
   if(id !== 'accueil'){
     if(id.indexOf("-") > 0){
       if(id.lastIndexOf("-") != id.indexOf("-")){

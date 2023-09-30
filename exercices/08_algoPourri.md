@@ -17,3 +17,6 @@ debfonc
 	retour j;
 finfonc
 ```
+
+Pourquoi est-il pourri ? Quelles sont les résultats obtenus selon plusieurs valeurs de i ?
+Comment faire un meilleur algorithme pour les mêmes résultats ?

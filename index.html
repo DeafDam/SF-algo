@@ -1,218 +1,274 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>IPI - Introduction à l'algorithmique</title>
-    
-    <meta name="description" content="" />
-    <meta name="author" content="Pierre-Julien VILLOUD" />
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S&F - Introduction à l'algorithmique</title>
+
+    <meta name="description" content="" />
+    <meta name="author" content="Damien ARCO" />
 
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/idea.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
 </head>
 
 <body class="impress-not-supported">
 
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
-</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="my-navbar">
+        <a class="navbar-brand" href="index.html">
+            <img class="" src="img/logo_SF.png" width="50" alt="S&F" />
+            Cours Algo
+        </a>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="my-navbar">
-  <a class="navbar-brand" href="index.html">
-    <img src="img/ipi.jpg" width="30" height="30" alt=""> Cours Algo 001
-  </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav nav-pills mr-auto">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="nav nav-pills mr-auto">
-      
-    </ul>
-    <span class="navbar-text">
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <form class="form-inline my-2 my-lg-0" onsubmit="search()">
-              <div class="input-group">
-                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Rechercher">
-                <div class="input-group-append">
-                  <span class="input-group-text" id="searchNb"></span>
-                  <button class="btn btn-primary" type="submit"><i class="fa fa-icon fa-search"></i></button>
-                </div>
-              </div>
-              
-              
-            </form>
-            <a class="btn btn-primary" href="https://github.com/pjvilloud/ipi-algo-001-cours" target="_blank"><i class="fa fa-icon fa-gamepad"></i></a>
-            &nbsp;
-            <a class="btn btn-primary" href="mailto:pjvilloud@protonmail.com"><i class="fa fa-icon fa-envelope"></i></a>
-            &nbsp;
-            <a class="btn btn-primary" href="https://github.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-github"></i></a>
-            &nbsp;
-            <a class="btn btn-primary" href="https://linkedin.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-linkedin"></i></a>&nbsp;
-            <a class="btn btn-primary" href="#" id="numSlide">1</a>
-        </div>
-    </span>
-  </div>
-</nav>
-<div class="progress">
-  <div id="progress" class="progress-bar" style="width: 0%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="container-fluid" id="impress">
-
-    <div id="accueil" class="step slide" data-rel-x="0" data-y=0>
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container text-center">
-            <h1 class="display-3">Bienvenue !</h1>
-            <p class="lead">
-                <h2>Pierre-Julien VILLOUD</h2>
-                <div class="big-top-margin">
-                    <img src="img/pjvilloud.jpg" class="img-bienvenue rounded mx-auto d-block" alt="Pierre-Julien VILLOUD">
-                </div>
-                <div class="big-top-margin">
-                    <h3><i class="fa fa-graduation-cap"></i>&nbsp;<a href="https://pjvilloud.github.io/ipi-algo-001-cours/">https://pjvilloud.github.io/ipi-algo-001-cours/</a>
-                    <h3><i class="fa fa-icon fa-envelope-square"></i>&nbsp;<a href="mailto:pjvilloud@protonmail.com">pjvilloud@protonmail.com</a></h3>
-                    <h3><i class="fa fa-icon fa-github-square"></i>&nbsp;<a href="https://github.com/pjvilloud" target="_blank">https://github.com/pjvilloud</a></h3>
-                    <h3><i class="fa fa-icon fa-linkedin-square"></i>&nbsp;<a href="https://linkedin.com/pjvilloud" target="_blank">https://linkedin.com/pjvilloud</a></h3>
-                    <h3><i class="fa fa-icon fa-globe"></i>&nbsp;<a href="https://pjvilloud.github.io" target="_blank">https://pjvilloud.github.io</a></h3>
-                </div>
-            </p>
-          </div>
-        </div>
-    </div>
-
-    <div id="introduction" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Introduction</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;<strong>Algorithme</strong> : C'est une suite d'actions (ou <em>instructions</em>) qu'un ordinateur doit effectuer pour obtenir en un temps fini un résultat déterminé (ou <em>sortie</em>), à partir d'une situation donnée (ou <em>entrée</em>).
-            </div>
-          </div>
-          <div class="container small-font  big-top-margin">
-            <img src="img/wordcloud.png" alt="" width="1200">
-          </div>
-        
-        </div>
-      </div>
-    </div>
-
-    <div id="introduction-langages" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Langages de programmation</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Au tout début de l'informatique, les programmes étaient développés en <strong>langage machine</strong>, c'est-à-dire des 0 et des 1 qui étaient directement interprétables et exécutables par le processeur de l'ordinateur. Cela a évidemment été très vite compliqué. Un premier langage de bas niveau est apparu, le <strong>langage assembleur</strong>, un langage très proche du langage machine mais lisible par un être humain.
-            </div>
-          </div>
-          <div class="container small-font  big-top-margin">
-            <img src="img/compilation.png" alt="">
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font big-top-margin" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les langages utilisés maintenant sont dits de <strong>haut niveau</strong>. Ces langages sont transformés ou <strong>compilés</strong> en langage assembleur puis <strong>assemblés</strong> en langage machine pour pouvoir être exécutés par le processeur.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="introduction-compilation" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Compilation</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour passer d'un code source en langage de haut niveau à un code en langage assembleur, on passe par ce que l'on appelle un <strong>compilateur</strong>. Il effectue les actions suivantes sur le code source : 
-            </div>
-          </div>
-          <div class="container small-font  big-top-margin">
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Analyse lexicale</strong> : Cela permet d'isoler chaque <em>mot</em> et de le qualifier (est-ce un mot réservé du langage, est-ce une valeur, un identificateur ?).</li>
-                <li class="list-group-item"><strong>Analyse syntaxique</strong> : Cela permet de vérifier que l'enchainement des mots est valide par rapport à la grammaire du langage.</li>
-                <li class="list-group-item"><strong>Analyse sémantique</strong> : Cela permet de vérifier que les types des variables sont respectés ou qu'elles ont été bien déclarées par exemple.</li>
             </ul>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font big-top-margin" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;En cas de problème à l'une des étapes ci-dessus, la compilation génère des erreurs et le programme ne peut être exécuté. Nous allons utiliser dans ce cours un <em>pseudo-langage</em> permettant de comprendre les concepts de l'algorithmique.
-            </div>
-          </div>
+            <span class="navbar-text">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <form class="form-inline my-2 my-lg-0" onsubmit="search()">
+                        <div class="input-group">
+                            <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Rechercher"
+                                aria-label="Rechercher">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="searchNb"></span>
+                                <button class="btn btn-primary" type="submit"><i
+                                        class="fa fa-icon fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    &nbsp;
+                    <a class="btn btn-primary" href="https://github.com/DeafDam/SF-algo/tree/intiForSF#readme" target="_blank">
+                        <i class="fa fa-icon fa-gamepad"></i>
+                    </a>
+                    &nbsp;
+                    <!-- 
+                    <a class="btn btn-primary" href="https://github.com/DeafDam" target="_blank">
+                        <i class="fa fa-icon fa-github"></i>
+                    </a>
+                    &nbsp;
+                    <a class="btn btn-primary" href="https://www.linkedin.com/in/arcod/" target="_blank">
+                        <i class="fa fa-icon fa-linkedin"></i> 
+                    </a>
+                    &nbsp;
+                    -->
+                    <a class="btn btn-primary" href="#" id="numSlide">1</a>
+                </div>
+            </span>
         </div>
-      </div>
+    </nav>
+    <div class="progress">
+        <div id="progress" class="progress-bar" style="width: 0%;" role="progressbar" aria-valuenow="0"
+            aria-valuemin="0" aria-valuemax="100"></div>
     </div>
+    <div class="container-fluid h-75" id="impress">
 
-    <div id="chainescaracteres" class="step slide term-1">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container-fluid text-center">
-                <h1 class="display-3">Les chaînes de caractères</h1>
-                <div class="container-fluid">
-                    <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fréquent que l'utilisateur d'un programme et l'ordinateur intéragissent en échangeant des messages textuels. Nous allons donc introduire deux <strong>instructions</strong> permettant l'affichage par l'ordinateur et la saisie par l'utilisateur de messages sous formes de <strong>chaînes de caractères</strong>.
+        <div id="accueil" class="step slide" data-rel-x="0" data-y=0>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container text-center">
+                    <h2 class="display-3">Bienvenue !</h2>
+                    <p class="lead">
+                    <h2>Damien ARCO</h2>
+                    <div class="big-top-margin">
+                        <img src="img/avatar.jpg" class="img-bienvenue rounded-circle mx-auto d-block"
+                            alt="Damien ARCO">
+                    </div>
+                    <!-- 
+                    <div class="big-top-margin">
+                        <h3><i class="fa fa-graduation-cap"></i>&nbsp;<a href="https://deafdam.github.io/SF-algo/">https://deafdam.github.io/SF-algo/</a>
+                        <h3><i class="fa fa-icon fa-github-square"></i>&nbsp;<a href="https://github.com/DeafDam" target="_blank">https://github.com/DeafDam</a></h3>
+                        <h3><i class="fa fa-icon fa-linkedin-square"></i>&nbsp;<a href="https://www.linkedin.com/in/arcod/" target="_blank">https://www.linkedin.com/in/arcod/</a></h3>
+                        <h3><i class="fa fa-icon fa-globe"></i>&nbsp;<a href="" target="_blank"></a></h3>
+                    </div> 
+                    -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="introduction" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Introduction</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;<strong>Algorithme</strong> : C'est une suite
+                            d'actions (ou
+                            <em>instructions</em>) qu'un ordinateur doit effectuer pour obtenir en un temps fini un
+                            résultat déterminé
+                            (ou <em>sortie</em>), à partir d'une situation donnée (ou <em>entrée</em>).
+                        </div>
+                    </div>
+                    <div class="container small-font  big-top-margin">
+                        <img src="img/wordcloud.png" alt="" width="1200">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="introduction-langages" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Langages de programmation</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Au tout début de l'informatique, les
+                            programmes étaient
+                            développés en <strong>langage machine</strong>, c'est-à-dire des 0 et des 1 qui étaient
+                            directement
+                            interprétables et exécutables par le processeur de l'ordinateur. Cela a évidemment été très
+                            vite
+                            compliqué. Un premier langage de bas niveau est apparu, le <strong>langage
+                                assembleur</strong>, un langage
+                            très proche du langage machine mais lisible par un être humain.
+                        </div>
+                    </div>
+                    <div class="container small-font  big-top-margin">
+                        <img src="img/compilation.png" alt="">
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font big-top-margin" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les langages utilisés maintenant sont dits de
+                            <strong>haut
+                                niveau</strong>. Ces langages sont transformés ou <strong>compilés</strong> en langage
+                            assembleur puis
+                            <strong>assemblés</strong> en langage machine pour pouvoir être exécutés par le processeur.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
-                <div class="row small-text">
-                    <div class="col-6">
-                        <h2 class="display-4">Affichage</h2>
-                        <pre><code class="ada"><span data-toggle="popover" data-trigger="hover click" data-placement="bottom" data-html="true"
-                        data-title="Procédure <code>afficher</code>" data-content="Le mot <em>afficher</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">afficher</span>(<span data-toggle="popover" data-trigger="hover click" data-placement="top" data-html="true" data-title="Chaîne de caractère entre quotes" data-content="Pour représenter une suite de caractères, on écrit cette dernière entre simples (parfois doubles) quotes : ''">'Hello World !'</span>)<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Séparateur d'instruction ;" data-content="Chaque instruction est terminée par un point-virgule (comme dans beaucoup de langages)">;</span></code></pre>
+        </div>
+
+        <div id="introduction-compilation" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Compilation</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour passer d'un code source en langage de
+                            haut niveau à un
+                            code en langage assembleur, on passe par ce que l'on appelle un
+                            <strong>compilateur</strong>. Il effectue
+                            les actions suivantes sur le code source :
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <h2 class="display-4">Saisie</h2>
-                        <pre><code class="ada"><span data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true"  data-content="Le mot <em>lire</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">lire</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Variable de type chaîne de caractère" data-content="Pour rendre le programme interactif, on introduit une variable qui va contenir la chaîne de caractère saisie par l'utilisateur. Cette notion sera approfondie plus tard.">nom);</span></code></pre>
+                    <div class="container small-font  big-top-margin">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Analyse lexicale</strong> : Cela permet d'isoler chaque
+                                <em>mot</em>
+                                et de le qualifier (est-ce un mot réservé du langage, est-ce une valeur, un
+                                identificateur ?).</li>
+                            <li class="list-group-item"><strong>Analyse syntaxique</strong> : Cela permet de vérifier
+                                que
+                                l'enchainement des mots est valide par rapport à la grammaire du langage.</li>
+                            <li class="list-group-item"><strong>Analyse sémantique</strong> : Cela permet de vérifier
+                                que les types
+                                des variables sont respectés ou qu'elles ont été bien déclarées par exemple.</li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font big-top-margin" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;En cas de problème à l'une des étapes
+                            ci-dessus, la
+                            compilation génère des erreurs et le programme ne peut être exécuté. Nous allons utiliser
+                            dans ce cours un
+                            <em>pseudo-langage</em> permettant de comprendre les concepts de l'algorithmique.
+                        </div>
                     </div>
                 </div>
-                <hr>
-                <div class="row smaller-text">
-                    <div class="col-6 text-left">
-                        <pre><code class="ada">afficher('Quel est votre nom ?');
+            </div>
+        </div>
+
+        <div id="chainescaracteres" class="step slide term-1">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Les chaînes de caractères</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fréquent que l'utilisateur d'un
+                            programme et
+                            l'ordinateur intéragissent en échangeant des messages textuels. Nous allons donc introduire
+                            deux
+                            <strong>instructions</strong> permettant l'affichage par l'ordinateur et la saisie par
+                            l'utilisateur de
+                            messages sous formes de <strong>chaînes de caractères</strong>.
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row small-text">
+                        <div class="col-6">
+                            <h2 class="display-4">Affichage</h2>
+                            <pre><code class="ada"><span data-toggle="popover" data-trigger="hover click" data-placement="bottom" data-html="true"
+                        data-title="Procédure <code>afficher</code>" data-content="Le mot <em>afficher</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">afficher</span>(<span data-toggle="popover" data-trigger="hover click" data-placement="top" data-html="true" data-title="Chaîne de caractère entre quotes" data-content="Pour représenter une suite de caractères, on écrit cette dernière entre simples (parfois doubles) quotes : ''">'Hello World !'</span>)<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Séparateur d'instruction ;" data-content="Chaque instruction est terminée par un point-virgule (comme dans beaucoup de langages)">;</span></code></pre>
+                        </div>
+                        <div class="col-6">
+                            <h2 class="display-4">Saisie</h2>
+                            <pre><code class="ada"><span data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true"  data-content="Le mot <em>lire</em> correpond à l'appel d'une procédure. Cette notion sera présentée plus tard.">lire</span>(<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="Variable de type chaîne de caractère" data-content="Pour rendre le programme interactif, on introduit une variable qui va contenir la chaîne de caractère saisie par l'utilisateur. Cette notion sera approfondie plus tard.">nom);</span></code></pre>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row smaller-text">
+                        <div class="col-6 text-left">
+                            <pre><code class="ada">afficher('Quel est votre nom ?');
 lire(<span id="term1-nom">nom</span>);<span id="term1-nom2"></span>
 afficher('Bonjour ' <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
     data-title="Concaténation de chaînes" data-content="Le signe + est un opérateur qui dans ce contexte permet de concaténer deux chaînes de caractères en une seule">+</span> nom + ' !');
                         </code></pre>
-                    </div>
-                    <div class="col-6 text-left little-top-margin" >
-                        <div id="term-1"></div>
+                        </div>
+                        <div class="col-6 text-left little-top-margin">
+                            <div id="term-1"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container-fluid little-top-margin text-center">
-                <div class="alert alert-primary small-font " role="alert">
-                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les chaînes de caractères peuvent être composées de n'importe quels caractères (lettres, majuscules, minuscules, chiffres, caractères accentués ou spéciaux...).
+                <div class="container-fluid little-top-margin text-center">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les chaînes de caractères peuvent être composées
+                        de n'importe
+                        quels caractères (lettres, majuscules, minuscules, chiffres, caractères accentués ou
+                        spéciaux...).
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="variablesettypes" class="step slide term-2">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container-fluid text-center">
-                <h1 class="display-3">Variables et types</h1>
-                <div class="container-fluid">
-                    <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Comme nous l'avons vu, nous pouvons utiliser des <strong>variables</strong> pour stocker des valeurs (dans le cas précédent, une chaîne de caractères). On peut considérer que l'ordinateur contient un certain nombre de <em>cases</em>, ou <em>emplacements mémoires</em> permettant d'accueillir et de stocker ces fameuses variables. Pour pouvoir utiliser cette variable dans une autre instruction, on l'identifie par une <em>étiquette</em> ou <em>identificateur</em> permettant d'y faire référence. Un identificateur est donc une suite de caractères alphanumériques (mais commençant forcément par une lettre).
+        <div id="variablesettypes" class="step slide term-2">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Variables et types</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Comme nous l'avons vu, nous pouvons utiliser
+                            des
+                            <strong>variables</strong> pour stocker des valeurs (dans le cas précédent, une chaîne de
+                            caractères). On
+                            peut considérer que l'ordinateur contient un certain nombre de <em>cases</em>, ou
+                            <em>emplacements
+                                mémoires</em> permettant d'accueillir et de stocker ces fameuses variables. Pour pouvoir
+                            utiliser cette
+                            variable dans une autre instruction, on l'identifie par une <em>étiquette</em> ou
+                            <em>identificateur</em>
+                            permettant d'y faire référence. Un identificateur est donc une suite de caractères
+                            alphanumériques (mais
+                            commençant forcément par une lettre).
+                        </div>
                     </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="row smaller-text">
-                        <div class="col-6 text-left">
-                            <pre><code class="ada">afficher('Quel est votre nom ?');
+                    <div class="container-fluid">
+                        <div class="row smaller-text">
+                            <div class="col-6 text-left">
+                                <pre><code class="ada">afficher('Quel est votre nom ?');
 lire(<span id="term2-nom">nom</span>);<span id="term2-nom2"></span>
 afficher('Bonjour ' + nom + ' !');
 afficher('Rappelez-moi votre nom ?');
@@ -221,32 +277,42 @@ afficher('OK ! Bonjour ' + nom + ' !');
 afficher('Bonjour ' + <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
     data-title="Ceci n'est pas un identificateur" data-content="Attention, <em>nom</em> est ici entre quotes, ce n'est donc pas l'identificateur (et donc pas la variable) qui est utilisé mais bien la chaîne de caractère 'nom' !">'nom'</span> + ' !');
                             </code></pre>
-                        </div>
-                        <div class="col-6 text-left little-top-margin" >
-                            <div id="term-2"></div>
+                            </div>
+                            <div class="col-6 text-left little-top-margin">
+                                <div id="term-2"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="alert alert-primary small-font " role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;On peut ensuite utiliser ou manipuler ces variables en faisant référence à leurs identificateurs respectifs.
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;On peut ensuite utiliser ou manipuler ces
+                            variables en
+                            faisant référence à leurs identificateurs respectifs.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="variablesettypes-declaration" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Déclarations de variables</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour pouvoir être utilisée, une variable doit être <strong>déclarée</strong> une seule fois avant d'y faire référence pour la première fois. Dans une déclaration, on précise le <strong>type</strong> de la variable ainsi que <strong>l'identificateur</strong> qui sera utilisé pour y faire référence. La plupart des langages sont sensibles à la casse. Ainsi une variable d'identificateur <code>nom</code> est distincte de <code>Nom</code> ou de <code>NOM</code>.
-            </div>
-          </div>
-          <div class="container text-left">
-            <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+        <div id="variablesettypes-declaration" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Déclarations de variables</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour pouvoir être utilisée, une variable doit
+                            être
+                            <strong>déclarée</strong> une seule fois avant d'y faire référence pour la première fois.
+                            Dans une
+                            déclaration, on précise le <strong>type</strong> de la variable ainsi que
+                            <strong>l'identificateur</strong> qui sera utilisé pour y faire référence. La plupart des
+                            langages sont
+                            sensibles à la casse. Ainsi une variable d'identificateur <code>nom</code> est distincte de
+                            <code>Nom</code> ou de <code>NOM</code>.
+                        </div>
+                    </div>
+                    <div class="container text-left">
+                        <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
                 data-title="Identificateur" data-content="L'identificateur <code>nom</code> est déclaré. A chaque fois que cet identificateur est utilisé, cela fera référence à cette variable.">nom</span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
                     data-title="<em>est du type</em>" data-content="Le caractère <code>:</code> est équivalent à <em>est du type</em>">:</span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
                         data-title="Type" data-content="Le type de la variable est ici une chaîne de caractère, mais il y en a d'autres que l'on verra plus tard.">chaîne</span>;
@@ -255,30 +321,42 @@ afficher('Bonjour ' + <span data-toggle="popover" data-offset="0" data-trigger="
 afficher('Quel est votre nom ?');
 lire(nom);
 afficher('Bonjour ' + nom + ' !');</code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On parle ici de langage <strong>fortement typé</strong> (Java, C++...), c'est-à-dire qu'on ne peut stocker qu'un seul type de valeur dans une variable. Il existe aussi des langages <strong>faiblement typés</strong> où l'on peut stocker n'importe quel type dans une variable (Javascript, PHP...). Dans ce cas, on ne spécifie pas le type.
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;On parle ici de langage <strong>fortement
+                                typé</strong>
+                            (Java, C++...), c'est-à-dire qu'on ne peut stocker qu'un seul type de valeur dans une
+                            variable. Il existe
+                            aussi des langages <strong>faiblement typés</strong> où l'on peut stocker n'importe quel
+                            type dans une
+                            variable (Javascript, PHP...). Dans ce cas, on ne spécifie pas le type.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="variablesettypes-affectation" class="step slide term-2-2">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Initialisation et affectation de variables</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une fois déclarée, la variable est <strong>indéfinie</strong> puisqu'elle n'a pas encore de valeur. Elle doit donc être <strong>initialisée</strong>, c'est-à-dire qu'on doit lui donner une valeur avant de pouvoir la référencer quelque part. Par la suite, on peut lui <strong>affecter</strong> d'autres valeurs au fur et à mesure de l'algorithme.
-            </div>
-          </div>
-          <div class="container-fluid text-left">
-            <div class="row">
-                <div class="col-6 text-left" >
-                           
-                    <pre><code class="ada">msg : chaîne;
+        <div id="variablesettypes-affectation" class="step slide term-2-2">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Initialisation et affectation de variables</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une fois déclarée, la variable est
+                            <strong>indéfinie</strong> puisqu'elle n'a pas encore de valeur. Elle doit donc être
+                            <strong>initialisée</strong>, c'est-à-dire qu'on doit lui donner une valeur avant de pouvoir
+                            la référencer
+                            quelque part. Par la suite, on peut lui <strong>affecter</strong> d'autres valeurs au fur et
+                            à mesure de
+                            l'algorithme.
+                        </div>
+                    </div>
+                    <div class="container-fluid text-left">
+                        <div class="row">
+                            <div class="col-6 text-left">
+
+                                <pre><code class="ada">msg : chaîne;
 ch : chaîne;
 <span class="text-primary" id="term2-2-msglbl1">msg</span> := 'Bonjour ';<span id="term2-2-msg0"></span>
 afficher('Quel est votre prénom ?');
@@ -288,91 +366,114 @@ afficher('Quel est votre nom ?');
 lire(<span class="term2-2-nomprenomlbl2">ch</span>);<span id="term2-2-nomprenom2"></span>
 <span class="term2-2-msglbl3">msg</span> := <span class="term2-2-msglbl3">msg</span> + <span class="term2-2-nomprenomlbl2">ch</span> + ' !';<span id="term2-2-msg2"></span>
 afficher(<span class="term2-2-msglbl3">msg</span>);</code></pre>
+                            </div>
+                            <div class="col-6 text-left">
+                                <div id="term-2-2"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            <div class="col-6 text-left" >
-                <div id="term-2-2"></div>
             </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="variablesettypes-typeentier" class="step slide term-3">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Type entier</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu que nous pouvions stocker des chaînes de caractères dans des variables. Que se passe-t-il si l'on souhaite effectuer des opérations arithmétiques (additions ou multiplications par exemple) avec des nombres entiers ? Une chaîne de caractères ne peut être utilisée pour effectuer ces opérations puisqu'elle peut contenir n'importe quel caractère. On utilise le type <strong>entier</strong>.
-            </div>
-          </div>
-          <div class="container-fluid big-top-margin">
-            <div class="row smaller-text">
-                <div class="col-6 text-left">
-                    <pre><code class="ada">nombre : entier;
+        <div id="variablesettypes-typeentier" class="step slide term-3">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Type entier</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu que nous pouvions stocker des
+                            chaînes de
+                            caractères dans des variables. Que se passe-t-il si l'on souhaite effectuer des opérations
+                            arithmétiques
+                            (additions ou multiplications par exemple) avec des nombres entiers ? Une chaîne de
+                            caractères ne peut
+                            être utilisée pour effectuer ces opérations puisqu'elle peut contenir n'importe quel
+                            caractère. On utilise
+                            le type <strong>entier</strong>.
+                        </div>
+                    </div>
+                    <div class="container-fluid big-top-margin">
+                        <div class="row smaller-text">
+                            <div class="col-6 text-left">
+                                <pre><code class="ada">nombre : entier;
 afficher('Nombre entre 1 et 10');
 lire(<span id="term3-nom">nombre</span>);<span id="term3-nom2"></span>
 afficher('Carré : ' + <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="bottom" data-html="true"
     data-title="Expression arithmétique" data-content="Comme la variable <code>nombre</code> contient un nombre entier, on peut effectuer une multiplication et afficher le résultat (on part du principe que l'instruction <code>affiche</code> sait afficher des variables de type entier). ">nombre*nombre</span>);</code></pre>
-                </div>
-                <div class="col-6 text-left little-top-margin" >
-                    <div id="term-3"></div>
+                            </div>
+                            <div class="col-6 text-left little-top-margin">
+                                <div id="term-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid big-top-margin">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les autres opérateurs arithmétiques peuvent
+                            être utilisés :
+                            <code>+ / *</code> et combinés. Les règles de priorité sur les opérateurs sont celles des
+                            mathématiques.
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
-          <div class="container-fluid big-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les autres opérateurs arithmétiques peuvent être utilisés : <code>+ / *</code> et combinés. Les règles de priorité sur les opérateurs sont celles des mathématiques.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="variablesettypes-typereel" class="step slide term-3">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Type réel</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ajouter, soustraire et multiplier des entiers fonctionne bien. Qu'en est-il de la division de deux entiers ? Cela ne produit pas systématiquement un entier. On doit alors utiliser le type <strong>réel</strong>.
-            </div>
-          </div>
-          <div class="container-fluid text-left">
-                    <pre><code class="ada">nbEntier, deux, cinq, dix : entier;
+        <div id="variablesettypes-typereel" class="step slide term-3">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Type réel</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ajouter, soustraire et multiplier des entiers
+                            fonctionne
+                            bien. Qu'en est-il de la division de deux entiers ? Cela ne produit pas systématiquement un
+                            entier. On
+                            doit alors utiliser le type <strong>réel</strong>.
+                        </div>
+                    </div>
+                    <div class="container-fluid text-left">
+                        <pre><code class="ada">nbEntier, deux, cinq, dix : entier;
 nbReelFini, nbReelNonFini : réel;
 
 <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
     data-title="Affectation d'un entier" data-content="Pour affecter un entier, il suffit de l'écrire directement. Attention, <code>10</code> est ici bien un entier mais <code>'10'</code> serait une chaîne de caractère, et il ne serait pas possible d'effectuer des opérations dessus.">dix := 10;</span>
 cinq := 5;
-deux := 10 / 5;<span class="badge-primary badge">=&gt; <script>document.write(10/5)</script></span>
+deux := 10 / 5;<span class="badge-primary badge">=&gt; <script>document.write(10 / 5)</script></span>
 nbEntier := cinq / deux;<span class="badge-warning badge">=&gt; 2</span>
 nbReelFini := cinq / deux;<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
     data-title="Entier/Réel" data-content="<code>2</code> est un entier mais <code>2.0</code> est un réel même si mathématiquement, les valeurs sont identiques. Ainsi lorsqu'on utilise <code>2.0</code>, les calculs seront effectués en valeur approchée."><span class="badge-primary badge">=&gt; 2.0</span></span>
 nbReelFini := cinq / nbReelFini;<span class="badge-primary badge">=&gt; 2.5</span>
-nbReelNonFini := 2.0 / 3;<span class="badge-warning badge">=&gt; <script>document.write(2/3);</script></span></code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Généralement dans les langages de programmation typés, la division de deux entiers produit un entier. Il faut que l'un de deux opérandes soit un réel pour produire un réel. A noter que lorsque le résultat n'est pas fini, ce dernier est arrondi.
+nbReelNonFini := 2.0 / 3;<span class="badge-warning badge">=&gt; <script>document.write(2 / 3);</script></span></code></pre>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Généralement dans les langages de
+                            programmation typés, la
+                            division de deux entiers produit un entier. Il faut que l'un de deux opérandes soit un réel
+                            pour produire
+                            un réel. A noter que lorsque le résultat n'est pas fini, ce dernier est arrondi.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="variablesettypes-structure" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Type structuré</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Avant de parler de programmation objet dans un prochain cours, une première étape consiste à utiliser un type structuré permettant de représenter des données composées.
-            </div>
-          </div>
-          <div class="container text-left">
-            <pre><code class="ada">type personne = structure 
+        <div id="variablesettypes-structure" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Type structuré</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Avant de parler de programmation objet dans
+                            un prochain
+                            cours, une première étape consiste à utiliser un type structuré permettant de représenter
+                            des données
+                            composées.
+                        </div>
+                    </div>
+                    <div class="container text-left">
+                        <pre><code class="ada">type personne = structure 
     nom : chaîne;
     prenom : chaîne;
     âge : entier;
@@ -382,99 +483,126 @@ p : personne;
 p.nom := 'Pierre-Julien';
 p.prenom := 'Villoud';
 p.âge := 32;</code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Cela permet de représenter des données plus complexes.
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Cela permet de représenter des données plus
+                            complexes.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="variablesettypes-exo" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Exercice</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ecrire un algorithme permettant à un utilisateur de calculer son âge en lui demandant son année de naissance et l'année en cours (on ne tient pas compte des jours et des mois).
+        <div id="variablesettypes-exo" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Exercice</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ecrire un algorithme permettant à un
+                            utilisateur de
+                            calculer son âge en lui demandant son année de naissance et l'année en cours (on ne tient
+                            pas compte des
+                            jours et des mois).
+                        </div>
+                    </div>
+                    <div class="container small-font text-left">
+                        <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Comment faire maintenant si l'on souhaite
+                            calculer
+                            également l'âge de tous ses enfants ? Comment gérer le cas où l'utilisateur renseigne une
+                            année de
+                            naissance supérieure à l'année en cours ?
+                        </div>
+                    </div>
+                </div>Exercice 
             </div>
-          </div>
-          <div class="container small-font text-left">
-            <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Comment faire maintenant si l'on souhaite calculer également l'âge de tous ses enfants ? Comment gérer le cas où l'utilisateur renseigne une année de naissance supérieure à l'année en cours ?
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
+        Exercice 
+        <div id="conditioniteration" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Conditions et itérations</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsqu'on écrit un algorithme, nous avons
+                            rapidement besoin
+                            de pouvoir effectuer des portions d'algorithmes plusieurs fois, ou d'exécuter une portion
+                            d'algorithme
+                            uniquement dans tel ou tel cas. Pour cela, on doit d'abord définir comment <em>isoler</em>
+                            un ensemble
+                            d'instructions pour former un <strong>bloc</strong>.
+                        </div>
+                    </div>
+                    <div class="container-fluid small-font text-left">
+                        <div class="row">
 
-    <div id="conditioniteration" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Conditions et itérations</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsqu'on écrit un algorithme, nous avons rapidement besoin de pouvoir effectuer des portions d'algorithmes plusieurs fois, ou d'exécuter une portion d'algorithme uniquement dans tel ou tel cas. Pour cela, on doit d'abord définir comment <em>isoler</em> un ensemble d'instructions pour former un <strong>bloc</strong>.
-            </div>
-          </div>
-          <div class="container-fluid small-font text-left">
-            <div class="row">
-                
-                <div class="col-6">
-                    <h3 class="display-4">Condition</h3>
-                    <pre><code class="ada">nombre : entier;
+                            <div class="col-6">
+                                <h3 class="display-4">Condition</h3>
+                                <pre><code class="ada">nombre : entier;
 afficher('Pair ou impair ? Entre un nombre : ');
 lire(nombre);
 </code></pre>
-<em>Si nombre est pair on exécute l'instruction suivante</em>
-<pre><code class="ada">     afficher(nombre + ' est pair !');</code></pre>
-<em>Sinon, on exécute l'instruction suivante</em>
-<pre><code class="ada">     afficher(nombre + ' est impair !');</code></pre>
-                </div>
-                <div class="col-6">
-                    <h3 class="display-4">Itération</h3>
-                    <pre><code class="ada">x, y, resultat : entier;
+                                <em>Si nombre est pair on exécute l'instruction suivante</em>
+                                <pre><code class="ada">     afficher(nombre + ' est pair !');</code></pre>
+                                <em>Sinon, on exécute l'instruction suivante</em>
+                                <pre><code class="ada">     afficher(nombre + ' est impair !');</code></pre>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="display-4">Itération</h3>
+                                <pre><code class="ada">x, y, resultat : entier;
 afficher('On souhaite calculer x ^ y. Entrer x : ');
 lire(x);
 afficher('Entrer y');
 lire(y);
 resultat := 1;
 </code></pre>
-<em>Exécuter l'instruction suivante y fois</em>
-<pre><code class="ada">     resultat := resultat * x;
+                                <em>Exécuter l'instruction suivante y fois</em>
+                                <pre><code class="ada">     resultat := resultat * x;
 
 afficher(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;On prendra l'habitude
+                            <strong>d'indenter</strong>,
+                            c'est-à-dire de décaler par plusieurs espaces ou une tabulation (il faut cependant garder
+                            toujours le même
+                            espacement pour des raisons de lisibilité) les instructions contenues dans le bloc. Voyons
+                            maintenant
+                            comment écrire ces itérations et conditions.
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On prendra l'habitude <strong>d'indenter</strong>, c'est-à-dire de décaler par plusieurs espaces ou une tabulation (il faut cependant garder toujours le même espacement pour des raisons de lisibilité) les instructions contenues dans le bloc. Voyons maintenant comment écrire ces itérations et conditions.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="conditioniteration-condition" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Conditions</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour pouvoir exécuter un bloc de code en fonction d'une condition, nous devons déjà définir la notion <strong>d'expression booléenne</strong> ou <strong>d'instruction conditionnelle</strong>. Cela représente une instruction qui renvoie <code>vrai</code> ou <code>faux</code>. On introduit donc par la même occasion un nouveau type, le <strong>type booléen</strong> qui ne peut prendre que ses deux valeurs.
-            </div>
-          </div>
-          <div class="container small-font text-left">
-            <div class="row">
-                <div class="col-6">
-                    <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+        <div id="conditioniteration-condition" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Conditions</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour pouvoir exécuter un bloc de code en
+                            fonction d'une
+                            condition, nous devons déjà définir la notion <strong>d'expression booléenne</strong> ou
+                            <strong>d'instruction conditionnelle</strong>. Cela représente une instruction qui renvoie
+                            <code>vrai</code> ou <code>faux</code>. On introduit donc par la même occasion un nouveau
+                            type, le
+                            <strong>type booléen</strong> qui ne peut prendre que ses deux valeurs.
+                        </div>
+                    </div>
+                    <div class="container small-font text-left">
+                        <div class="row">
+                            <div class="col-6">
+                                <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
                         data-title="Début de condition" data-content="Le mot réservé <code>si</code> signale le début d'une instruction conditionnelle. L'instruction qui suit doit être une expression booléenne."><span class="text-primary">si</span></span> condition <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
                             data-title="Début de bloc" data-content="Le mot réservé <code>alors</code> signale le début du bloc d'instructions à exécuter dans le cas ou la condition est vraie."><span class="text-primary">alors</span></span>
     instructions...
@@ -495,9 +623,10 @@ afficher(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
     instructions...
 <span class="text-primary">sinon</span>
     instructions...
-<span class="text-primary">finsi</span></code></pre></div>
-                <div class="col-6">
-                    <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-title="Test d'égalité" data-content="Attention, ceci n'est pas une affectation, on n'utilise pas <code>:=</code> mais <code>=</code>. Ainsi <code>x = 0</code> est une expression booléenne renvoyant <code>vrai</code> si x vaut 0, <code>faux</code> sinon."><span class="text-primary">si</span></span> x = 0 <span class="text-primary">alors</span>
+<span class="text-primary">finsi</span></code></pre>
+                            </div>
+                            <div class="col-6">
+                                <pre><code class="javascript"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-title="Test d'égalité" data-content="Attention, ceci n'est pas une affectation, on n'utilise pas <code>:=</code> mais <code>=</code>. Ainsi <code>x = 0</code> est une expression booléenne renvoyant <code>vrai</code> si x vaut 0, <code>faux</code> sinon."><span class="text-primary">si</span></span> x = 0 <span class="text-primary">alors</span>
     afficher('x est nul !');
 <span class="text-primary">finsi</span>
 
@@ -513,221 +642,253 @@ afficher(x + ' ^ ' + y + ' = ' + resultat);</code></pre>
     afficher('x est positif !');
 <span class="text-primary">sinon</span>
     afficher('x est nul !');
-<span class="text-primary">finsi</span></code></pre></div>
-            </div>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que <code>si</code>, <code>alors</code>, <code>sinon</code> et <code>finsi</code> sont désormais des <strong>mots réservés</strong>. Ils ne peuvent être utilisés en tant qu'identificateur pour des variables. On peut également <em>imbriquer</em> d'autres <code>si ... finsi</code> à l'intérieur des instructions permettant de modéliser des cas plus complexes.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="conditioniteration-expressionsbooleennes1" class="step slide">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container-fluid text-center">
-                <h1 class="display-3">Expressions booléennes (1/2)</h1>
-                <div class="container-fluid">
-                    <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu des expressions booléennes simples. Dans la réalité, les conditions sont souvent plus complexes et combinées. Voyons quelques exemples. Soit <code>A</code> et <code>B</code> des expressions booléennes simples (comme <code>x = 0</code> par exemple).
+<span class="text-primary">finsi</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que <code>si</code>,
+                            <code>alors</code>,
+                            <code>sinon</code> et <code>finsi</code> sont désormais des <strong>mots réservés</strong>.
+                            Ils ne peuvent
+                            être utilisés en tant qu'identificateur pour des variables. On peut également
+                            <em>imbriquer</em> d'autres
+                            <code>si ... finsi</code> à l'intérieur des instructions permettant de modéliser des cas
+                            plus complexes.
+                        </div>
                     </div>
                 </div>
-                <div class="container-fluid small-font text-left">
-                    <div class="row">
-                        <div class="col-6">
-                            <h3 class="display-5">Négation</h3>
-                            <p>La négation permet d'inverser la condition. </p>
-                            <pre><code class="ada">non A
+            </div>
+        </div>
+
+        <div id="conditioniteration-expressionsbooleennes1" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Expressions booléennes (1/2)</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu des expressions booléennes
+                            simples. Dans la
+                            réalité, les conditions sont souvent plus complexes et combinées. Voyons quelques exemples.
+                            Soit
+                            <code>A</code> et <code>B</code> des expressions booléennes simples (comme
+                            <code>x = 0</code> par
+                            exemple).
+                        </div>
+                    </div>
+                    <div class="container-fluid small-font text-left">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3 class="display-5">Négation</h3>
+                                <p>La négation permet d'inverser la condition. </p>
+                                <pre><code class="ada">non A
         non x = 0 
         <em>équivalent à </em>x &ne; 0  <em>ou </em> x != 0</code></pre>
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">A</th>
-                                  <th scope="col">non A</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>vrai</td>
-                                  <td>faux</td>
-                                </tr>
-                                <tr>
-                                  <td>faux</td>
-                                  <td>vrai</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="display-5">Intersection</h3>
-                            <p>Le résultat d'une intersection est vrai lorsque les deux opérandes sont vrais. </p>
-                            <pre><code class="ada">A et B
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">A</th>
+                                            <th scope="col">non A</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>vrai</td>
+                                            <td>faux</td>
+                                        </tr>
+                                        <tr>
+                                            <td>faux</td>
+                                            <td>vrai</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="display-5">Intersection</h3>
+                                <p>Le résultat d'une intersection est vrai lorsque les deux opérandes sont vrais. </p>
+                                <pre><code class="ada">A et B
         x &gt; 0 et x &le; 4 (ou x &lt;= 4)
         <em>est vrai si x est compris entre 1 et 4,
         faux sinon</em></code></pre>
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">A</th>
-                                  <th scope="col">B</th>
-                                  <th scope="col">A et B</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>vrai</td>
-                                  <td>vrai</td>
-                                  <td>vrai</td>
-                                </tr>
-                                <tr>
-                                  <td>vrai</td>
-                                  <td>faux</td>
-                                  <td>faux</td>
-                                </tr>
-                                <tr>
-                                  <td>faux</td>
-                                  <td>vrai</td>
-                                  <td>faux</td>
-                                </tr>
-                                <tr>
-                                  <td>faux</td>
-                                  <td>faux</td>
-                                  <td>faux</td>
-                                </tr>
-                                
-                              </tbody>
-                            </table>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">A</th>
+                                            <th scope="col">B</th>
+                                            <th scope="col">A et B</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>vrai</td>
+                                            <td>vrai</td>
+                                            <td>vrai</td>
+                                        </tr>
+                                        <tr>
+                                            <td>vrai</td>
+                                            <td>faux</td>
+                                            <td>faux</td>
+                                        </tr>
+                                        <tr>
+                                            <td>faux</td>
+                                            <td>vrai</td>
+                                            <td>faux</td>
+                                        </tr>
+                                        <tr>
+                                            <td>faux</td>
+                                            <td>faux</td>
+                                            <td>faux</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que dans le cas d'une intersection et
+                            dans la
+                            plupart des langages de programmation, si le premier opérande est faux, le deuxième n'est
+                            même pas évalué.
                         </div>
                     </div>
                 </div>
-              <div class="container-fluid">
-                <div class="alert alert-primary small-font" role="alert">
-                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que dans le cas d'une intersection et dans la plupart des langages de programmation, si le premier opérande est faux, le deuxième n'est même pas évalué.
-                </div>
-              </div>
             </div>
         </div>
-    </div>
 
-    <div id="conditioniteration-expressionsbooleennes2" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Expressions booléennes (2/2)</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu des expressions booléennes simples. Dans la réalité, les conditions sont souvent plus complexes et combinées. Voyons quelques exemples. Soit <code>A</code> et <code>B</code> des expressions booléennes simples (comme <code>x = 0</code> par exemple).
-            </div>
-          </div>
-          <div class="container-fluid small-font text-left">
-            <div class="row">
-                <div class="col-6">
-                    <h3 class="display-5">Union</h3>
-                    <p>L'union permet de s'assurer qu'au moins un des deux opérandes est vrai.</p>
-                    <pre><code class="ada">A ou B
+        <div id="conditioniteration-expressionsbooleennes2" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Expressions booléennes (2/2)</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu des expressions booléennes
+                            simples. Dans la
+                            réalité, les conditions sont souvent plus complexes et combinées. Voyons quelques exemples.
+                            Soit
+                            <code>A</code> et <code>B</code> des expressions booléennes simples (comme
+                            <code>x = 0</code> par
+                            exemple).
+                        </div>
+                    </div>
+                    <div class="container-fluid small-font text-left">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3 class="display-5">Union</h3>
+                                <p>L'union permet de s'assurer qu'au moins un des deux opérandes est vrai.</p>
+                                <pre><code class="ada">A ou B
 autorisationParentale : booléen;
 age &gt;= 18 ou autorisationParentale
 &nbsp;</code></pre>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col">A</th>
-                          <th scope="col">B</th>
-                          <th scope="col">A ou B</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>vrai</td>
-                          <td>vrai</td>
-                          <td>vrai</td>
-                        </tr>
-                        <tr>
-                          <td>vrai</td>
-                          <td>faux</td>
-                          <td>vrai</td>
-                        </tr>
-                        <tr>
-                          <td>faux</td>
-                          <td>vrai</td>
-                          <td>vrai</td>
-                        </tr>
-                        <tr>
-                          <td>faux</td>
-                          <td>faux</td>
-                          <td>faux</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                </div>
-                <div class="col-6">
-                    <h3 class="display-5">Union exclusive</h3>
-                    <p>L'union exclusive permet de s'assurer qu'un et un seul des deux opérandes est vrai.</p>
-                    <pre><code class="ada">A xou B
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">A</th>
+                                            <th scope="col">B</th>
+                                            <th scope="col">A ou B</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>vrai</td>
+                                            <td>vrai</td>
+                                            <td>vrai</td>
+                                        </tr>
+                                        <tr>
+                                            <td>vrai</td>
+                                            <td>faux</td>
+                                            <td>vrai</td>
+                                        </tr>
+                                        <tr>
+                                            <td>faux</td>
+                                            <td>vrai</td>
+                                            <td>vrai</td>
+                                        </tr>
+                                        <tr>
+                                            <td>faux</td>
+                                            <td>faux</td>
+                                            <td>faux</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="display-5">Union exclusive</h3>
+                                <p>L'union exclusive permet de s'assurer qu'un et un seul des deux opérandes est vrai.
+                                </p>
+                                <pre><code class="ada">A xou B
 fromage, dessert : booléen;
 fromage xou dessert</code></pre>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col">A</th>
-                          <th scope="col">B</th>
-                          <th scope="col">A xou B</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>vrai</td>
-                          <td>vrai</td>
-                          <td>faux</td>
-                        </tr>
-                        <tr>
-                          <td>vrai</td>
-                          <td>faux</td>
-                          <td>vrai</td>
-                        </tr>
-                        <tr>
-                          <td>faux</td>
-                          <td>vrai</td>
-                          <td>vrai</td>
-                        </tr>
-                        <tr>
-                          <td>faux</td>
-                          <td>faux</td>
-                          <td>faux</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">A</th>
+                                            <th scope="col">B</th>
+                                            <th scope="col">A xou B</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>vrai</td>
+                                            <td>vrai</td>
+                                            <td>faux</td>
+                                        </tr>
+                                        <tr>
+                                            <td>vrai</td>
+                                            <td>faux</td>
+                                            <td>vrai</td>
+                                        </tr>
+                                        <tr>
+                                            <td>faux</td>
+                                            <td>vrai</td>
+                                            <td>vrai</td>
+                                        </tr>
+                                        <tr>
+                                            <td>faux</td>
+                                            <td>faux</td>
+                                            <td>faux</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que dans le cas d'une union
+                            classique, si le
+                            premier opérande est vrai, le deuxième n'est même pas évalué.
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter que dans le cas d'une union classique, si le premier opérande est vrai, le deuxième n'est même pas évalué.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="conditioniteration-iteration" class="step slide term-4">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Itérations</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Afin d'éviter de dupliquer un bloc de code, ou lorsqu'on ne sait pas à l'avance combien de fois on veut l'exécuter, on utilise les <strong>itérations</strong> (ou boucles). Une itération exécute un bloc de code <strong>tant qu'une condition est vérifiée</strong>. Dès que la condition est fausse, l'itération se termine et la suite du programme s'exécute.
-            </div>
-          </div>
-          <div class="container-fluid small-font text-left">
-            <div class="row">
-                <div class="col-6">
-                    <pre><code class="javascript"><span class="text-primary">tantque</span> condition <span class="text-primary">faire</span>
+        <div id="conditioniteration-iteration" class="step slide term-4">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Itérations</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Afin d'éviter de dupliquer un bloc de code,
+                            ou lorsqu'on ne
+                            sait pas à l'avance combien de fois on veut l'exécuter, on utilise les
+                            <strong>itérations</strong> (ou
+                            boucles). Une itération exécute un bloc de code <strong>tant qu'une condition est
+                                vérifiée</strong>. Dès
+                            que la condition est fausse, l'itération se termine et la suite du programme s'exécute.
+                        </div>
+                    </div>
+                    <div class="container-fluid small-font text-left">
+                        <div class="row">
+                            <div class="col-6">
+                                <pre><code class="javascript"><span class="text-primary">tantque</span> condition <span class="text-primary">faire</span>
     instructions
 <span class="text-primary">finfaire</span>;</code></pre>
-<hr>
-                    <pre><code class="javascript">resultat, x, y, i : entier;
+                                <hr>
+                                <pre><code class="javascript">resultat, x, y, i : entier;
 afficher('On souhaite calculer x ^ y. Entrer x : ');
 lire(<span id="term4-x">x</span>);<span id="term4-xlbl"></span>
 afficher('Entrer y');
@@ -740,58 +901,76 @@ i := 1;
     <span class="term4-i">i</span> := <span class="term4-i">i</span> + 1;<span id="term4-ilbl"></span>
 <span class="text-primary">finfaire</span>;
 afficher(x + ' ^ ' y + ' = ' + resultat);</code></pre>
+                            </div>
+                            <div class="col-6 big-top-margin">
+                                <div id="term-4" class="little-top-margin"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-warning small-font " role="alert">
+                            <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Pour éviter les boucles infinies, il
+                            faut bien
+                            faire attention à la condition. Généralement les variables sur lesquelles porte la condition
+                            doivent être
+                            mises à jour dans le bloc de l'itération pour qu'il y ait sortie de boucle à un moment
+                            donné.
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 big-top-margin">
-                    <div id="term-4" class="little-top-margin"></div>
+            </div>
+        </div>
+
+        <div id="conditioniteration-exercice" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Exercice</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ecrire maintenant l'algorithme permettant de
+                            demander le
+                            nom et l'année de naissance de l'utilisateur. Calculer son age, puis lui demander combien
+                            d'enfant il a.
+                            Pour chaque enfant, demander son nom et calculer son âge.
+                        </div>
+                    </div>
+                    <div class="container small-font text-left">
+                        <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il y a encore une duplication au niveau du
+                            calcul de l'âge
+                            de l'utilisateur et de ses enfants. Comment l'éviter ?
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-warning small-font " role="alert">
-                <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Pour éviter les boucles infinies, il faut bien faire attention à la condition. Généralement les variables sur lesquelles porte la condition doivent être mises à jour dans le bloc de l'itération pour qu'il y ait sortie de boucle à un moment donné.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="conditioniteration-exercice" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Exercice</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ecrire maintenant l'algorithme permettant de demander le nom et l'année de naissance de l'utilisateur. Calculer son age, puis lui demander combien d'enfant il a. Pour chaque enfant, demander son nom et calculer son âge.
-            </div>
-          </div>
-          <div class="container small-font text-left">
-            <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il y a encore une duplication au niveau du calcul de l'âge de l'utilisateur et de ses enfants. Comment l'éviter ?
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
 
-    <div id="proceduresfonctions" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Procédures et fonctions</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour éviter de recopier des portions entières d'algorithmes lorsqu'on en a besoin plusieurs fois à des endroits différents, on peut regrouper ces instructions en une <strong>procédure</strong> ou une <strong>fonction</strong> qui sera nommée. Il suffira ensuite d'utiliser le nom de la procédure ou fonction pour exécuter les instructions.
-            </div>
-          </div>
-          <div class="container-fluid small-font text-left">
-            <div class="row">
-                <div class="col-6">
-                    <h3 class="display-4">Procédure</h3>
-                    <p>Une procédure est simplement un regroupement d'instructions.</p>
-                    <pre class="big-top-margin"><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
+        <div id="proceduresfonctions" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Procédures et fonctions</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour éviter de recopier des portions entières
+                            d'algorithmes
+                            lorsqu'on en a besoin plusieurs fois à des endroits différents, on peut regrouper ces
+                            instructions en une
+                            <strong>procédure</strong> ou une <strong>fonction</strong> qui sera nommée. Il suffira
+                            ensuite d'utiliser
+                            le nom de la procédure ou fonction pour exécuter les instructions.
+                        </div>
+                    </div>
+                    <div class="container-fluid small-font text-left">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3 class="display-4">Procédure</h3>
+                                <p>Une procédure est simplement un regroupement d'instructions.</p>
+                                <pre
+                                    class="big-top-margin"><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
                         data-title="Déclaration de procédure" data-content="Une procédure doit être déclarée pour pouvoir être appelée. On utilise donc le mot réservé <code>procédure</code>"><span class="text-primary">procédure</span></span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
                             data-title="Nom de la procédure" data-content="De la même manière qu'une variable, il faut nommer une procédure. C'est ce dernier qui sera utilisé pour appeler la procédure">bonjour</span>
 <span class="text-primary">debproc</span>
@@ -805,11 +984,13 @@ afficher(x + ' ^ ' y + ' = ' + resultat);</code></pre>
 
 <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
     data-title="Appel de procédure" data-content="Pour appeler une procédure, il suffit de faire référence à son nom. Comme toute instruction, on finit par un <code>;</code>">bonjour;</span></code></pre>
-                </div>  
-                <div class="col-6">
-                    <h3 class="display-4">Fonction</h3>
-                    <p>Une fonction est un regroupement d'instructions mais qui <strong>renvoie</strong> un résultat qui peut être stocké dans une variable ou utilisé directement dans une instruction.</p>
-                    <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+                            </div>
+                            <div class="col-6">
+                                <h3 class="display-4">Fonction</h3>
+                                <p>Une fonction est un regroupement d'instructions mais qui <strong>renvoie</strong> un
+                                    résultat qui
+                                    peut être stocké dans une variable ou utilisé directement dans une instruction.</p>
+                                <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
                         data-title="Déclaration de fonction" data-content="Une fonction doit également être déclarée. On utilise le mot réservé <code>fonction</code>"><span class="text-primary">fonction</span></span> <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
                             data-title="Nom de la fonction" data-content="De la même manière qu'une procédure, il faut nommer une fonction. C'est ce dernier qui sera utilisé pour appeler la fonction">majeur</span>(âge : entier) <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true"
                                 data-title="Type de retour" data-content="On spécifie le type de la donnée qui sera retournée par la fonction. Ici c'est un booléen, mais cela pourrait être un entier ou une chaîne de caractère par exemple">: booléen</span>
@@ -824,43 +1005,56 @@ afficher(x + ' ^ ' y + ' = ' + resultat);</code></pre>
 ...
 estmajeur := majeur(25);<span class="badge badge-success">vrai</span>
 <span class="text-primary">si</span> majeur(12) <span class="text-primary">alors</span>...<span class="badge badge-danger">faux</span></code></pre>
-                </div>
-            </div>
-          </div>
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="container-fluid">
-            <div class="row">
-                <div class="col-6">
-                    <div class="alert alert-primary small-font " role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>afficher()</code> est une procédure
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="alert alert-primary small-font " role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>lire(var)</code> est une fonction puisqu'elle renvoie une chaîne de caractère.
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="alert alert-primary small-font " role="alert">
+                                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>afficher()</code> est une
+                                    procédure
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="alert alert-primary small-font " role="alert">
+                                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;<code>lire(var)</code> est une
+                                    fonction puisqu'elle
+                                    renvoie une chaîne de caractère.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Dans le cas d'une fonction, il est
+                            obligatoire de renvoyer
+                            systématiquement une valeur du bon type. Il ne doit pas y avoir de <em>branche</em> qui ne
+                            fait pas de
+                            retour.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Dans le cas d'une fonction, il est obligatoire de renvoyer systématiquement une valeur du bon type. Il ne doit pas y avoir de <em>branche</em> qui ne fait pas de retour.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="proceduresfonctions-parametres" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Paramètres</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est intéressant de développer des procédures et des fonctions <strong>dynamiques</strong>, c'est-à-dire qui peuvent être utilisées avec des données différentes. Pour cela, on peut utiliser des <strong>paramètres</strong> dans nos fonctions et procédures.
-            </div>
-          </div>
-          <div class="container-fluid small-font text-left">
-            <div class="row">
-                <div class="col-6"><pre><code class="ada">fonction saisieNombre() : entier
+        <div id="proceduresfonctions-parametres" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Paramètres</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est intéressant de développer des
+                            procédures et des
+                            fonctions <strong>dynamiques</strong>, c'est-à-dire qui peuvent être utilisées avec des
+                            données
+                            différentes. Pour cela, on peut utiliser des <strong>paramètres</strong> dans nos fonctions
+                            et procédures.
+                        </div>
+                    </div>
+                    <div class="container-fluid small-font text-left">
+                        <div class="row">
+                            <div class="col-6">
+                                <pre><code class="ada">fonction saisieNombre() : entier
 nombre : entier;
 debfonc
     afficher('Entrer un nombre !');
@@ -875,8 +1069,10 @@ debproc
     x = saisieNombre();
     y = saisieNombre();
     afficher(x + ' ^ ' + y + ' = ' + puissance(x,y));
-finproc;</code></pre></div>
-                <div class="col-6"><pre><code class="ada">fonction puissance(a : entier, b : entier) : entier
+finproc;</code></pre>
+                            </div>
+                            <div class="col-6">
+                                <pre><code class="ada">fonction puissance(a : entier, b : entier) : entier
 resultat, i : entier;
 debfonc
     resultat := 1;
@@ -888,164 +1084,229 @@ debfonc
     retour resultat;
 finfonc;
 
-calculPuissance('Calcul de x ^ y : ');</code></pre></div>
+calculPuissance('Calcul de x ^ y : ');</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les paramètres sont des variables
+                            particulières
+                            puisqu'elles n'ont de valeur que lors de l'appel de la procédure ou la fonction. Il n'y a
+                            pas
+                            d'affectation explicite.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les paramètres sont des variables particulières puisqu'elles n'ont de valeur que lors de l'appel de la procédure ou la fonction. Il n'y a pas d'affectation explicite.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="proceduresfonctions-exercice" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Exercice</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ecrire le même algorithme que dans l'exercice précédent mais en introduisant des procédures et des fonctions pour rendre le code aussi propre et concis que possible, sans duplication. 
-            </div>
-          </div>
-          <div class="container small-font text-left">
-            <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="vecteurs" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Les vecteurs</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fréquent de vouloir représenter un ensemble de variables d'un même type dans un algorithme. On veut pouvoir généralement parcourir une à une ces variables pour effectuer un traitement dessus, ou accéder à une variable en particulier (la n<sup>ème</sup> par exemple). Un <strong>vecteur</strong> (ou tableau) permet de stocker un nombre illimité de variables d'un même type.
-            </div>
-          </div>
         </div>
 
-          <div class="container">
-              <div class="small-font text-center">
-                <ul class="list-group">
-                    <li class="list-group-item">Liste de présence =&gt; Vecteur de chaînes de caractère</li>
-                    <li class="list-group-item">Les employés d'une entreprise =&gt; Vecteur d'un type structuré <code>employe</code></li>
-                    <li class="list-group-item">Les livres d'une bibliothèque =&gt; Vecteur d'un type structuré <code>livre</code></li>
-                    <li class="list-group-item">...</li>
-                </ul>
-                <pre><code class="java"></code></pre>
-              </div>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une <strong>chaîne de caractère</strong> peut être considérée comme un tableau de caractères, c'est d'ailleurs de cette manière qu'elle est souvent représentée en programmation (comme en C avec <code>char[]</code>). Le type <code>chaîne</code> introduit jusqu'ici peut donc être utilisé de la même manière qu'un vecteur.
+        <div id="proceduresfonctions-exercice" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Exercice</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ecrire le même algorithme que dans l'exercice
+                            précédent
+                            mais en introduisant des procédures et des fonctions pour rendre le code aussi propre et
+                            concis que
+                            possible, sans duplication.
+                        </div>
+                    </div>
+                    <div class="container small-font text-left">
+                        <pre><code class="ada"><textarea class="saisie-code"></textarea></code></pre>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-    </div>
 
-    <div id="vecteurs-representation" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Représentation graphique</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un vecteur peut être représenté des manières suivantes : 
+        <div id="vecteurs" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Les vecteurs</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fréquent de vouloir représenter un
+                            ensemble de
+                            variables d'un même type dans un algorithme. On veut pouvoir généralement parcourir une à
+                            une ces
+                            variables pour effectuer un traitement dessus, ou accéder à une variable en particulier (la
+                            n<sup>ème</sup> par exemple). Un <strong>vecteur</strong> (ou tableau) permet de stocker un
+                            nombre
+                            illimité de variables d'un même type.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="small-font text-center">
+                        <ul class="list-group">
+                            <li class="list-group-item">Liste de présence =&gt; Vecteur de chaînes de caractère</li>
+                            <li class="list-group-item">Les employés d'une entreprise =&gt; Vecteur d'un type structuré
+                                <code>employe</code>
+                            </li>
+                            <li class="list-group-item">Les livres d'une bibliothèque =&gt; Vecteur d'un type structuré
+                                <code>livre</code>
+                            </li>
+                            <li class="list-group-item">...</li>
+                        </ul>
+                        <pre><code class="java"></code></pre>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une <strong>chaîne de caractère</strong> peut
+                        être considérée
+                        comme un tableau de caractères, c'est d'ailleurs de cette manière qu'elle est souvent
+                        représentée en
+                        programmation (comme en C avec <code>char[]</code>). Le type <code>chaîne</code> introduit
+                        jusqu'ici peut
+                        donc être utilisé de la même manière qu'un vecteur.
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container-fluid small-font row big-top-margin">
-              <div class="col-4">
-                  <ul class="list-group small-font">
-                      <li class="list-group-item">Appolinaire Guillaume</li>
-                      <li class="list-group-item">Aragon Louis</li>
-                      <li class="list-group-item">...</li>
-                      <li class="list-group-item">Eluard Paul</li>
-                  </ul>
-              </div>
-              <div class="col-8">
-                  <table class="table table-bordered ">
-                      <tr>
-                          <td>
-                              <ul class="list-group">
-                                  <li class="list-group-item"><strong>Auteur</strong> : Appolinaire Guillaume</li>
-                                  <li class="list-group-item"><strong>Titre</strong> : Calligrammes</li>
-                                  <li class="list-group-item"><strong>Publié en</strong> : avril 1918</li>
-                                  <li class="list-group-item"><strong>Editeur</strong> : Mercure de France</li>
-                              </ul>
-                          </td>
-                          <td>
-                            <ul class="list-group">
-                                  <li class="list-group-item"><strong>Auteur</strong> : Aragon Louis</li>
-                                  <li class="list-group-item"><strong>Titre</strong> : Les Beaux Quartiers</li>
-                                  <li class="list-group-item"><strong>Publié en</strong> : octobre 1936</li>
-                                  <li class="list-group-item"><strong>Editeur</strong> : Denoël</li>
-                              </ul>
-                          </td>
-                          <td>...</td>
-                          <td>
-                            <ul class="list-group">
-                                  <li class="list-group-item"><strong>Auteur</strong> : Eluard Paul</li>
-                                  <li class="list-group-item"><strong>Titre</strong> : Capitale de la douleur</li>
-                                  <li class="list-group-item"><strong>Publié en</strong> : septembre 1936</li>
-                                  <li class="list-group-item"><strong>Editeur</strong> : Denoël</li>
-                              </ul>
-                          </td>
-                      </tr>
-                  </table>
-              </div>
-          </div>
-          <div class="little-top-margin container-fluid big-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Bien que les types structurés soient le plus souvent utilisés, nous prendrons des exemples avec des types simples pour commencer.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-vocabulaire" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Vocabulaire</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voici les différents éléments de vocabulaire lorsqu'on parle de vecteurs
+        <div id="vecteurs-representation" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Représentation graphique</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un vecteur peut être représenté des manières
+                            suivantes :
+                        </div>
+                    </div>
+                    <div class="container-fluid small-font row big-top-margin">
+                        <div class="col-4">
+                            <ul class="list-group small-font">
+                                <li class="list-group-item">Appolinaire Guillaume</li>
+                                <li class="list-group-item">Aragon Louis</li>
+                                <li class="list-group-item">...</li>
+                                <li class="list-group-item">Eluard Paul</li>
+                            </ul>
+                        </div>
+                        <div class="col-8">
+                            <table class="table table-bordered ">
+                                <tr>
+                                    <td>
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><strong>Auteur</strong> : Appolinaire Guillaume
+                                            </li>
+                                            <li class="list-group-item"><strong>Titre</strong> : Calligrammes</li>
+                                            <li class="list-group-item"><strong>Publié en</strong> : avril 1918</li>
+                                            <li class="list-group-item"><strong>Editeur</strong> : Mercure de France
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><strong>Auteur</strong> : Aragon Louis</li>
+                                            <li class="list-group-item"><strong>Titre</strong> : Les Beaux Quartiers
+                                            </li>
+                                            <li class="list-group-item"><strong>Publié en</strong> : octobre 1936</li>
+                                            <li class="list-group-item"><strong>Editeur</strong> : Denoël</li>
+                                        </ul>
+                                    </td>
+                                    <td>...</td>
+                                    <td>
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><strong>Auteur</strong> : Eluard Paul</li>
+                                            <li class="list-group-item"><strong>Titre</strong> : Capitale de la douleur
+                                            </li>
+                                            <li class="list-group-item"><strong>Publié en</strong> : septembre 1936</li>
+                                            <li class="list-group-item"><strong>Editeur</strong> : Denoël</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="little-top-margin container-fluid big-top-margin">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Bien que les types structurés soient le plus
+                            souvent
+                            utilisés, nous prendrons des exemples avec des types simples pour commencer.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container small-font text-left little-top-margin">
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Ensemble des éléments</strong> : Cela correspond à l'ensemble des <em>cases</em> du vecteur.</li>
-                <li class="list-group-item"><strong>Taille</strong> : Cela correspond au nombre d'éléments du vecteur.</li>
-                <li class="list-group-item"><strong>Ensemble des indices</strong> : Cela correspond à l'ensemble des <em>numéros des cases</em> du vecteur (parfois de 1 à <em>taille</em>, mais généralement de 0 à <em>taille - 1</em>). L'indice le plus petit est appelé <em>borne inférieure</em>, le plus grand <em>borne supérieure</em>.</li>
-                <li class="list-group-item"><strong>Parcours</strong> : Lorsqu'on effectue un traitement sur chaque élément d'un vecteur, du premier au dernier.</li>
-                <li class="list-group-item"><strong>Accès direct</strong> : Lorsqu'on veut obtenir la valeur située à un indice donné.</li>
-                <li class="list-group-item"><strong>Tri</strong> : Permet de trier les éléments du tableau selon un critère particulier.</li>
-                <li class="list-group-item"><strong>Recherche</strong> : Lorsqu'on veut rechercher une valeur dans un tableau.</li>
-                <li class="list-group-item"><strong>Sous-vecteur</strong> : Cela représente un sous-ensemble d'un vecteur.</li>
-            </ul>
-          </div>
-          <div class="container-fluid little-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voyons maintenant comment déclarer et utiliser ces vecteurs.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-declaration" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Déclaration et initialisation d'un vecteur</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Cela dépend des langages de programmation, mais généralement pour déclarer un vecteur, il faut connaître le type de données que l'on souhaite stocker à l'intérieur. Pour l'initialiser, il faut connaître que le nombre d'éléments qui'il contiendra au maximum. Concernant ce dernier paramètre, cela dépend des implémentations.
+        <div id="vecteurs-vocabulaire" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Vocabulaire</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voici les différents éléments de vocabulaire
+                            lorsqu'on
+                            parle de vecteurs
+                        </div>
+                    </div>
+                    <div class="container small-font text-left little-top-margin">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Ensemble des éléments</strong> : Cela correspond à
+                                l'ensemble des
+                                <em>cases</em> du vecteur.
+                            </li>
+                            <li class="list-group-item"><strong>Taille</strong> : Cela correspond au nombre d'éléments
+                                du vecteur.
+                            </li>
+                            <li class="list-group-item"><strong>Ensemble des indices</strong> : Cela correspond à
+                                l'ensemble des
+                                <em>numéros des cases</em> du vecteur (parfois de 1 à <em>taille</em>, mais généralement
+                                de 0 à
+                                <em>taille - 1</em>). L'indice le plus petit est appelé <em>borne inférieure</em>, le
+                                plus grand
+                                <em>borne supérieure</em>.
+                            </li>
+                            <li class="list-group-item"><strong>Parcours</strong> : Lorsqu'on effectue un traitement sur
+                                chaque
+                                élément d'un vecteur, du premier au dernier.</li>
+                            <li class="list-group-item"><strong>Accès direct</strong> : Lorsqu'on veut obtenir la valeur
+                                située à un
+                                indice donné.</li>
+                            <li class="list-group-item"><strong>Tri</strong> : Permet de trier les éléments du tableau
+                                selon un
+                                critère particulier.</li>
+                            <li class="list-group-item"><strong>Recherche</strong> : Lorsqu'on veut rechercher une
+                                valeur dans un
+                                tableau.</li>
+                            <li class="list-group-item"><strong>Sous-vecteur</strong> : Cela représente un sous-ensemble
+                                d'un vecteur.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid little-top-margin">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voyons maintenant comment déclarer et
+                            utiliser ces
+                            vecteurs.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container little-top-margin">
-            <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
+        </div>
+
+        <div id="vecteurs-declaration" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Déclaration et initialisation d'un vecteur</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Cela dépend des langages de programmation,
+                            mais
+                            généralement pour déclarer un vecteur, il faut connaître le type de données que l'on
+                            souhaite stocker à
+                            l'intérieur. Pour l'initialiser, il faut connaître que le nombre d'éléments qui'il
+                            contiendra au maximum.
+                            Concernant ce dernier paramètre, cela dépend des implémentations.
+                        </div>
+                    </div>
+                    <div class="container little-top-margin">
+                        <pre><code class="ada"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true"
                 data-title="" data-content="Nom de la variable">v</span> : <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true"
                     data-title="" data-content="Type que contiendra le vecteur">entier</span>[];
 a : chaine[];
@@ -1053,27 +1314,33 @@ t : booleen[];
 
 v := entier<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Nombre d'éléments maximum du vecteur">[5];</span>
 v := entier[3];</code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font little-top-margin" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Parce qu'on ne sait pas forcément combien d'éléments un vecteur contiendra, il existe des implémentations où il n'est pas nécessaire de fournir le nombre d'éléments. Le vecteur s'agrandira au fur et à mesure de son remplissage.
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font little-top-margin" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Parce qu'on ne sait pas forcément combien
+                            d'éléments un
+                            vecteur contiendra, il existe des implémentations où il n'est pas nécessaire de fournir le
+                            nombre
+                            d'éléments. Le vecteur s'agrandira au fur et à mesure de son remplissage.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-accesdirect" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Accès direct</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour accéder directement à un élément d'un certain indice, on utilise la notation suivante : 
-            </div>
-          </div>
-          <div class="container ">
-            <pre><code class="ada">v : entier[];
+        <div id="vecteurs-accesdirect" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Accès direct</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour accéder directement à un élément d'un
+                            certain indice,
+                            on utilise la notation suivante :
+                        </div>
+                    </div>
+                    <div class="container ">
+                        <pre><code class="ada">v : entier[];
 nb, taille : entier;
 v := entier[5];
 
@@ -1083,29 +1350,39 @@ nb := <span data-toggle="popover" data-offset="0" data-trigger="hover click" dat
 taille := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Nombre d'éléments du vecteur">longueur(v)</span>;
 <span class="text-danger">nb := <span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-title="" data-content="Cette instruction provoque une erreur car il n'y a que 5 éléments maximum dans mon vecteur">v[5]</span></span>;
 </code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;En fonction des langages de programmation, le fait de vouloir accéder à un indice en dehors des bornes du vecteur résulte au mieux à une <em>valeur indéfinie</em> ou au pire à une <em>erreur d'exécution</em>. Il est donc primordial de s'assurer de la validité d'un indice au sein d'un vecteur. On pourra utiliser la fonction <code>longueur(v)</code> qui donne le nombre d'éléments d'un vecteur.
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;En fonction des langages de programmation, le
+                            fait de
+                            vouloir accéder à un indice en dehors des bornes du vecteur résulte au mieux à une
+                            <em>valeur
+                                indéfinie</em> ou au pire à une <em>erreur d'exécution</em>. Il est donc primordial de
+                            s'assurer de la
+                            validité d'un indice au sein d'un vecteur. On pourra utiliser la fonction
+                            <code>longueur(v)</code> qui
+                            donne le nombre d'éléments d'un vecteur.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-parcours" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Parcours séquentiel d'un vecteur</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour effectuer un traitement sur chaque élement d'un vecteur, on utilise une des deux notations suivantes : 
-            </div>
-          </div>
-          <div class="container-fluid row">
-              <div class="col-6">
-                  <div class="container text-left">
-                    <pre><code class="ada">v : entier[];
+        <div id="vecteurs-parcours" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Parcours séquentiel d'un vecteur</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour effectuer un traitement sur chaque
+                            élement d'un
+                            vecteur, on utilise une des deux notations suivantes :
+                        </div>
+                    </div>
+                    <div class="container-fluid row">
+                        <div class="col-6">
+                            <div class="container text-left">
+                                <pre><code class="ada">v : entier[];
 ...
 i : entier;
 i := 0;
@@ -1114,128 +1391,203 @@ i := 0;
     faireQuelqueChoseSur(v[i]);
     i := i + 1;
 finfaire;</code></pre>
-                </div>
-              </div>
-              <div class="col-6">
-                  <div class="container text-left">
-<pre><code class="ada">v : entier[];
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="container text-left">
+                                <pre><code class="ada">v : entier[];
 ...
 i : entier;
 pour i := 0 à longueur(v) - 1 faire
     faireQuelqueChoseSur(v[i]);
 finfaire;</code></pre>
-              </div>
-          </div>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On a parcouru le vecteur <em>de gauche à droite</em> ou <em>du début à la fin</em> mais on peut également le parcourir dans le sens inverse. Dans ce cas, on initialise <code>i := longueur(v) - 1</code> et on décrémente <code>i</code> à chaque itération jusqu'à ce qu'<code>i</code> prenne la valeur <code>0</code>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;On a parcouru le vecteur <em>de gauche à
+                                droite</em> ou
+                            <em>du début à la fin</em> mais on peut également le parcourir dans le sens inverse. Dans ce
+                            cas, on
+                            initialise <code>i := longueur(v) - 1</code> et on décrémente <code>i</code> à chaque
+                            itération jusqu'à ce
+                            qu'<code>i</code> prenne la valeur <code>0</code>.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-recherche" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Recherches dans un vecteur</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous n'avons jusqu'ici mis aucune condition sur l'ordre des éléments d'un vecteur. Ainsi, si l'on souhaite rechercher une valeur dans un vecteur, on est obligé de parcourir l'ensemble du vecteur, ce qui peut être gourmand en ressources. Voyons ce qu'il est possible de faire avec un vecteur trié. On dit qu'un vecteur est trié si quel que soit <code>i</code> on a <code>V[i+1] &ge; V[i]</code>
+        <div id="vecteurs-recherche" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Recherches dans un vecteur</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous n'avons jusqu'ici mis aucune condition
+                            sur l'ordre des
+                            éléments d'un vecteur. Ainsi, si l'on souhaite rechercher une valeur dans un vecteur, on est
+                            obligé de
+                            parcourir l'ensemble du vecteur, ce qui peut être gourmand en ressources. Voyons ce qu'il
+                            est possible de
+                            faire avec un vecteur trié. On dit qu'un vecteur est trié si quel que soit <code>i</code> on
+                            a
+                            <code>V[i+1] &ge; V[i]</code>
+                        </div>
+                    </div>
+                    <div class="container small-font text-left">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Recherche séquentielle dans un vecteur non trié</strong>
+                                : Puisque le
+                                vecteur n'est pas trié, nous sommes obligés de parcourir tous les éléments du vecteur
+                                jusqu'à la fin si
+                                l'élément n'est pas trouvé dans le vecteur, ou jusqu'à ce qu'on rencontre cet élément.
+                            </li>
+                            <li class="list-group-item"><strong>Recherche séquentielle dans un tableau trié</strong> :
+                                Grâce au tri,
+                                on peut s'arrêter de chercher si l'élément recherché est supérieur à l'élément lu
+                                puisque tous les
+                                éléments suivants du vecteur seront supérieurs.</li>
+                            <li class="list-group-item"><strong>Recherche dichotomique dans un tableau trié</strong> :
+                                Cet algorithme
+                                partitionne le vecteur sur lequel on travaille en 3. Un sous-vecteur contenant les
+                                indices 1 à m - 1, un
+                                sous-vecteur d'un seul élément d'indice m et un autre sous-vecteur contenant les indices
+                                m + 1 à n. On
+                                regarde si l'élément recherché est situé à l'indice m, si ce n'est pas le cas, on
+                                réitère la recherche
+                                sur le premier sous-vecteur si l'élément recherché est inférieur à l'élément d'indice m,
+                                ou sur le
+                                dernier sous-vecteur si l'élément recherché est supérieur à l'indice m.</li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid little-top-margin">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;La recherche séquentielle est donc à
+                            proscrire dans le cas
+                            d'un vecteur trié. Si le vecteur ne l'est pas, il faut évaluer si beaucoup de recherches
+                            seront effectuées
+                            et si le vecteur contiendra potentiellement beaucoup d'éléments, dans ce cas, cela peut
+                            valoir le coup de
+                            trier soi-même le vecteur avant de rechercher dans ce dernier.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container small-font text-left">
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Recherche séquentielle dans un vecteur non trié</strong> : Puisque le vecteur n'est pas trié, nous sommes obligés de parcourir tous les éléments du vecteur jusqu'à la fin si l'élément n'est pas trouvé dans le vecteur, ou jusqu'à ce qu'on rencontre cet élément.</li>
-                <li class="list-group-item"><strong>Recherche séquentielle dans un tableau trié</strong> : Grâce au tri, on peut s'arrêter de chercher si l'élément recherché est supérieur à l'élément lu puisque tous les éléments suivants du vecteur seront supérieurs.</li>
-                <li class="list-group-item"><strong>Recherche dichotomique dans un tableau trié</strong> : Cet algorithme partitionne le vecteur sur lequel on travaille en 3. Un sous-vecteur contenant les indices 1 à m - 1, un sous-vecteur d'un seul élément d'indice m et un autre sous-vecteur contenant les indices m + 1 à n. On regarde si l'élément recherché est situé à l'indice m, si ce n'est pas le cas, on réitère la recherche sur le premier sous-vecteur si l'élément recherché est inférieur à l'élément d'indice m, ou sur le dernier sous-vecteur si l'élément recherché est supérieur à l'indice m.</li>
-            </ul>
-          </div>
-          <div class="container-fluid little-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;La recherche séquentielle est donc à proscrire dans le cas d'un vecteur trié. Si le vecteur ne l'est pas, il faut évaluer si beaucoup de recherches seront effectuées et si le vecteur contiendra potentiellement beaucoup d'éléments, dans ce cas, cela peut valoir le coup de trier soi-même le vecteur avant de rechercher dans ce dernier.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-tri" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Tri d'un vecteur</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour trier un vecteur non trié, nous avons plusieurs méthodes possibles : 
+        <div id="vecteurs-tri" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Tri d'un vecteur</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour trier un vecteur non trié, nous avons
+                            plusieurs
+                            méthodes possibles :
+                        </div>
+                    </div>
+                    <div class="container small-font text-left">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Tri par remplacement</strong> : Cet algorithme
+                                sélectionne le minimum
+                                du vecteur d'origine à chaque itération, le ranger dans un nouveau vecteur que l'on
+                                construit et le
+                                remplace par une valeur maximum dans le vecteur d'origine pour qu'il ne soit plus
+                                récupéré.</li>
+                            <li class="list-group-item"><strong>Tri par permutation</strong> : Cet algorithme permet
+                                d'éviter la
+                                construction d'un nouveau vecteur en considérant que le vecteur est <em>séparé</em> en
+                                deux
+                                sous-vecteurs, le sous-vecteur contenant <code>i</code> éléments dont les éléments ont
+                                été triés, et les
+                                <code>n - 1</code> éléments qui restent à trier. A chaque itération, on permute le
+                                i<sup>ème</sup>
+                                élément avec le minimum du deuxième sous-vecteur.
+                            </li>
+                            <li class="list-group-item"><strong>Tri par bulle</strong> : Cet algorithme parcourt le
+                                sous-vecteur des
+                                éléments non triés de droite à gauche, et à chaque fois que deux éléments consécutifs ne
+                                sont pas dans
+                                l'ordre, on les permute, ce qui permet d'avoir en fin de parcours le plus petit élément
+                                du sous-vecteur
+                                placé en bonne position. De plus, l'ordre général du sous-vecteur a été amélioré du fait
+                                des
+                                permutations successives.</li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid little-top-margin">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ces algorithmes ont été présentés dans
+                            l'ordre de leur coût
+                            décroissant.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container small-font text-left">
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Tri par remplacement</strong> : Cet algorithme sélectionne le minimum du vecteur d'origine à chaque itération, le ranger dans un nouveau vecteur que l'on construit et le remplace par une valeur maximum dans le vecteur d'origine pour qu'il ne soit plus récupéré.</li>
-                <li class="list-group-item"><strong>Tri par permutation</strong> : Cet algorithme permet d'éviter la construction d'un nouveau vecteur en considérant que le vecteur est <em>séparé</em> en deux sous-vecteurs, le sous-vecteur contenant <code>i</code> éléments dont les éléments ont été triés, et les <code>n - 1</code> éléments qui restent à trier. A chaque itération, on permute le i<sup>ème</sup> élément avec le minimum du deuxième sous-vecteur.</li>
-                <li class="list-group-item"><strong>Tri par bulle</strong> : Cet algorithme parcourt le sous-vecteur des éléments non triés de droite à gauche, et à chaque fois que deux éléments consécutifs ne sont pas dans l'ordre, on les permute, ce qui permet d'avoir en fin de parcours le plus petit élément du sous-vecteur placé en bonne position. De plus, l'ordre général du sous-vecteur a été amélioré du fait des permutations successives.</li>
-            </ul>
-          </div>
-          <div class="container-fluid little-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ces algorithmes ont été présentés dans l'ordre de leur coût décroissant.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-multi" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Vecteurs à plusieurs dimensions</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un vecteur pouvant contenir n'importe quel type, on peut donc représenter un vecteur de vecteur, ou vecteurs à deux dimensions. Mais on peut également représenter des vecteurs à trois ou quatre dimensions... Pour déclarer et initialiser un vecteur à deux dimensions, on utilise la notation <code>v : entier[][]; v := entier[3][3];</code>
+        <div id="vecteurs-multi" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Vecteurs à plusieurs dimensions</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un vecteur pouvant contenir n'importe quel
+                            type, on peut
+                            donc représenter un vecteur de vecteur, ou vecteurs à deux dimensions. Mais on peut
+                            également représenter
+                            des vecteurs à trois ou quatre dimensions... Pour déclarer et initialiser un vecteur à deux
+                            dimensions, on
+                            utilise la notation <code>v : entier[][]; v := entier[3][3];</code>
+                        </div>
+                    </div>
+                    <div class="container small-font text-center big-top-margin">
+                        <table class="table table-bordered-tr">
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container-fluid big-top-margin">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour accéder à un élément d'un vecteur à deux
+                            dimensions,
+                            on utilise la notation <code>v[i][j]; v[2][1] =&gt; 8</code>.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container small-font text-center big-top-margin">
-            <table class="table table-bordered-tr">
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                </tr>
-            </table>
-          </div>
-          <div class="container-fluid big-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour accéder à un élément d'un vecteur à deux dimensions, on utilise la notation <code>v[i][j]; v[2][1] =&gt; 8</code>.
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-multiparcours" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Parcours séquentiel d'un vecteur à deux dimensions</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour effectuer un traitement sur chaque élement d'un vecteur à deux dimensions, on utilise une des deux notations suivantes : 
-            </div>
-          </div>
-          <div class="container-fluid small-font row">
-              <div class="col-6">
-                  <div class="container text-left">
-                    <pre><code class="ada">v : entier[][];
+        <div id="vecteurs-multiparcours" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Parcours séquentiel d'un vecteur à deux dimensions</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour effectuer un traitement sur chaque
+                            élement d'un
+                            vecteur à deux dimensions, on utilise une des deux notations suivantes :
+                        </div>
+                    </div>
+                    <div class="container-fluid small-font row">
+                        <div class="col-6">
+                            <div class="container text-left">
+                                <pre><code class="ada">v : entier[][];
 ...
 i,j : entier;
 i := 0;
@@ -1248,11 +1600,11 @@ tantque i &lt; longueur(v) faire
     finfaire;
     i := i + 1;
 finfaire;</code></pre>
-                </div>
-              </div>
-              <div class="col-6">
-                  <div class="container text-left">
-<pre><code class="ada">v : entier[][];
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="container text-left">
+                                <pre><code class="ada">v : entier[][];
 ...
 i; j : entier;
 pour i := 0 à longueur(v) - 1 faire
@@ -1260,78 +1612,112 @@ pour i := 0 à longueur(v) - 1 faire
         faireQuelqueChoseSur(v[i][j]);
     finfaire
 finfaire;</code></pre>
-              </div>
-          </div>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Si on souhaite parcourir un vecteur à trois dimensions, on imbriquera de nouveau un <code>tantque</code>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Si on souhaite parcourir un vecteur à trois
+                            dimensions, on
+                            imbriquera de nouveau un <code>tantque</code>.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-insertion" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Insertions</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Insérer une valeur dans un vecteur est possible si le vecteur n'est pas plein. Voici plusieurs méthodes pour effectuer une insertion.
+        <div id="vecteurs-insertion" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Insertions</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Insérer une valeur dans un vecteur est
+                            possible si le
+                            vecteur n'est pas plein. Voici plusieurs méthodes pour effectuer une insertion.
+                        </div>
+                    </div>
+                    <div class="container small-font text-left big-top-margin">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur non trié</strong> :
+                                On utilisera
+                                un algorithme de recherche séquentielle afin de trouver un indice dans le vecteur où il
+                                y a une valeur
+                                <em>indéfini</em>. Le cas échéant, on place alors l'élément à l'indice.
+                            </li>
+                            <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur trié</strong> : On
+                                utilisera un
+                                algorithme de recherche séquentielle dans un vecteur trié afin de trouver l'indice
+                                auquel l'élément
+                                devrait être placé. Il faut ensuite décalé les éléments supérieurs.</li>
+                            <li class="list-group-item"><strong>Méthode dichotomique dans un vecteur trié</strong> :
+                                Idem que la
+                                méthode précédente sauf qu'on utilise une recherche dichotomique pour trouver l'indice.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid big-top-margin">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voyons maintenant comment supprimer un
+                            élément d'un vecteur
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container small-font text-left big-top-margin">
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur non trié</strong> : On utilisera un algorithme de recherche séquentielle afin de trouver un indice dans le vecteur où il y a une valeur <em>indéfini</em>. Le cas échéant, on place alors l'élément à l'indice.</li>
-                <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur trié</strong> : On utilisera un algorithme de recherche séquentielle dans un vecteur trié afin de trouver l'indice auquel l'élément devrait être placé. Il faut ensuite décalé les éléments supérieurs.</li>
-                <li class="list-group-item"><strong>Méthode dichotomique dans un vecteur trié</strong> : Idem que la méthode précédente sauf qu'on utilise une recherche dichotomique pour trouver l'indice.</li>
-            </ul>
-          </div>
-          <div class="container-fluid big-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voyons maintenant comment supprimer un élément d'un vecteur
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div id="vecteurs-suppression" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Suppressions</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Supprimer une valeur dans un vecteur est possible si la valeur existe dans le vecteur. Voici plusieurs méthodes pour effectuer une suppression.
+        <div id="vecteurs-suppression" class="step slide">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid text-center">
+                    <h2 class="display-3">Suppressions</h2>
+                    <div class="container-fluid">
+                        <div class="alert alert-primary small-font" role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;Supprimer une valeur dans un vecteur est
+                            possible si la
+                            valeur existe dans le vecteur. Voici plusieurs méthodes pour effectuer une suppression.
+                        </div>
+                    </div>
+                    <div class="container small-font text-left big-top-margin">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur non trié</strong> :
+                                On utilisera
+                                un algorithme de recherche séquentielle afin de trouver l'indice de l'élément recherché.
+                                S'il existe, on
+                                affecte l'élément à la valeur <em>indéfini</em>.</li>
+                            <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur trié</strong> : On
+                                utilisera un
+                                algorithme de recherche séquentielle dans un vecteur trié afin de trouver l'indice de
+                                l'élément dans le
+                                vecteur. S'il existe on décale les éléments supérieurs vers la gauche</li>
+                            <li class="list-group-item"><strong>Méthode dichotomique dans un vecteur trié</strong> :
+                                Idem que la
+                                méthode précédente sauf qu'on utilise une recherche dichotomique pour trouver l'indice.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid big-top-margin">
+                        <div class="alert alert-primary small-font " role="alert">
+                            <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter qu'un vecteur peut contenir plusieurs
+                            valeurs
+                            égales. Il faut donc savoir si c'est le cas avant d'écrire notre algorithme car
+                            l'implémentation peut
+                            alors être différente.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container small-font text-left big-top-margin">
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur non trié</strong> : On utilisera un algorithme de recherche séquentielle afin de trouver l'indice de l'élément recherché. S'il existe, on affecte l'élément à la valeur <em>indéfini</em>.</li>
-                <li class="list-group-item"><strong>Méthode séquentielle dans un vecteur trié</strong> : On utilisera un algorithme de recherche séquentielle dans un vecteur trié afin de trouver l'indice de l'élément dans le vecteur. S'il existe on décale les éléments supérieurs vers la gauche</li>
-                <li class="list-group-item"><strong>Méthode dichotomique dans un vecteur trié</strong> : Idem que la méthode précédente sauf qu'on utilise une recherche dichotomique pour trouver l'indice.</li>
-            </ul>
-          </div>
-          <div class="container-fluid big-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;A noter qu'un vecteur peut contenir plusieurs valeurs égales. Il faut donc savoir si c'est le cas avant d'écrire notre algorithme car l'implémentation peut alors être différente.
-            </div>
-          </div>
         </div>
-      </div>
+
     </div>
-
-</div>
-
-
-<script src="js/impress.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/highlight.min.js"></script>
-<script src="js/moment.min.js"></script>
-<script src="js/terminal.js"></script>
-<script src="js/mark.min.js"></script>
-<script src="js/script.js"></script>
-<script src="js/search.js"></script>
+    <script src="js/impress.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/mark.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
 
