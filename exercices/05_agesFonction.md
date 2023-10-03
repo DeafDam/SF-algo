@@ -5,6 +5,7 @@ Ecrire le même algorithme que dans l'exercice 02 :
 
 Mais en introduisant des procédures et des fonctions pour rendre le code aussi propre et concis que possible, sans duplication. 
 
+```python
 nom : chaine;
 anneeNaissance, anneeEnCours, nbEnfants : entier;
 
@@ -37,9 +38,9 @@ debproc
 	i : entier;
 	i := 1;
 	tantque nbEnfants > 0 faire
-		affiche('Quel est le prénom de l'enfant n°' + i + ' ?');
+		affiche("Quel est le prénom de l'enfant n° " + i + ' ?');
 		lit(nom);
-		affiche('Quelle est l'année de naissance de ' + nom + ' ?');
+		affiche("Quelle est l'année de naissance de " + nom + ' ?');
 		lit(anneeNaissance);
 		affiche(nom + 'a ' + age(anneeNaissance, anneeEnCours) + ' ans !');
 		nbEnfants := nbEnfants - 1;
@@ -48,8 +49,9 @@ debproc
 finproc
 
 init();
-affiche('Combien d'enfants as-tu ?');
+affiche("Combien d'enfants as-tu ?");
 lit(nbEnfants);
 si nbEnfants > 0 alors
 	chaqueEnfant(nbEnfants);
 finsi;
+```

@@ -1,5 +1,6 @@
 Ecrire la fonction permettant de renvoyer le minimum entre trois nombres 
 
+```python
 fonction min2(a : réel, b : réel) : réel
 debfonc
 	si (a < b) alors
@@ -24,3 +25,4 @@ fonction min3(a: entier, b: entier, c: entier) : entier
 debfonc
 	retour(min2( min2(a,b) ,c));
 finfonc;
+```

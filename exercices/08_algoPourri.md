@@ -21,6 +21,7 @@ finfonc
 Pourquoi est-il pourri ? Quelles sont les résultats obtenus selon plusieurs valeurs de i ?
 Comment faire un meilleur algorithme pour les mêmes résultats ?
 
+```python
 i = 25 => algoPourri(25) = 25
 i = 20 => algoPourri(20) = 25
 i = 30 => algoPourri(30) = 30
@@ -32,3 +33,4 @@ debfonc
 	finsi;
 	retour i;
 finfonc;
+```

@@ -1,5 +1,6 @@
 Ecrire la fonction permettant de renvoyer le minimum entre deux nombres 
 
+```python
 fonction min2(a : réel, b : réel) : réel
 debfonc
 	si (a < b) alors
@@ -7,3 +8,4 @@ debfonc
 	finsi;
 	retour b;
 finfonc;
+```
