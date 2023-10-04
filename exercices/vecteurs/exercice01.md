@@ -29,6 +29,7 @@ finproc
 //fonction qui marche pour les 2 sens
 // 	si sensGaD = vrai alors on fait de gauche à droite
 //	si sensGaD = faux alors on fait de droite à gauche
+
 procedure parcourir(v : chaine[], sensGaD : booléen) 
 debproc
 	i : entier;
