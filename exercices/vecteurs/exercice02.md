@@ -5,6 +5,7 @@ Ecrire une fonction retournant la somme de tous les éléments d'un vecteur d'en
 Ecrire une fonction retournant la somme d'un élément sur deux d'un vecteur d'entiers passé en paramètre. 
 [4,6,7,9,3] => 4+7+3 = 14.
 
+```python
 fonction somme(v : entier[]) : entier
 i, somme : entier; 
 i:=0;
@@ -57,3 +58,4 @@ debfonc
 	finsi;
 	retour res;
 finfonc
+```
